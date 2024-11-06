@@ -1,0 +1,47 @@
+
+div#container{
+  border:2px solid lightgray;
+  width: 90%;
+}
+div#header{
+  background: black;
+  color: white;
+  margin: 10px 10px 0 10px;
+}
+#header h1{
+  text-align: center;
+  padding: 20px;
+}
+
+div#row1Parent {
+  overflow: auto;
+  border: 1px solid;
+  margin: 0 10px 0 10px;
+}
+div#chaild1{
+  width: 250px;
+  background: lightblue;
+  height: 150px;
+  float: left;
+}
+#childd1 ul{
+  list-style-type: none;
+}
+
+li {
+  line-height: 1.5;
+}
+div#chaild2{
+  margin-left: 15px;
+  width: 780px;
+  float: right;
+}
+div#footer {
+  background: black;
+  color: white;
+  margin: 0 10px 0 10px;
+}
+#footer p{
+  text-align: center;
+  padding: 15px;
+}

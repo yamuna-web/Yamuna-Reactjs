@@ -1,0 +1,127 @@
+body{
+	background:#FED8CB;
+	}
+#wrapper{
+	width:1000px;
+	margin:0 auto;
+	}
+#header{
+	width:1000px;
+	height:150px;
+	border-radius:10px;
+	}
+#page_content{
+	background:#E5E7E6;
+	box-shadow:0px 0px 2px 2px #C3B984;
+	padding:10px;
+	border-radius:10px;
+	margin-top:5px;
+	}
+.navigation{
+	margin:0px 0px 12px;
+	padding:16px 15px;
+	border:1px solid #AFABAA;
+	background:#E7D8D3;
+	}
+.navigation ul {
+	margin:0px;
+	padding:0px;
+	}
+.navigation ul li {
+	margin:0px;
+	padding:0 35px;
+	display:inline;
+	font-size:17px;
+	list-style-type:none;
+	border-right:2px dotted #868B8F;
+	}
+.right_side_bar{
+	width:210px;
+	float:right;
+	}
+.right_side_bar .col_1{
+	padding:0px 0px 20px;
+	}
+.right_side_bar h1{
+	font-size:20px;
+	padding :12px 0px 12px 35px;
+	margin-bottom:10px;
+	color:#1B0400;
+	}
+.right_side_bar .col_1 .box{
+	padding: 0px 10px 5px;
+	}
+.right_side_bar .col_1 .box ul{
+	margin:0px;
+	padding:0px;
+	
+	}
+ul{
+	list-style-type:none;
+	}
+.right_side_bar .col_1 .box ul li{
+	margin:0px 0px 8px;
+	padding: 0px 0px 0px 25px;
+	font-size:13px;
+	list-style-type:none;
+	}
+.right_side_bar .col_1 .box ul li a{
+	color:#BB3B4A;
+	text-decoration:underline;
+	}
+#page_content .right_section{
+	width:720px;
+	float:left;
+	padding:15px;
+	}
+.common_content{
+	padding:0 0 20px;
+	}
+h2{
+	font-size:25px;
+	margin-bottom:20px;
+	}
+hr{
+	border-bottom:1px solid #CECED6;
+	margin:5px 0 10px;
+	padding:0px;
+	height:2px;
+	width:100%;
+	}
+#page_content .right_section .top_content{
+	padding:15px 0 0 ;
+	
+	}
+#page_content .right_section .top_content .column_one{
+	width:290px;
+	float:left;
+	margin-bottom:20px;
+	} 
+#page_content .right_section .top_content .column_two{
+	width:290px;
+	float:right;
+	margin-bottom:20px;
+	}
+.clear{
+	clear:both;}
+a.btn{
+	color:#0A0800;
+	font-size:12px;
+	text-decoration:none;
+	padding:7px 15px;
+	display:inline-block;
+	border:1px solid #7A6F73;
+	border-radius:5px;
+	background:pink
+	}
+#footer{
+	clear:both;
+	margin-top:18px;
+	padding:12px 0px;
+	height:20px;
+	text-align:center;
+	font-size:12px;
+	line-height:20px;
+	border-radius:5px;
+	background:#F7A7B2
+	}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selector</title>
+    <style>
+      /* Body */
+      body {
+        background-color: blueviolet;
+      }
+      /* * Global Selector  */
+      * {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      /* 1. ID Selector # */
+      #firstLI {
+        color: red;
+      }
+      /* 2.Class Selector . */
+      .links {
+        background-color: aqua;
+      }
+      p,
+      h4,
+      h3 {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CSS Selector -->
+    <!-- 1. ID Selector -->
+    <!-- 2.Class Selector -->
+    <!-- 3. Grouping Selector -->
+    <!-- * Global Selector -->
+
+    <!-- UL unorder list -->
+    <h3>unorder list</h3>
+    <ul>
+      <!-- LI List Items -->
+      <li id="firstLI">Link1</li>
+      <li>Link1</li>
+      <li class="links">Link1</li>
+      <li class="links">Link1</li>
+      <li>Link1</li>
+      <li>Link1</li>
+    </ul>
+    <!-- OL Order List -->
+    <h3>Order List</h3>
+    <ol>
+      <li>Link1</li>
+      <li>Link1</li>
+      <li>Link1</li>
+      <li>Link1</li>
+      <li>Link1</li>
+      <li>Link1</li>
+    </ol>
+    <p>Link1Link1Link1Link1Link1Link1Link1</p>
+    <h4>Iam From Links</h4>
+  </body>
+</html>

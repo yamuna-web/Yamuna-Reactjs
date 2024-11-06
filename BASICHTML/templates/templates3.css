@@ -1,0 +1,76 @@
+.container {
+    width: auto;
+}
+.row1 {
+    width: 1330px;
+    background: black;
+    height: 50px;
+}
+.row1 nav {
+    float: left;
+}
+.row1 ul li {
+    list-style-type: none;
+    /* margin: 5px; */
+    display: inline;
+    /* margin-top: 17px; */
+    font-size: 20px;
+    margin-right: 20px;
+}
+.row1 div {
+    float: right;
+    margin-top: 20px;
+}
+.row1 nav a {
+    text-decoration: none;
+}
+.row2 {
+    width: 1330px;
+    text-align: center;
+    background: lightgreen;
+    height: 180px;
+}
+.row2 button {
+    background: blue;
+    color: white;
+}
+.row3 {
+    text-align: center;
+}
+
+.child1 {
+    width: 366px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 65px;
+}
+.child1 img {
+    width: 345px;
+}
+.child1 h2 {
+    text-align: center;
+}
+.child2 img {
+    width: 345px;
+}
+.row4 {
+    width: 1330px;
+    background: yellow;
+    height: 388px;
+}
+.rose {
+    float: left;
+    width: 322px;
+    margin-left: 102px;
+}
+.rose p {
+    padding: 0;
+    margin: 0;
+}
+.row4 img {
+    border-radius: 100px;
+}
+.row5 {
+    text-align: center;
+    background: white;
+}

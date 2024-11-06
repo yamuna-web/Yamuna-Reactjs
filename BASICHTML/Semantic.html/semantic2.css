@@ -1,0 +1,60 @@
+.container {
+  border: 2px solid;
+}
+h1 {
+  border: 2px solid;
+  margin: 5px;
+  height: 65px;
+  text-align: center;
+  background-color: blue;
+}
+nav {
+  border: 2px solid;
+  margin: 5px;
+  height: 50px;
+  text-align: center;
+  background-color: yellow;
+}
+.MidparentRow {
+  /* border: 1px solid; */
+  margin: 5px;
+  overflow: auto;
+}
+.child1 {
+  /* border: 2px solid; */
+  width: 600px;
+  float: left;
+}
+section {
+  width: 700px;
+  border: 2px solid;
+  height: 100px;
+  text-align: center;
+  background-color: green;
+}
+article {
+  border: 2px solid;
+  width: 700px;
+  height: 100px;
+  text-align: center;
+  margin-top: 5px;
+  background-color: brown;
+}
+aside {
+  border: 2px solid;
+  width: 610px;
+  float: right;
+  height: 200px;
+  text-align: center;
+  background-color: purple;
+}
+footer {
+  border: 2px solid;
+  margin: 5px;
+  height: 50px;
+  text-align: center;
+  background-color: aqua;
+}
+ul {
+  list-style-type: none;
+}

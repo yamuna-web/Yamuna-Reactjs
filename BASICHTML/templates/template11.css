@@ -303,5 +303,23 @@ img {
     margin: 0 0 15px 0;
     padding: 0px;
     border: 3px solid #cccccc;
-    width: 329px;
+    width: 3oopx;
+}
+#templatemo_banner {
+    width: 960px;
+    height: 149px;
+    margin: 0 auto;
+    background: orange;
+}
+#templatemo_menu {
+    clear: both;
+    width: 960px;
+    height: 42px;
+    background: blue;
+}
+#templatemo_container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background: gray;
 }

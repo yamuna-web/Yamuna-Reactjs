@@ -125,3 +125,11 @@ a.btn{
 	border-radius:5px;
 	background:#F7A7B2
 	}
+	#header {
+		width: 1000px;
+		height: 150px;
+		border-radius: 10px;
+		background: blue;
+		text-align: center;
+		padding-top: 5px;
+	}

@@ -155,12 +155,14 @@ img {
 	margin: 0px;
 	padding: 0 0 0 20px;
 	list-style: none;
+
 }
 
 #templatemo_menu ul li {
 	margin: 0px;
 	padding: 0px;
 	display: inline;
+
 }
 
 #templatemo_menu ul li a {
@@ -238,6 +240,7 @@ img {
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
+
 }
 
 .category_list li { 
@@ -322,4 +325,8 @@ img {
     margin: 0 auto;
     padding: 0 10px;
     background: gray;
+}
+#logo li {
+    list-style-type: none;
+    
 }

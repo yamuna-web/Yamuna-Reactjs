@@ -202,6 +202,7 @@ a:hover {
 	float: left;
 	padding: 18px;
 	margin-left: 10px;
+	background-image: url(../th\ \(3\).jpeg);
 }
 .section1 h3, .section4 h3 {
 	font-size: 14px;
@@ -214,6 +215,7 @@ a:hover {
 	float: left;
 	padding: 18px;
 	margin-left: 17px;
+	background-image: url(./2476888-bigthumbnail.webp);
 }
 .section2 h3 {
 	font-size: 14px;
@@ -227,6 +229,7 @@ a:hover {
 	float: left;
 	padding: 18px;
 	margin-left: 17px;
+	background-image: url(./th\ \(2\).jpeg);
 }
 .section3 h3 {
 	font-size: 14px;
@@ -240,6 +243,7 @@ a:hover {
 	float: left;
 	padding: 18px;
 	margin-left: 17px;
+	background-image: url(../th\ \(1\).jpeg);
 }
 a.more {
 	font-size: 11px;
@@ -300,4 +304,10 @@ a.more:hover {
 .footer-link:hover {
 	color:green; 
 	text-decoration:underline; 
+}
+.content {
+    width: 899px;
+    float: left;
+    padding: 19px 20px 0px 20px;
+    background: pink;
 }

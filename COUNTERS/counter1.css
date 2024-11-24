@@ -1,7 +1,62 @@
-.row1 {
-    width: 250px;
+
+.container {
+    width: 1342px;
 }
-.row1 ul li {
+.header {
+    width: 1285px;
+}
+.row1 img {
+    width: 47px;
+}
+.row1 h2 {
+    float: left;
+}
+.row1 {
+    float: left;
+}
+.row1 img {
+    width: 47px;
+    border-radius: 47px;
+}
+.row2 {
+    text-align: center;
+}
+form {
+    margin-top: 18px;
+}
+.row2 img {
+    width: 26px;
+    margin-right: -238px;
+    margin-top: -20px;
+    border-radius: 26px;
+}
+.row3 {
+    float: right;
+    margin-right: 56px;
+}
+.row3 img {
+    width: 47px;
+    border-radius: 47px;
+}
+.navesection ul li {
+    display: inline;
+    margin-left: 72px;
+    text-align: center;
+    background: wheat;
+}
+.row4 {
+    width: 1285px;
+}
+
+.sticky {
+    position: static;
+    height: 48px;
+}
+.staircase {
+    float: left;
+    width: 184px;
     height: 40px;
-    list-style-type: none;
+    position: relative;
+    height: 500px;
+    overflow: scroll;
 }

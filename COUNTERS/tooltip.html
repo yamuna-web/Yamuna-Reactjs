@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tooltip{
+            position:relative;
+            display: inline-block;
+            border-bottom: 2px dotted blue;
+        
+        }
+        .tooltip .tooltiptext{
+            visibility: hidden;
+            width: 120px;
+            background: black;
+            color: white;
+            text-align: center;
+            border-radius: 7px;
+            padding: 5px;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+        }
+        .tooltip:hover .tooltiptext{
+            visibility: visible;
+        }
+        .govt .abrivation{
+            visibility: hidden;
+        }
+        .govt :hover .abrivation{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>tool tip</h1>
+    <p>computer is an electronic device</p>
+    <div class="tooltip">hover on me
+        <span class="tooltiptext">
+           tooltip text
+        </span>
+    </div>
+    <div class="govt">
+        govt
+        <span class="abrivation">
+            Government
+
+        </span>
+
+    </div>
+</body>
+</html>

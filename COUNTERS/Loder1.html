@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+        }
+        .spiner{
+            border: 10px  dotted red;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            animation: ani 5s linear infinite;
+        }
+        @-webkit-keyframes ani{
+            0%{
+                transform :calc(1);
+                -webkit-transform: calc(0);
+             }
+            5%{
+                border: pink dotted;
+                
+            }
+            10%{
+                border: blue dotted;
+                
+            }
+            15%{
+                border: yellow dotted;
+            }
+            20%{
+                border: green dotted;
+            }
+            25%{
+                border: orange dotted;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="spiner"></div>
+</body>
+</html>

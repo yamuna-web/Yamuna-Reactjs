@@ -8,31 +8,64 @@
         body{
             background: black;
         }
-        .loader{
-            position: relative;
+        #div::before{
+            border: 10px  dotted red;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            top: 200px;
+            left: 150px;
+            animation: ani 5s linear infinite;
+        }
+        .spiner{
+            border: 10px  dotted rgb(0, 255, 13);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            animation: ani 5s linear infinite;
+        }
+        #div::after{
+            border: 10px  dotted rgb(38, 0, 255);
             width: 100px;
             height: 100px;
-            border: 5px solid white;
-            -webkit-animation: mid 1.5s linear infinite;
             border-radius: 50%;
-            text-align: center;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            animation: ani 5s linear infinite;
 
         }
-
-        @-webkit-keyframes mid{
+        @-webkit-keyframes ani{
             0%{
-                transform:rotateZ(10dge);
-            -webkit-animation:rotatez(10dge)
+                transform :calc(1);
+                -webkit-transform: calc(0);
+             }
+            5%{
+                border: pink dotted;
             }
             10%{
-                color: blue;
-                left: 0;
-                top: 0;
+                border: blue dotted;
+                
             }
+            15%{
+                border: yellow dotted;
+            }
+            20%{
+                border: green dotted;
+            }
+            25%{
+                border: orange dotted;
+            }
+
         }
     </style>
 </head>
 <body>
-    <div class="loader"></div>
+    <div class="spiner"></div>
+    
 </body>
 </html>

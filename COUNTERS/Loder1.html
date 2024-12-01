@@ -17,6 +17,19 @@
             top: 200px;
             left: 300px;
             animation: ani 5s linear infinite;
+            background-color: white;
+        }
+
+        .spiner:hover{
+            border: 10px  dotted red;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            animation: ani 5s linear infinite;
+            background-color: green;
         }
         @-webkit-keyframes ani{
             0%{
@@ -39,12 +52,15 @@
             25%{
                 border: orange dotted;
             }
+            30%{
+                border: red dotted;
+            }
 
         }
+        div{transition-timing-function: ease-out;}
     </style>
 </head>
 <body>
     <div class="spiner"></div>
-    
 </body>
 </html>

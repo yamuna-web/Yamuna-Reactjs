@@ -1,6 +1,9 @@
 * {
     margin: 2px;
 }
+h1{
+    text-shadow: 4px 4px black;
+}
 
 body {
     font-size: 25px;
@@ -13,7 +16,7 @@ body {
 }
 
 .flex-header {
-    background-color: blue;
+    background-color: green;
     padding: 3rem;
     padding-bottom: 3rem;
 }
@@ -68,9 +71,10 @@ body {
 }
 
 .flex-footer {
-    background-color: red;
+    background-color: purple;
     padding-top: 3rem;
     padding-bottom: 3rem;
+
 }
 
 @-webkit-keyframes ani{

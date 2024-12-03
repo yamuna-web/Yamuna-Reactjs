@@ -27,6 +27,19 @@ body {
 .flex-nav {
     background-color: green;
     padding-top: 3rem;
+    width: 200%;
+    width: 200px;
+    flex: 1 1 5rem;
+    border-radius: 50%;
+    background-image: url(../BASICHTML/71f57e26dbd72ac491f128366fce2b9a.jpg);
+    border: 10px dotted rgb(0, 255, 13);
+    animation: ani 5s linear infinite;
+}
+.flex-nav:hover{
+    background-color: green;
+    padding-top: 3rem;
+    width: 350px;
+    height: 350px;
     flex: 1 1 5rem;
     border-radius: 50%;
     background-image: url(../BASICHTML/71f57e26dbd72ac491f128366fce2b9a.jpg);

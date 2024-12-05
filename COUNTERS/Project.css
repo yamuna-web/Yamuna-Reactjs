@@ -1,0 +1,164 @@
+.container {
+    width: 1356px;
+    height: 900px;
+  background-image: url(./14W9Zo.webp);
+}
+.row1 {
+    height: 66px;
+    background: black;
+}
+.row1 {
+    height: 66px;
+    background: black;
+    width: 1356px;
+}
+li:hover{
+    background: yellowgreen;
+    width: 20px;
+}
+li {
+    display: inline;
+    padding-right: 215px;
+    float: left;
+    padding-top: 22px;
+    text-align: center;
+    list-style-type: none;
+}
+.row2 {
+    width: 1356px;
+    height: 156px;
+}
+.row2 form {
+    float: right;
+    padding-right: 114px;
+    padding-top: 31px;
+}
+input[type="text"] {
+    width: 220px;
+    height: 20px;
+    border-radius: 10px;
+}
+h1 {
+    float: left;
+    padding-left: 350px;
+    padding-top: 30px;
+    text-shadow: 3px 3px black;
+    color: white;
+}
+.row2 p {
+    width: 300px;
+    padding-left: 274px;
+    color: white;
+}
+.row3 {
+    width: 1356px;
+}
+.left.child {
+    width: 400px;
+    float: left;
+    padding-top: 46px;
+}
+.sticky {
+    height: 64px;
+    padding-left: 20px;
+    color: red;
+}
+.mid.child {
+    width: 400px;
+    float: left;
+    padding-top: 30px;
+}
+.row3 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px dotted red;
+}
+.row3 img :hover{
+    width:300px ;
+    height: 300px;
+    animation: ani 5s linear infinite;
+
+}
+@-webkit-keyframes ani{
+    0%{
+        transform :calc(1);
+        -webkit-transform: calc(0);
+     }
+    5%{
+        border: pink dotted;
+    }
+    10%{
+        border: blue dotted;
+        
+    }
+    15%{
+        border: yellow dotted;
+    }
+    20%{
+        border: green dotted;
+    }
+    25%{
+        border: orange dotted;
+    }
+
+}
+.row3 p {
+    width: 300px;
+    color: green;
+}
+.lastchild {
+    width: 400px;
+    float: right;
+    padding-top: 107px;
+}
+.row3 button {
+    background: yellow;
+    color: purple;
+    padding-right: -87px;
+}
+table {
+    width: 1297px;
+    color: red;
+    background: pink;
+}
+.row5 {
+    width: 1356px;
+}
+.child1 {
+    float: left;
+    padding-left: 168px;
+}
+.row5 form {
+    height: 40px;
+}
+.row5 button {
+    padding-left: 10px;
+    background: green;
+}
+.child2 {
+    float: right;
+    padding-right: 275px;
+}
+.row5 h2 {
+    background: beige;
+}
+.left.child {
+    width: 207px;
+    float: left;
+    padding-top: 46px;
+    background: gainsboro;
+}
+.mid.child {
+    width: 400px;
+    float: left;
+    padding-top: 30px;
+    padding-left: 330px;
+}
+.row6 {
+    width: 1356px;
+}
+.footer {
+    padding-top: 160px;
+    text-align: center;
+}

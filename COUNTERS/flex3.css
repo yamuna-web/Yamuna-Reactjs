@@ -76,6 +76,9 @@ body {
     padding-bottom: 3rem;
 
 }
+.flex-footer:hover{
+    background-color: brown;
+}
 
 @-webkit-keyframes ani{
     0%{

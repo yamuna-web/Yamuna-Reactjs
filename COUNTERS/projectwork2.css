@@ -34,6 +34,7 @@ input[type="text"] {
 .row2 {
     width: 1340px;
     height: 184px;
+    background: lightsalmon;
 }
 .row2 div {
     display: inline;

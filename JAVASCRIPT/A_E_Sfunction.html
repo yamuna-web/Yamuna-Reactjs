@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>arrowfunction</h2>
+    <script>
+        //addition//
+        var addingthenumbers=(num1,num2,num3)=>{
+var total=num1+num2+num3;
+document.write ("adding the numbers",total)
+        }
+        addingthenumbers(20,30,5);
+
+        var addingthenumbers=(num1,num2,num3)=>{
+         return(num1+num2+num3);
+
+        }
+        var total=addingthenumbers(20,30,5)
+        document.write("adding the numbers",total)
+        
+
+    </script>
+    <h2>expreessionfunction</h2>
+    <script>
+        var addingthenumbers=function(num1,num2,num3){
+            var total = num1+num2+num3;
+            document.write("adding the numbers",total)
+        }
+        addingthenumbers(20,30,5);
+
+        var addingthenumbers=function(num1,num2,num3){
+            return(num1+num2+num3);
+        }
+        var total=addingthenumbers(20,30,5);
+        document.write("adding the numbers",total)
+
+    </script>
+    <h2>sif function</h2>
+    <script>
+        (function(num1,num2,num3){
+            var total=num1+num2+num3;
+            document.write("addingthenumbers",total)
+        })(20,30,5);
+
+        var result=(function(num1,num2,num3){
+            return(num1+num2+num3)
+        })(20,30,5)
+        document.write("addingthe numbers",result)
+    </script>
+
+</body>
+</html>

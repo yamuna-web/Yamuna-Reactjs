@@ -11,10 +11,12 @@
     width: 800px;
     background: gray;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
   }
   .basic {
     width: 220px;
-    float: left;
+    /* float: left; */
     margin-top: 10px;
   }
   .basic h1 {
@@ -26,14 +28,18 @@
     margin: 0;
   }
   nav {
-    float: right;
+    /* float: right; */
     margin-top: 13px;
     background: black;
   }
   nav ul li {
-    display: inline;
+    /* display: inline; */
     margin-right: 40px;
     font-size: 20px;
+  }
+  .row1 nav ul{
+    display: flex;
+    list-style-type: none;
   }
   .row2 {
     margin-top: 20px;
@@ -48,10 +54,11 @@
     width: 800px;
     margin: auto;
     overflow: auto;
+    display: flex;
   }
   .childs {
     width: 185px;
-    float: left;
+    /* float: left; */
     margin-right: 15px;
   }
   .childs figure {
@@ -77,7 +84,7 @@
   }
   .childs4 {
     width: 185px;
-    float: right;
+    /* float: right; */
   }
   .childs4 figure img {
     width: 28px;
@@ -106,21 +113,22 @@
     overflow: auto;
     border-bottom: 1px solid;
     color: gray;
+    display: flex;
 }
 .parent1 {
   width: 290px;
   height: 180px;
-  float: left;
+  /* float: left; */
 }
 .parent1 {
   width: 290px;
   height: 180px;
-  float: left;
+  /* float: left; */
 }
 .parent {
   width: 290px;
   height: 180px;
-  float: right;
+  /* float: right; */
 }
 p.parent2 {
   float: right;
@@ -137,10 +145,11 @@ p.parent2 {
 }
 .child1{
   overflow:auto ;
+  display: flex;
 }
 .child1img{
   width: 170px;
-  float: left;
+  /* float: left; */
 }
 .child1img img{
   width: 170px;
@@ -150,7 +159,7 @@ p.parent2 {
 }
 .child1cap{
   width: 390px;
-  float: right;
+  /* float: right; */
   margin-left: 10px;
 }
 .child1cap p{
@@ -164,6 +173,10 @@ p#child1para{
   text-decoration: none;
   font-size: 13px;
 }
+.child2 {
+  display: flex
+;
+}
 a{
   float: right;
   color: orange;
@@ -172,7 +185,8 @@ a{
 }
 aside{
   width: 198px;
-  float: right;
+  /* float: right; */
+  display: flex;
 }
 aside ul{
 list-style: none;
@@ -191,13 +205,15 @@ footer {
   width: 800px;
   margin: auto;
   overflow: auto;
+  display: flex;
+  justify-content: space-around;
 }
 p#footerPara1 {
-  float: left;
+  /* float: left; */
   font-size: 13px;
 }
 p#footerPara2 {
-  float: right;
+  /* float: right; */
   font-size: 13px;
 }
 article p {

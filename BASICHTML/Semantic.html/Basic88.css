@@ -14,10 +14,12 @@ header {
   width: 800px;
   background: gray;
   margin: auto;
+  display: flex;
+  justify-content: space-around;
 }
 .basic {
   width: 220px;
-  float: left;
+  /* float: left; */
   margin-top: 10px;
 }
 .basic h1 {
@@ -29,7 +31,7 @@ header {
   margin: 0;
 }
 nav {
-  float: right;
+  /* float: right; */
   margin-top: 13px;
   background: black;
 }
@@ -51,15 +53,16 @@ nav ul li {
   margin: 0 auto;
   overflow: auto;
   margin-top: 20px;
+  display: flex;
 }
 .childs {
-  float: left;
+  /* float: left; */
   width: 230px;
   /* height: 150px; */
   margin-right: 25px;
 }
 .child3 {
-  float: right;
+  /* float: right; */
   width: 240px;
   /* height: 150px; */
 }
@@ -105,14 +108,15 @@ a {
   margin: auto;
   overflow: auto;
   margin-top: 20px;
+  display: flex;
 }
 article {
   width: 390px;
-  float: left;
+  /* float: left; */
 }
 aside {
   width: 390px;
-  float: right;
+  /* float: right; */
 }
 aside img {
   border: 1px solid;
@@ -125,6 +129,7 @@ section {
   width: 800px;
   margin: auto;
   overflow: auto;
+  display: flex;
 }
 /* .sections {
   width: 195px;
@@ -132,11 +137,11 @@ section {
 } */
 .sections4 {
   width: 187px;
-  float: right;
+  /* float: right; */
 }
 .sections {
   width: 187px;
-  float: left;
+  /* float: left; */
   margin-right: 14px;
 }
 .sections ul {
@@ -167,13 +172,15 @@ footer {
   width: 800px;
   margin: auto;
   overflow: auto;
+  display: flex;
+  justify-content: space-between;
 }
 p#footerPara1 {
-  float: left;
+  /* float: left; */
   font-size: 13px;
 }
 p#footerPara2 {
-  float: right;
+  /* float: right; */
   font-size: 13px;
 }
 article p {

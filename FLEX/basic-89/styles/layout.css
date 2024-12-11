@@ -55,11 +55,11 @@ code {
 }
 
 .fl_left {
-    float: left;
+    /* float: left; */
 }
 
 .fl_right {
-    float: right;
+    /* float: right; */
 }
 
 img {
@@ -294,10 +294,12 @@ select {
 
 #header {
     padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 #header #hgroup {
-    float: left;
+    /* float: left; */
     margin: 0 0 20px 0;
 }
 
@@ -317,7 +319,7 @@ select {
 
 #header nav {
     display: block;
-    float: right;
+    /* float: right; */
     margin: 10px 0 0 0;
     padding: 20px 0;
     color: #C0BAB6;
@@ -547,9 +549,10 @@ select {
 
 #footer {
     padding: 20px 0;
+    display: flex;
 }
 
 #footer p {
     margin: 0;
-    padding: 0;
+    padding-right: 225px;
 }

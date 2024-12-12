@@ -304,11 +304,13 @@ select {
 /*----------------------------------------------Header-------------------------------------*/
 
 #header {
+    display: grid;
+    justify-content: space-around;
     padding: 20px 0;
 }
 
 #header #hgroup {
-    float: left;
+    /* float: left; */
     margin: 0 0 20px 0;
 }
 
@@ -329,7 +331,7 @@ select {
 
 #header nav {
     display: block;
-    float: right;
+    /* float: right; */
     margin: 10px 0 0 0;
     padding: 20px 0;
     color: #C0BAB6;

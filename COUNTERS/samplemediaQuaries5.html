@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color:lawngreen;
+  }
+  .header{
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+  header {
+    position: relative;
+    text-align: center;
+    text-align: center;
+  }
+  nav {
+    background-color: #6b0748;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+     
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+    background-color: red;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  article {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+ 
+  aside {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  section {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+ 
+  footer {
+    background-color:black;
+    color:white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+  }
+  @media (max-width: 1000px) {
+    .content {
+      flex-direction: column;
+      background-color: aqua;
+    }
+  
+    article,
+    aside {
+      flex: 1;
+      margin-bottom: 20px;
+      background-color: red;
+      
+    }
+    image{
+        flex-direction: column;
+    }
+  }
+  
+ 
+  @media (max-width: 800px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+    img{
+        flex-direction: column;
+    }
+  
+    footer {
+      font-size: 0.9rem;
+    }
+  }
+  
+ 
+  @media (max-width: 500px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav ul li a {
+      font-size: 1rem;
+    }
+  
+    article,
+    aside {
+      padding: 10px;
+    }
+    img{
+        flex-direction: column;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+  
+  
+    </style>
+</head>
+<body>
+   <div class="header">
+    <h1>header</h1>
+   </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+    </nav>
+    <div class="content">
+        <aside>
+            <h2>this is a aside section</h2>
+            <p>YouTube is a free video-sharing website that allows users to watch, create, and upload videos. It's one
+                of the most popular sites on the web, with billion</p>
+        </aside>
+        <section>
+            <h2>this is a section class</h2>
+            <p>
+                Flipkart Private Limited is an Indian e-commerce company established in 2007. It started with a primary
+                focus on online book sales and soon, expanded to lifestyle products, electronics, home essentials and
+                groceries.
+            </p>
+        </section>
+        <article>
+            <h2>this is a article class</h2>
+            <p>YouTube is a free video-sharing website that allows users to watch, create, and upload videos. It's one
+                of the most popular sites on the web, with billion</p>
+             <img src="../BASICHTML/th (3).jpeg" alt="">
+        </article>
+    </div>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+</html>

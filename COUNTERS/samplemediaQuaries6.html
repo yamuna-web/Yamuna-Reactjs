@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: pink;
+    }
+
+    .row1 {
+      background: black;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .row2 {
+      background: purple;
+    }
+
+    .row2 ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    .row2 li {
+      margin: 0 15px;
+    }
+
+    .row2 a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .parent {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    article {
+      background: lightgreen;
+    }
+
+    aside {
+      background: lightgray;
+    }
+
+    section {
+      background: lightblue;
+    }
+
+    .row4 {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .row4 nav {
+      background: lightblue;
+      text-decoration: none;
+    }
+
+    .row4 li {
+      list-style: none;
+      line-height: 1.9;
+    }
+
+    .row4 a {
+      text-decoration: none;
+    }
+
+    .row5 {
+      background: black;
+      color: white;
+    }
+
+    @media (max-width: 1000px) {
+      .section {
+        flex-direction: column;
+        background-color: rgb(119, 0, 255);
+      }
+
+      article,
+      aside {
+        flex: 1;
+        margin-bottom: 20px;
+        background-color: red;
+
+      }
+
+      .container {
+        background: purple 50%;
+        background: lightgreen 30%;
+      }
+    }
+
+
+    @media (max-width: 800px) {
+      .row1 header h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .row4 nav {
+        margin: 10px 0;
+      }
+
+      img {
+        flex-direction: column;
+      }
+
+      .row5 {
+        font-size: 0.9rem;
+        background: grey;
+      }
+    }
+
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .row4 a {
+        font-size: 1rem;
+      }
+
+      article,
+      aside {
+        padding: 10px;
+      }
+
+      .row5 {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row1">
+      <div class="header">
+        <h1>Global</h1>
+      </div>
+    </div>
+    <div class="row2">
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">content</a></li>
+        <li><a href="#">page</a></li>
+      </ul>
+    </div>
+    <div class="row3">
+      <div class="parent">
+        <article>
+          <h2>Article</h2>
+          <p>
+            collebrately administrate empowered markets via-
+            and-play networks.Ddianomically practicate b2c
+            users after intracted base benifits dra matically
+            visulasied customer directed convergence revolutionally
+            ROI
+          </p>
+        </article>
+        <aside>
+          <h2>Aside</h2>
+          <p>
+            collebrately administrate empowered markets via-
+            and-play networks.Ddianomically practicate b2c
+            users after intracted base benifits dra matically
+            visulasied customer directed convergence revolutionally
+            ROI
+          </p>
+        </aside>
+        <section>
+          <h2>section</h2>
+          <p>
+            collebrately administrate empowered markets via-
+            and-play networks.Ddianomically practicate b2c
+            users after intracted base benifits dra matically
+            visulasied customer directed convergence revolutionally
+            ROI
+          </p>
+        </section>
+      </div>
+    </div>
+    <div class="row4">
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- Section Two -->
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- Section Three -->
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- Section Four -->
+      <section class="one_quarter lastbox">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+    </div>
+    <div class="row5">
+      <h1>footer</h1>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -3,6 +3,9 @@
     color: #989898;
     overflow: auto;
   }
+  .container{
+    background: beige;
+  }
   header {
     width: 850px;
     margin: auto;
@@ -43,6 +46,7 @@
       margin: auto;
       display: flex;
       justify-content: space-between;
+      background: lightblue;
   }
     .Ajio {
       width: 250px;

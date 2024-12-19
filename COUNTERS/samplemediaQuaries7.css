@@ -309,10 +309,10 @@ article p {
 @media (max-width: 500px) {
     .container{
         background-color: aqua;
-        width: 450px;
+        width: 480px;
     }
     .row1{
-         width: 450px;
+         width: 480px;
         height: 400px;
         display: flex;
     }
@@ -321,7 +321,7 @@ article p {
       display: flex;
       flex-direction: column;
       align-items: center;
-    width: 460px;
+    width: 480px;
     height: 400px;
     }
     .row1 nav{
@@ -333,47 +333,47 @@ article p {
         flex-direction: column;
     }
     .row2{
-        height: 300px;
-        width: 450px;
+        height: 400px;
+        width: 480px;
     }
     .row2 img{
-        width: 450px;
+        width: 480px;
         height: 250px;
     }
     .row3{
         flex-direction: column;
         align-items: center;
-        width: 450px;
+        width: 480px;
     }
     .row4{
         flex-direction: column;
         align-items: center;
-        width: 450px;
+        width: 480px;
         height: 500px;
     }
     .row5{
         flex-direction: column;
-        width: 450px;
+        width: 480px;
         height: auto;
     }
     .row5 article{
-        width: 400px;
+        width: 480px;
   font-size: 10px;
   flex: 1;
       margin-bottom: 20px;
       background-color: red;
     }
     .row5 aside{
-        width: 450px;
+        width: 500px;
     }
     .row5 aside img{
         width: 400px;
     }
     .row6{
-        width: 450px;
+        width: 480px;
       }
       .row6 footer{
-        width:410px;
+        width:480px;
         height: 90px;
         display:flex;
           flex-direction: column;

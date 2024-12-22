@@ -162,11 +162,11 @@
       /* float: right; */
       /* padding-right: 225px; */
   }
-  child1 h4 {
+  .child1 h4 {
       font-weight: lighter;
       font-size: 14px;
   }
-  child2 p {
+  .child2 p {
       font-weight: lighter;
       font-size: 14px;
   }

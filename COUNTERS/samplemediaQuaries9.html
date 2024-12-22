@@ -1,141 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./Basic88.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row1">
-        <header>
-          <div class="basic">
-            <h1>Basic88</h1>
-            <p>Free HTML5 Website Template</p>
-          </div>
-          <nav>
-            <ul>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-            </ul>
-          </nav>
-        </header>
-      </div>
-      <div class="row2">
-        <img src="../th.jpeg" alt="" width="800px" height="350px" />
-      </div>
-      <div class="row3">
-        <div class="childs">
-          <figure><img src="../th.jpeg" alt="" /></figure>
-          <figcaption>
-            <h4><i>Indonectetus facilis</i></h4>
-            <p>
-              Nullamlacus dui ipsum conseque loborttis non euisque morbi penas
-              dapibulum orna.
-            </p>
-            <p class="paraLink"><a href="#">Read More »</a></p>
-          </figcaption>
-        </div>
-        <div class="childs">
-          <figure><img src="../th.jpeg" alt="" /></figure>
-          <figcaption>
-            <h4><i>Indonectetus facilis</i></h4>
-            <p>
-              Nullamlacus dui ipsum conseque loborttis non euisque morbi penas
-              dapibulum orna.
-            </p>
-            <p class="paraLink"><a href="#">Read More »</a></p>
-          </figcaption>
-        </div>
-        <div class="child3">
-          <figure><img src="../th.jpeg" alt="" /></figure>
-          <figcaption>
-            <h4><i>Indonectetus facilis</i></h4>
-            <p>
-              Nullamlacus dui ipsum conseque loborttis non euisque morbi penas
-              dapibulum orna.
-            </p>
-            <p class="paraLink"><a href="#">Read More »</a></p>
-          </figcaption>
-        </div>
-      </div>
-      <div class="row4">
-        <article>
-          <h3><i>Indonectetus facilis leo nibh</i></h3>
-          <p>
-            This is a W3C compliant free website template from
-            <a href="#">OS Templates</a>. For full terms of use of this template
-            please read our <a href="#">website template licence</a>.
-          </p>
-          <p>
-            You can use and modify the template for both personal and commercial
-            use. You must keep all copyright information and credit links in the
-            template and associated files. For more HTML5 templates
-            <a href="#">visit free website templates</a>.
-          </p>
-          <p class="paraLink"><a href="#">Read More »</a></p>
-        </article>
-        <aside>
-          <img src="../th.jpeg" alt="" width="380px" height="250px" />
-        </aside>
-      </div>
 
-      <div class="row5">
-        <section>
-          <div class="sections">
-            <h4><i>Link Block</i></h4>
-            <ul>
-              <li>Lorem ipsum dolor sit</li>
-              <li>Amet consectetur</li>
-              <li>Praesent vel sem id</li>
-              <li>Curabitur hendrerit est</li>
-              <li>Sed a nulla urna</li>
-            </ul>
-          </div>
-          <div class="sections">
-            <h4><i>Link Block</i></h4>
-            <ul>
-              <li>Lorem ipsum dolor sit</li>
-              <li>Amet consectetur</li>
-              <li>Praesent vel sem id</li>
-              <li>Curabitur hendrerit est</li>
-              <li>Sed a nulla urna</li>
-            </ul>
-          </div>
-          <div class="sections">
-            <h4><i>Link Block</i></h4>
-            <ul>
-              <li>Lorem ipsum dolor sit</li>
-              <li>Amet consectetur</li>
-              <li>Praesent vel sem id</li>
-              <li>Curabitur hendrerit est</li>
-              <li>Sed a nulla urna</li>
-            </ul>
-          </div>
-          <div class="sections4">
-            <h4><i>Link Block</i></h4>
-            <ul>
-              <li>Lorem ipsum dolor sit</li>
-              <li>Amet consectetur</li>
-              <li>Praesent vel sem id</li>
-              <li>Curabitur hendrerit est</li>
-              <li>Sed a nulla urna</li>
-            </ul>
-          </div>
-        </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic-88-Layout</title>
+  <link rel="stylesheet" href="samplemediaQuaries9.css" />
+</head>
+<style>
+  @media screen and (max-width:750px) {
+    body {
+      background-color: aqua;
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      color: black;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      line-height: 2em;
+      align-items: center;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      /* text-align: center; */
+      align-items: center;
+      width: 100%;
+      font-size: 25px;
+    }
+
+    header h2 p {
+      text-align: right;
+      font-size: 15px;
+    }
+
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .row2 {
+      align-items: center;
+      width: 100%;
+    }
+
+    .row2 img {
+      width: 100%;
+    }
+
+    .row3 {
+      display: flex;
+      flex-direction: row;
+
+      width: 100%;
+      text-align: center;
+      gap: 2px;
+
+
+    }
+
+    .row3 .meesho figcaption i p {
+      color: black;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .meesho figure {
+      width: 100%;
+      text-align: center;
+
+    }
+
+    .row4 {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      width: 100%;
+      align-items: center;
+    }
+
+    .parentsection .sub.section {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      align-items: center;
+    }
+
+    figcaption p {
+      color: black;
+
+    }
+
+    article {
+      text-align: center;
+    }
+
+    article p {
+      color: black;
+    }
+
+    figcaption i {
+      color: red;
+    }
+
+    article h3 {
+      color: red;
+    }
+  }
+
+  @media screen and (max-width:500px) {
+    body {
+      background-color: rgb(219, 173, 226);
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      color: aliceblue;
+      width: 100%;
+    }
+
+    .meesho {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      text-align: center;
+      width: 100%;
+    }
+
+    header nav ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .row2 img {
+      width: 100%;
+    }
+
+    .row3 {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      width: 100%;
+      align-items: center;
+    }
+
+    .row3 p {
+      font-size: 15px;
+    }
+
+    .meesho figure {
+      width: 100%;
+
+    }
+
+    .row4 {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      width: 100%;
+      align-items: center;
+    }
+
+    .parentsection .sub.section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+    }
+
+    figcaption p {
+      color: black;
+
+    }
+
+    figcaption i {
+      color: red;
+    }
+
+    article p {
+      color: black;
+    }
+
+    article h3 {
+      color: red;
+    }
+
+    .figcaption p {
+      color: black;
+    }
+
+    .row4 aside img {
+      width: 100%;
+    }
+
+    .row5-footer {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+
+    }
+
+    .row5-footer p {
+      text-align: center;
+      padding-left: 20px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      line-height: 2em;
+      align-items: center;
+    }
+
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="row1">
+      <header>
+
+        <h2> meesho</h2>
+        <p>Welcome to new clothing design</p>
+
+      </header>
+
+      <nav>
+        <ul>
+          <li>FASHION</li>
+          <li>GROCERIES</li>
+          <li>KITCHEN</li>
+          <li>BEAUTY</li>
+
+        </ul>
+      </nav>
+
+    </div>
+    <div class="row2">
+      <img src="../COUNTERS/how-to-become-a-meesho-seller-1024x576.jpg" alt="" />
+    </div>
+    <div class="row3">
+      <div class="meesho">
+        <figure>
+          <img src="../COUNTERS/maxresdefault.jpg" alt="" />
+        </figure>
+        <figcaption>
+          <i>Product Details</i>
+          <p>A high-fashion editorial where we feature the internet’s coolest cats</p>
+          <p> meesho clothing<a href="#">Readmore</a></p>
+        </figcaption>
       </div>
-      <div class="row6">
-        <footer>
-          <p id="footerPara1">
-            Copyright © 2018 - All Rights Reserved - Domain Name
-          </p>
-          <p id="footerPara2">Template by OS Templates</p>
-        </footer>
+      <div class="meesho">
+        <figure>
+          <img src="../COUNTERS/maxresdefault.jpg" alt="" />
+        </figure>
+        <figcaption>
+          <i>Product Details</i>
+          <p>A high-fashion editorial where we feature the internet’s coolest cats</p>
+          <p> meesho clothing<a href="#">Readmore</a></p>
+        </figcaption>
+      </div>
+      <div class="meesho">
+        <figure>
+          <img src="../COUNTERS/maxresdefault.jpg" alt="" />
+        </figure>
+        <figcaption>
+          <i>Product Details</i>
+          <p>A high-fashion editorial where we feature the internet’s coolest cats</p>
+          <p> meesho clothing..<a href="#">Readmore</a></p>
+        </figcaption>
       </div>
     </div>
-  </body>
+
+    <div class="row4">
+      <article>
+        <h3>welcome to our new clothing sections</h3>
+        <p>orders per month in March 2020.[10] It saw big growth during 2021 and 2022.[11] Meesho's monthly
+          transacting user count rose 26 times during 2020–2022.</p>
+        <p>orders per month in March 2020.[10] It saw big growth during 2021 and 2022.[11] Meesho's monthly
+          transacting user count rose 26 times during 2020–2022. Globally, Meesho mobile app was among the top
+          most downloaded apps in 2021.[12] In 2022, Meesho had about 120 million monthly users and about 910
+          million orders were made through the platfor</p>
+        <p>meesho clothing<a href="#">Readmore</a></p>
+      </article>
+      <aside>
+        <img src="../COUNTERS/unnamed.jpg" alt="" />
+      </aside>
+    </div>
+    <div class="parentsection">
+      <div class="sub section">
+        <section>
+          <i>Link Block</i>
+          <ul>
+            <li><a href="#">Open New Products</a></li>
+            <li><a href="#">open shirt section</a></li>
+            <li><a href="#">open foot section</a></li>
+            <li><a href="#">open homley products</a></li>
+            <li><a href="#">open groceres</a></li>
+        </section>
+        <section>
+          <i>Link Block</i>
+          <ul>
+            <li><a href="#">Open New Products</a></li>
+            <li><a href="#">open shirt section</a></li>
+            <li><a href="#">open foot section</a></li>
+            <li><a href="#">open homley products</a></li>
+            <li><a href="#">open groceres</a></li>
+          </ul>
+        </section>
+        <section>
+          <i>Link Block</i>
+          <ul>
+            <li><a href="#">Open New Products</a></li>
+            <li><a href="#">open shirt section</a></li>
+            <li><a href="#">open foot section</a></li>
+            <li><a href="#">open homley products</a></li>
+            <li><a href="#">open groceres</a></li>
+          </ul>
+        </section>
+        <section>
+          <i>Link Block</i>
+          <ul>
+            <li><a href="#">Open New Products</a></li>
+            <li><a href="#">open shirt section</a></li>
+            <li><a href="#">open foot section</a></li>
+            <li><a href="#">open homley products</a></li>
+            <li><a href="#">open groceres</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="row5-footer">
+      <div class="child1">
+        <h4>Copy rights@2012-all rights reserved-meesho</h4>
+      </div>
+      <div class="child2">
+        <p>Template by os Template</p>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

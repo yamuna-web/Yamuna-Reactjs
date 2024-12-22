@@ -1,302 +1,688 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic-88-Layout</title>
-    <link rel="stylesheet" href="samplemediaQuaries8.css" />
-</head>
-<style>
-    /* *{
-        margin:0px;
-        padding:0px;
-        box-sizing: border-box;
-    } */
-    @media screen and (max-width:750px) {
-        body {
-            background-color: aqua;
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            color: black;
-        }
-        header {
-            display: flex;
-            flex-direction: column;
-            height: fit-content;
-            /* text-align: center; */
-            align-items: center;
-            width: auto;
-        }
-        header h2 p {
-            text-align: right;
-        }
-        header nav ul {
-            display: flex;
-            flex-direction: row;
-            text-align: center;
-            line-height: 1.5;
-        }
-        .row2 {
-            align-items: center;
-            width: 708px;
-        }
-        .row2 img {
-            width: 708px;
-        }
-        .row3 {
-            display: flex;
-            flex-direction: row;
-        
-            width: 708px;
-            text-align: center;
-            gap: 2px;
-        }
-        .row3 .Ajio figcaption i p {
-            color: black;
-            font-size: 20px;
-            text-align: center;
-        }
-        .Ajio figure {
-            width: 100%;
-            text-align: center;
-        }
-        .row4 {
-            display: flex;
-            flex-direction: column;
-            height: fit-content;
-            width: auto;
-            align-items: center;
-        }
-        .parentsection .sub.section {
-            width: 650px;
-            display: flex;
-            flex-direction: row;
-            height: auto;
-            align-items: center;
-        }
-        figcaption p {
-            color: black;
-        }
-        article{
-            text-align: center;
-        }
-        article p {
-            color: black;
-        }
-        figcaption i {
-            color: orange;
-        }
-        article h3 {
-            color: orange;
-        }
+  <title>Basic 90</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="samplemediaQuaries11.css" type="text/css">
+  <style>
+    * {
+
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
+
     @media screen and (max-width:500px) {
-        body {
-            background-color: rgb(219, 173, 226);
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            color: aliceblue;
-        }
-        .meesho {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            width: auto;
-        }
-        header {
-            display: flex;
-            flex-direction: column;
-            height: fit-content;
-            text-align: center;
-            width: auto;
-        }
-         header nav ul{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            line-height: 1.5;
-         }
- 
-        .row2 img {
-            width: 475px;
-        }
-        .row3 {
-            display: flex;
-            flex-direction: column;
-            height: fit-content;
-            width: auto;
-            align-items: center;
-        }
-        .meesho figure {
-            width: auto;
-        }
-        .row4 {
-            display: flex;
-            flex-direction: column;
-            height: fit-content;
-            width: auto;
-            align-items: center;
-        }
-        .parentsection .sub.section {
-            width: auto;
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            align-items: center;
-        }
-        figcaption p {
-            color: black;
-        }
-        figcaption i {
-            color: orange;
-        }
-        article p {
-            color: black;
-        }
-        article h3 {
-            color: orange;
-        }
- 
-        .row5-footer {
-            display: flex;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-            width: 475px;
-        } 
-        .row5-footer p{
-            text-align: center;
-            padding-left: 20px;
-        }
- 
+
+      body {
+        max-width: 100%;
+
+      }
+
+      #header {
+        padding: 20px 0;
+        width: 100%;
+        gap: 15px;
+        background-color: rgb(15, 1, 1);
+
+      }
+
+      #header #hgroup h1 {
+        padding-bottom: 10px;
+      }
+
+      #header #hgroup h2 {
+        font-size: 14px;
+        font-weight: lighter;
+      }
+
+      .headerflex {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-left: 5px;
+
+      }
+
+      #header form {
+        display: block;
+
+        margin: 20px 0;
+        padding: 0;
+
+      }
+
+      #header #hgroup h1 {
+        font-size: 35px;
+      }
+
+      #header form #sf_submit {
+        display: block;
+
+        width: 60px;
+        font-size: 10px;
+      }
+
+      #header nav {
+
+        width: 470px;
+        margin-left: 5px;
+        text-align: center;
+        border: 2px solid;
+      }
+
+      #header nav ul {
+
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+      }
+
+      .row2 a {
+        font-size: large;
+      }
+
+      #header nav li.last {
+        margin-right: 24px;
+      }
+
+      #container #slider figure {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #container #slider figure img {
+
+        width: 470px;
+        height: 200px;
+        margin-left: 5px;
+
+      }
+
+      #container #homepage section nav li {
+        font-size: large;
+      }
+
+      #container #slider figure img {
+        margin-bottom: 10px;
+      }
+
+      #container #slider figure h2 {
+        font-size: 30px;
+        font-weight: normal;
+        font-style: italic;
+        text-transform: none;
+      }
+
+      #container #slider figure figcaption {
+        display: block;
+        /* float: left; */
+        width: 470px;
+        margin-left: 5px;
+        height: 250px;
+        padding: 0px;
+        overflow: hidden;
+        color: #989898;
+        background-color: #071617;
+        line-height: 2em;
+        font-size: large;
+      }
+
+      #container #intro section article figure ul li img {
+        width: 400px;
+        height: 160px;
+        margin: 0;
+        padding: 4px;
+        border: 1px solid #D6D6D6;
+      }
+
+      #container #intro section article figure ul {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      #container #intro section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        line-height: 2em;
+        font-size: 14px;
+        gap: 15px;
+        color: darkcyan;
+
+      }
+
+      #container #homepage {
+        display: block;
+        width: 465px;
+        line-height: 1.8em;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        gap: 10px;
+        align-items: center;
+        background-color: #232323;
+
+
+
+      }
+
+      .imgcnt {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      .imgl {
+
+        width: 400px;
+        height: 160px;
+      }
+
+      article {
+
+        line-height: 1.8em;
+        font-size: large;
+      }
+
+      .imgcnt p {
+
+        text-align: justify;
+        margin-top: 0px;
+        font-size: large;
+      }
+
+
+      section.two_quarter.lastbox {
+        text-align: center;
+        margin: 0px;
+
+      }
+
+      .read {
+        width: 400px;
+
+        line-height: 1.8em;
+
+      }
+
+      .foot {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px;
+        width: 100%;
+        gap: 10px;
+        border: 1px solid gold;
+        font-size: large;
+        text-align: center;
+      }
+
+      #container #intro {
+        width: 470px;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+
+      }
+
+      #header,
+      #container,
+      #footer {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #container #intro section article figure ul li.last {
+        margin-right: 25px;
+
+      }
+
+      .oneq header {
+        font-size: large;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+      }
+
+      #container #homepage section article address,
+      #container #homepage section article time {
+        font-size: large;
+        font-style: normal;
+      }
+
+      #container #intro section article p {
+        font-size: large;
+        color: crimson;
+      }
+
+
+
     }
-</style>
+
+    @media screen and (min-width:501px) and (max-width:800px) {
+
+
+
+      body {
+        /* width: 800px;   */
+        margin: 0;
+
+      }
+
+      #header {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        width: 799px;
+        gap: 15px;
+        border: 1px solid blueviolet;
+        background-color: rgb(70, 6, 46);
+
+      }
+
+      #header #hgroup h1 {
+        padding-bottom: 10px;
+      }
+
+      #header #hgroup h2 {
+        font-size: 14px;
+        font-weight: lighter;
+      }
+
+      .headerflex {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-left: 5px;
+
+
+      }
+
+      #header form {
+        display: block;
+
+        margin: 20px 0;
+        padding: 0;
+        margin-right: 5px;
+
+      }
+
+      #header #hgroup h1 {
+        font-size: 35px;
+      }
+
+      #header form #sf_submit {
+        display: block;
+
+        width: 56px;
+        font-size: 10px;
+      }
+
+      #header nav {
+        display: block;
+
+        border: 1px solid lightblue;
+        margin: 0;
+        padding: 20px 0;
+        color: #C0BAB6;
+        background-color: #232323;
+        clear: both;
+      }
+
+      #header nav ul {
+
+        justify-content: space-between;
+      }
+
+      #container {
+        width: 720px;
+
+
+      }
+
+      #container #slider figure {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+
+      }
+
+      #container #slider figure img {
+
+        width: 700px;
+        height: 200px;
+
+        border: 1px solid blue;
+
+      }
+
+      #container #slider figure h2 {
+        font-size: 30px;
+        font-weight: normal;
+        font-style: italic;
+        text-transform: none;
+      }
+
+      #container #intro section article figure ul {
+        display: block;
+        width: 700px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #container #intro section article figure ul li {
+
+        margin: 0 0px 10px 0;
+      }
+
+      #container #slider figure figcaption {
+        display: block;
+
+        width: 700px;
+
+        height: 170px;
+        padding: 0px;
+        overflow: hidden;
+        color: #3e3333;
+        background-color: #b2cf0e;
+        line-height: 2em;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      #container #intro section {
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+
+        line-height: 2em;
+        font-size: 15px;
+        gap: 15px;
+        color: darkcyan;
+
+      }
+
+      .two_quarter {
+        width: 700px;
+
+      }
+
+      #container #homepage {
+        display: block;
+        width: 700px;
+        line-height: 1.8em;
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+        align-items: center;
+        background-color: rgb(17, 4, 64);
+
+      }
+
+      .imgcnt {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* height:200px; */
+      }
+
+      article {
+        line-height: 1.8em;
+        font-size: 14px;
+
+      }
+
+      section.two_quarter.lastbox {
+        text-align: center;
+        margin: 0px;
+
+      }
+
+      .read {
+        width: 80%;
+
+        line-height: 1.8em;
+        font-size: 15px;
+
+      }
+
+      .foot {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px;
+        width: 100%;
+        gap: 10px;
+        border: 1px solid gold;
+        font-size: 15px;
+
+        text-align: center;
+      }
+
+      #container #intro {
+        width: 100%;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+
+      }
+
+      div.wrapper {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+
+      /* #header ,
+    #footer {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    }    */
+      .oneq header {
+        font-size: 14px;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 15px;
+      }
+
+      #container #homepage section article address,
+      #container #homepage section article time {
+        font-size: 15px;
+        font-style: normal;
+      }
+
+      #container #intro section article figure ul li img {
+        width: 200px;
+        height: 150px;
+        margin: 0;
+        padding: 4px;
+        border: 1px solid #D6D6D6;
+      }
+
+      .imgl {
+
+        width: 80%;
+        height: 150px;
+      }
+
+      .row2 {
+        width: 90%;
+
+      }
+
+      .row1,
+      .row3 {
+        width: 100%;
+      }
+
+      #container #intro section article p {
+        font-size: 15px;
+        color: rgb(106, 5, 69);
+      }
+    }
+  </style>
+
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
 
 <body>
-    <div class="container">
-        <div class="row1">
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div class="headerflex">
+        <div id="hgroup">
+          <h1><a href="#">MEESHO</a></h1>
+          <h2>WELCOME TO OUR NEW CLOTHING</h2>
+        </div>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Search:</legend>
+            <input type="text" value="Search Our Website&hellip;"
+              onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+            <input type="submit" id="sf_submit" value="submit">
+          </fieldset>
+        </form>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">GROCERIES</a></li>
+          <li><a href="#">FASHION</a></li>
+          <li><a href="#">WESTERN WEAR</a></li>
+          <li><a href="#">ELECTRONICS</a></li>
+          <li class="last"><a href="#">JEWELLERY</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <!-- content -->
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- Slider -->
+      <section id="slider" class="clear">
+        <figure><img src="../COUNTERS/hQftJsyYYmvQbxGpnDFn7j.jpg" alt="" width="630px" height="300px">
+          <figcaption>
+            <h2>Eu justo augue estas</h2>
+            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis
+              curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat adipiscinia pellentum leo.
+            </p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- main content -->
+      <div id="intro">
+        <section class="clear">
+          <!-- article 1 -->
+          <article class="two_quarter">
+            <h2>Lorum ipsum dolor</h2>
+            <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/"
+                title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our
+              <a href="https://www.os-templates.com/template-terms">website template licence</a>.
+            </p>
+            <p>You can use and modify the template for both personal and commercial use. You must keep all copyright
+              information and credit links in the template and associated files. For more HTML5 templates visit <a
+                href="https://www.os-templates.com/">free website templates</a>.</p>
+          </article>
+          <!-- article 2 -->
+          <article class="two_quarter lastbox">
+            <figure>
+              <ul class="clear">
+                <li><a href="#"><img src="../COUNTERS/Flipkart-Introduces-AI-Powered.jpg" width="130" height="130"
+                      alt=""></a></li>
+                <li><a href="#"><img src="../COUNTERS/Flipkart-Introduces-AI-Powered.jpg" width="130" height="130"
+                      alt=""></a></li>
+                <li class="last"><a href="#"><img src="../COUNTERS/Flipkart-Introduces-AI-Powered.jpg" width="130"
+                      height="130" alt=""></a>
+                </li>
+              </ul>
+              <figcaption><a href="#">View Our Image Gallery Here &raquo;</a></figcaption>
+            </figure>
+          </article>
+        </section>
+      </div>
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <!-- ########################################################################################## -->
+      <div id="homepage" class="last clear">
+        <section class="one_quarter">
+          <h2 class="title">From The Blog</h2>
+          <article>
             <header>
-                <div class="AJIO">
-                    <h2> FLIPKART</h2>
-                    <p>Welcome to Flipkart</p>
-                </div>
-                <nav>
-                    <ul>
-                        <li>Fashion</li>
-                        <li>Electronics</li>
-                        <li>shoes</li>
-                        <li>sandels</li>
-                        <li>shirts</li>
-                    </ul>
-                </nav>
+              <h2>Post Title</h2>
+              <address>
+                <a href="#">Admin</a>, domainname.com
+              </address>
+              <time datetime="2000-04-06">Friday, 6<sup>th</sup> April 2000</time>
             </header>
-        </div>
-        <div class="row2">
-            <img src="../COUNTERS/hQftJsyYYmvQbxGpnDFn7j.jpg" alt="" />
-        </div>
-        <div class="row3">
-            <div class="Ajio">
-                <figure>
-                    <img src="../COUNTERS/Flipkart.jpg" alt="" />
-                </figure>
-                <figcaption>
-                    <i>Product Details</i>
-                    <p>A high-fashion editorial where we feature the internet’s coolest cats</p>
-                    <p> Flipkart Details><a href="#">Readmore</a></p>
-                </figcaption>
+            <p>Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.</p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </article>
+        </section>
+        <section class="one_quarter">
+          <h2 class="title">Quick Links</h2>
+          <nav>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor sit</a></li>
+              <li><a href="#">Amet consectetur</a></li>
+              <li><a href="#">Praesent vel sem id</a></li>
+              <li><a href="#">Curabitur hendrerit est</a></li>
+              <li class="last"><a href="#">Sed a nulla urna</a></li>
+            </ul>
+          </nav>
+        </section>
+        <section class="two_quarter lastbox">
+          <h2 class="title">About US</h2>
+          <div class="imgcnt">
+            <img class="imgl" src="../COUNTERS/Flipkart.jpg" width="130" height="130" alt="">
+            <div class="read">
+              <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante
+                quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat
+                imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit.
+              </p>
+              <footer class="more"><a href="#">Read More &raquo;</a></footer>
             </div>
-            <div class="Ajio">
-                <figure>
-                    <img src="../COUNTERS/Flipkart.jpg" alt="" />
-                </figure>
-                <figcaption>
-                    <i>Product Details</i>
-                    <p>A high-fashion editorial where we feature the internet’s coolest cats</p>
-                    <p> Flipkart Details><a href="#">Readmore</a></p>
-                </figcaption>
-            </div>
-            <div class="Ajio">
-                <figure>
-                    <img src="../COUNTERS/Flipkart.jpg" alt="" />
-                </figure>
-                <figcaption>
-                    <i>Product Details</i>
-                    <p>A high-fashion editorial where we feature the internet’s coolest cats</p>
-                    <p> Flipkart Details><a href="#">Readmore</a></p>
-                </figcaption>
-            </div>
-        </div>
-
-        <div class="row4">
-            <article>
-                <h3> Wecome to AJIO</h3>
-                <p>orders per month in March 2020.[10] It saw big growth during 2021 and 2022.[11] Meesho's monthly
-                    transacting user count rose 26 times during 2020–2022.</p>
-                <p>orders per month in March 2020.[10] It saw big growth during 2021 and 2022.[11] Meesho's monthly
-                    transacting user count rose 26 times during 2020–2022. Globally, Meesho mobile app was among the top
-                    most downloaded apps in 2021.[12] In 2022, Meesho had about 120 million monthly users and about 910
-                    million orders were made through the platfor</p>
-                <p>Flipkart Models ><a href="#">Readmore</a></p>
-            </article>
-            <aside>
-                <img src="../COUNTERS/Flipkart-Introduces-AI-Powered.jpg" alt="" />
-            </aside>
-        </div>
-        <div class="parentsection">
-            <div class="sub section">
-                <section>
-                    <i>Link Block</i>
-                    <ul>
-                        <li><a href="#">Open New Products</a></li>
-                        <li><a href="#">open shirt section</a></li>
-                        <li><a href="#">open foot section</a></li>
-                        <li><a href="#">open homley products</a></li>
-                        <li><a href="#">open groceres</a></li>
-                </section>
-                <section>
-                    <i>Link Block</i>
-                    <ul>
-                        <li><a href="#">Open New Products</a></li>
-                        <li><a href="#">open shirt section</a></li>
-                        <li><a href="#">open foot section</a></li>
-                        <li><a href="#">open homley products</a></li>
-                        <li><a href="#">open groceres</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <i>Link Block</i>
-                    <ul>
-                        <li><a href="#">Open New Products</a></li>
-                        <li><a href="#">open shirt section</a></li>
-                        <li><a href="#">open foot section</a></li>
-                        <li><a href="#">open homley products</a></li>
-                        <li><a href="#">open groceres</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <i>Link Block</i>
-                    <ul>
-                        <li><a href="#">Open New Products</a></li>
-                        <li><a href="#">open shirt section</a></li>
-                        <li><a href="#">open foot section</a></li>
-                        <li><a href="#">open homley products</a></li>
-                        <li><a href="#">open groceres</a></li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-        <div class="row5-footer">
-            <div class="child1">
-                <h4>Copy rights@2012-all rights reserved-Ajio</h4>
-            </div>
-            <div class="child2">
-                <p>Template by os Template</p>
-            </div>
-        </div>
+          </div>
+        </section>
+      </div>
+      <!-- / content body -->
     </div>
+  </div>
+  <!-- Footer -->
+  <div class="wrapper row3">
+    <div class="foot">
+      <div class="num1"> Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></div>
+      <div class="num2">Template by <a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates">OS Templates</a></div>
+    </div>
+  </div>
 </body>
 
 </html>

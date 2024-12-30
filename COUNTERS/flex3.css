@@ -81,7 +81,7 @@ body {
 }
 
 @-webkit-keyframes ani{
-    0%{
+    2%{
         transform :calc(1);
         -webkit-transform: calc(0);
      }

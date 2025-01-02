@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOTSRAP LAYOUT</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    .container {
+      border: 2px solid black;
+      background-color: rgb(146, 31, 133);
+    }
+    .row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .row3 img {
+      height: 150px;
+    }
+    .row2 img {
+      width: 100%;
+      height: 300px;
+      border: 2px double black;
+    }
+    .row4 {
+      justify-content: space-between;
+    }
+    .row4 img {
+      border: 2px solid black;
+    }
+    .row5 {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row m-3 p-3 bg-info text-black border-2 text-center ">
+          <div class="col">
+            <h1>basic88</h1>
+            <p>free html5 website template</p>
+          </div>
+          <div class="col-sm-6">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">best cars</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                  aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                  <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Link
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" aria-disabled="true">Link</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="row2 m-4 p-4 text-black border-2 text-center ">
+          <div class="col">
+            <img src="../download (9).jpg" alt="">
+          </div>
+        </div>
+        <div class="row3 m-4 p-4  text-black border-2 text-center  ">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="../download (10).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                  <button>#readmore</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../download (11).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                  <button>#read more</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../download (9).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                  <button>#readmore</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+         <div class="row4 d-flex bg-info p-2 border-2 bg-body-tertiary justify-content:space-between"> 
+         <div class="col">
+                     <article>
+                      <h3>Indonectetus facilis leo nibh</h3>
+                      <p>
+    @@ -148,79 +160,104 @@ <h3>Indonectetus facilis leo nibh</h3>
+                    <img src="../download (11).jpg" alt="" width="410px" height="240px">
+                  </aside> 
+                </div>
+            </div>
+            <!-- <div class="row m-0 pt-3 border-1 border-dark text-center text-white d-flex">
+              <div class="card mb-3 p-0">
+                <div class="row g-0 flex-row-reverse">
+                  <div class="col6">
+                    <img src="../images (5).jpg" alt="">
+                  </div>
+                  <div class="col6">
+                    <div class="card-body">
+                      <h5 class="card-title">card-title</h5>
+                      <p class="card-text"> A 2014 study in the Journal of the National Cancer Institute found that the more
+                        coffee participants drank, the less likely they were to develop malignant
+                        melanoma over a 10 year period. </p>
+                        <p class="card-text"><small class="text-body-secondary">last updated 3 minutes ago</small></p>
+                    </div>
+                  </div>
+                </div> -->
+              <!-- </div>
+            </div> -->
+            <div class="row5 d-flex m-2 p-3">
+              <div class="col">
+                <h3>list block</h3>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>list block</h3>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>list block</h3>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>list block</h3>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row6 bg-info background-color:pink m-3 p-3  text-center ">
+              <div class="col">
+                <p>
+                  copyright 2018- all rights reserved-domain name
+                </p>
+                <div class="col">
+                 <p>
+                      copyright 2018- all rights reserved-domain name
+                  
+                    </p>
+                  
+                </div>
+              </div>
+            </div>
+        </div>
+      </body>
+      </html>
+      

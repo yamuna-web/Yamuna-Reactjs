@@ -110,10 +110,14 @@
   .row4 {
     width: 900px;
     margin: auto;
-    overflow: auto;
+    /* overflow: auto; */
     border-bottom: 1px solid;
     color: gray;
     display: flex;
+}
+.row4 img {
+  width: 227px;
+  height: 141px;
 }
 .parent1 {
   width: 290px;
@@ -160,7 +164,7 @@ p.parent2 {
 .child1cap{
   width: 390px;
   /* float: right; */
-  margin-left: 10px;
+  margin-left: 34px;
 }
 .child1cap p{
   font-size: 15px;
@@ -191,6 +195,7 @@ aside{
 aside ul{
 list-style: none;
 padding: 0;
+line-height: 32px;
 }
 aside ul li{
   border-bottom: 1px solid lightgray;

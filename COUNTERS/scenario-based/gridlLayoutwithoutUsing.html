@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create a responsive grid layout without using any library</title>
+    <!-- Description: CSS Grid enables responsive layouts with minimal code, avoiding
+the need for third-party libraries.
+○ Using CSS Grid:
+.grid-container {
+○ display: grid;
+○ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+○ gap: 10px;
+○ }
+○ <div class="grid-container">
+○ <div>Item 1</div>
+○ <div>Item 2</div>
+○ <div>Item 3</div>
+○ </div> -->
+<style>
+    .grid-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 10px;
+ }
+</style>
+</head>
+<body>
+    <div class="grid-container">
+         <div>Item 1</div>
+         <div>Item 2</div>
+         <div>Item 3</div>
+         </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <!-- z-index properties are used in css. it control the vertical stacking order of 
+     elements -->
+     <!-- it works in positions,relarives,absolute,fixed and sticky -->
+    <style>
+        .parent{
+            position: relative;
+            z-index: 1;
+            width: 500px;
+        
+        }
+        .child1{
+            position: absolute;
+            z-index: 2;
+            color: crimson;
+        }
+        .child2{
+            position: absolute;
+            z-index: 1;
+            border: 5px solid black;
+          
+        }
+        img {
+    width: 350px;
+    height: 300px;
+}
+       
+
+    </style>
+</head>
+<body>
+ <div class="parent">
+    <div class="child1">
+        <h1> pawankalyan</h1>
+    </div>
+    <div class="child2">
+        <img src="../fruit-exotic-pineapple-apple-wallpaper.jpg" alt="">
+    </div>
+ </div>
+
+</div>
+</body>
+</html>

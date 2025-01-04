@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display properties</title>
+    <!-- disinline:- 1.it taking the as much as width as necessary
+                     2.it takes place horizontally
+                     3.if you canot applay width and height -->
+                      
+    <!-- disblock:- 1.it takes width as much of available width
+                    2.if you can applay width and height
+                    3.it occupies the vertically top of the others -->
+    <!-- disinlineblock:-1.These are the unlike inline elements you can
+                            set the width and height those elements -->
+    <style>
+        #disinline .a{
+            display: inline;
+            background-color: rgb(82, 22, 155);
+        }
+        #disblock .b{
+            display: block;
+            width: 100px;
+            height: 20px;
+            background-color: aqua;
+        }
+        #disinlineblock .c{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+        }
+         
+    </style>
+</head>
+<body>
+   <h2>display inline</h2>
+   <p id="disinline"> Andhra Pradesh is a <span class="a">state</span><span class="a">state </span><span class="a">in the</span> southern coastal region of India.
+    It is the seventh-largest state and the tenth-most populous in the
+     country.</p>
+     <h2>disblock</h2>
+     <p id="disblock">Andhra Pradesh is a <span class="b">state</span><span class="b">state </span><span class="b">in the</span> southern coastal region of India.
+        It is the seventh-largest state and the tenth-most populous in the
+         country.</p>
+         <h3>
+            display inline block
+         </h3>
+         <p id="disinlineblock">Andhra Pradesh is a <span class="c">state</span><span class="c">state </span><span class="c">in the</span> southern coastal region of India.
+            It is the seventh-largest state and the tenth-most populous in the
+             country.</p>
+</body>
+</html>

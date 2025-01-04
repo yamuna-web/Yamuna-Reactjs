@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid and flexbox</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial,sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: "header header " "sidebar main" "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+        .header{
+            grid-area: header;
+            background: red;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background: aqua;
+            padding: 20px;
+        }
+        .main{
+            grid-area: main;
+            background: blue;
+            padding: 20px;
+        }
+        .footer{
+            grid-area: footer;
+            background: greenyellow;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    1.css grid
+    css grid is a two dimensional layout system that allows you work both rows and colums
+    for example if you want to create a full webpage layout with headers,footers ,sidebar and maincontent areas,
+    css grid is a best choice.
+    2.flexbox
+    flex-box is a one dimensional layout system  that is designed for arranding items in either rows or columns
+    it is used for simple layouts
+    
+    
+    <div class="container">
+        <div class="header">header</div>
+        <div class="sidebar">sidebar</div>
+        <div class="main"> main</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

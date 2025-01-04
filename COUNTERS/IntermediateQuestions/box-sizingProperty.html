@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+</head>
+<body>
+    the box-sizing property in css affect the width and height of an elements are calculated
+    <br>
+    there are two main values
+    1.box-sizing:content- box
+    2.box-sizing:border-box
+    <br><br>
+    1.content-box
+    this element means that padding and border are added to the width and height
+    <br>
+    width and height only apply to the content,padding ,border applied total size
+    total width=width+padding+border
+    total width+200px+(20px*2)+(5px*2)
+    =200px+40px+10px
+    =250px
+    <br><br>
+    2.border-box
+    border box the width and height you set for an element include the content,padding,border
+    <br>
+    width and height include content ,padding,border,the total size remains as specifiied
+    width:200px,padding:20px,margin:5px
+    total width=(width(which includes padding and border))
+    total width=200px(the padding and border subtracted from the content area)
+</body>
+</html>

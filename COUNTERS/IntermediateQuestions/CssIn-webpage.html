@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>implement css in a webpage</title>
+    
+    <style>
+        p{
+            background: red;
+            color: black;
+            font-size: 20px;
+        }
+        .container{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: aqua;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    background: rgb(162, 12, 107);
+    margin: 10px;
+    text-align: center;
+    color: rgb(219, 134, 36);
+    font-size: 24px;
+}
+    </style>
+</head>
+<body>
+    <!-- there are 3 ways to implement css in a webpage
+    1 inline css
+    2 internal css
+    3 external css
+generally using extenal css is best it is easier to manage and update styles
+in a seperate file it is reusability -->
+<!-- <h1>inline css</h1>
+<div style="color:black;font-size: 50px;">pawankalyan</div> -->
+<!-- <h1>internal css</h1>
+<p>  Konidala Pawan Kalyan is an Indian politician,actor and philanthropist  serving as the 10th Deputy Chief
+    Minister of Andhra Pradesh since June 2024</p> -->
+    <h1>external css</h1>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>

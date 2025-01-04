@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox ,role of justiy content align-items and flex-directions</title>
+    <!-- flex box is used as the layout model in css that makes easier to 
+     design responsive web layouts.it helps you aline and distribute space among items
+     in a container, even when their sizes are unknow or dynamic -->
+
+     <!-- 1.justify-content:- this property is all about alignment along 
+      the main axis. it lets you control how the space is distributed between
+      items. you can set it to values like 
+            flex-start,flex-end,center,space-between and space-around-->
+             
+    <!-- 2.Aline-items:- this one handles alignment along the cross axis.
+     it helps you position items vertically (or horizontally, depending on the flex direction).
+     you can use these values.like
+     flex-start,flex-end,center  -->
+
+     <!-- 3.flex-direcion:- this property are difines the direction 
+      in which the flex items are placed in the flex center 
+      row,row-reverse,column,column-reverse -->
+      <style>
+        * {
+    margin: 2px;
+  }
+  body {
+    font-size: 25px;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-header {
+    background-color: blue;
+    padding: 3rem;
+    padding-bottom: 3rem;
+    justify-content: center;
+  }
+  .flexMain {
+    display: flex;
+    flex: 1;
+  }
+  .flex-nav {
+    background-color: green;
+    padding-top: 3rem;
+    flex: 1 1 5rem;
+  }
+  .flex-article {
+    background-color: purple;
+    padding-top: 3rem;
+    flex: 1 1 5rem;
+  }
+  .flex-aside {
+    background-color: brown;
+    padding-top: 3rem;
+    flex: 1 1 5rem;
+  }
+  
+  .flex-footer {
+    background-color: red;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+      </style>
+</head>
+<body>
+    <header class="flex-header">Header</header>
+    <main class="flexMain">
+      <nav class="flex-nav">SideNavBar</nav>
+      <article class="flex-article">Content</article>
+      <aside class="flex-aside">Aside</aside>
+    </main>
+    <footer class="flex-footer">Footer</footer>
+</body>
+</html>

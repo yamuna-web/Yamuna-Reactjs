@@ -83,7 +83,7 @@ figure {
   padding: 0;
   margin: 0;
 }
-ffigure img {
+figure img {
   width: 235px;
   height: 150px;
   border: 1px solid;

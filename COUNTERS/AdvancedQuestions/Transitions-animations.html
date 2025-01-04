@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transitions and animations</title>
+    <style>
+       button {
+    background: red;
+    color: white;
+    transition: 0.5 ease;
+}
+button:hover{
+    background: greenyellow;
+    color: white;
+}
+div {
+        background-color: rgb(255, 0, 187);
+        width: 400px;
+        height: 300px;
+        animation-name: circle;
+        animation-duration: 6s;
+        position: relative;
+        border: 5px double;
+        
+      }
+      @keyframes circle{
+
+   
+        10% {
+          background-color:yellowgreen;
+          left: 0px;
+          top: 0px;
+        }
+        20% {
+          background-color:red;
+          left: 200px;
+          top: 0px;
+        }
+    }
+    </style>
+</head>
+<body>
+    1.css transitions
+    transition allow you to change property values smothly.
+    <br>
+
+  <button> submit</button>
+  <br>
+
+
+
+  2.animations
+  animations allow for more complex sequences of changes to properties,and they can run without user interaction
+
+  <div></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed v/s sticky</title>
+    <style>
+        .container{
+            height: 1000px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            display: inline-block;
+            margin: 5px;
+            padding: 4px;
+            border: 2px solid black;
+        }
+        #box2{
+            position: fixed;
+            top: 30px;
+            left: 20px;
+           
+        }
+        #box3{
+            position: sticky;
+            top: 3px;
+        }
+    </style>
+</head>
+<body>
+    sticky: behaves like  a normal element until a scroll position it reached ,then it sticks to a specified position
+    <br>
+    fixed:always stays in the same position relative to the airport,regardless of scrolling
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>

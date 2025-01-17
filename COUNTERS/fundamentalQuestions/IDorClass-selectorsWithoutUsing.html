@@ -4,60 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Selector</title>
-    <style>
-      /* Body */
-      body {
-        background-color: blueviolet;
-      }
-      /* * Global Selector  */
-      * {
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
-      }
-      /* 1. ID Selector # */
-      #firstLI {
-        color: red;
-      }
-      /* 2.Class Selector . */
-      .links {
-        background-color: aqua;
-      }
-      p,
-      h4,
-      h3 {
-        border: 1px solid blue;
-      }
-    </style>
+    <!-- 1.element selector
+         2.nth-child selector
+         3.attribute selector
+         4.general sibling selector
+         5.global selector
+         6.inline styles -->
+         <style>
+          li:nth-child(2){
+            color: blue;
+          }
+          p{
+            color: brown;
+          }
+         </style>
+    
   </head>
   <body>
-    <!-- CSS Selector -->
-    <!-- 1. ID Selector -->
-    <!-- 2.Class Selector -->
-    <!-- 3. Grouping Selector -->
-    <!-- * Global Selector -->
-
-    <!-- UL unorder list -->
-    <h3>unorder list</h3>
-    <ul>
-      <!-- LI List Items -->
-      <li id="firstLI">Link1</li>
-      <li>Link1</li>
-      <li class="links">Link1</li>
-      <li class="links">Link1</li>
-      <li>Link1</li>
-      <li>Link1</li>
-    </ul>
-    <!-- OL Order List -->
-    <h3>Order List</h3>
-    <ol>
-      <li>Link1</li>
-      <li>Link1</li>
-      <li>Link1</li>
-      <li>Link1</li>
-      <li>Link1</li>
-      <li>Link1</li>
-    </ol>
-    <p>Link1Link1Link1Link1Link1Link1Link1</p>
-    <h4>Iam From Links</h4>
+    <!-- 1. element selector -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus pariatur recusandae
+       voluptatum, modi nostrum asperiores dolorum facere velit quia nisi officia, nesciunt 
+       perferendis quis? Sapiente odit officiis consectetur quod omnis.
+    </p>
+    <li>yamuna</li>
+    <li>yamuna</li>
+    <li>yamuna</li>
+    <li>yamuna</li>
+    <li>yamuna</li>
   </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch operators "+,-,*,/</title>
+</head>
+
+<body>
+    <script>
+        function calculate() {
+            var num1 = Number(prompt("enter 1st number"));
+            var num2= Number(prompt("enter 2nd number"));
+            var operator = prompt("enter mode of calculation");
+            switch (operator) {
+                case "+":
+                    document.write(num1 + num2)
+                    break;
+                case "-":
+                    document.write(num1 - num2)
+                    break;
+                case "*":
+                    document.write(num1 * num2)
+                    break;
+                case "/":
+                    document.write(num1 / num2)
+                    break;
+
+            }
+
+
+        }
+        calculate();
+    </script>
+
+</body>
+
+</html>

@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function calculate(){
-            var num1=Number(prompt("enter 1st number"));   //number methods converts user input as number 
-            var num2=Number(prompt("enter second value"));
-            var total= num1 % num2;
-            document.write(total)
+        function calculate() {
+            var num1 = Number(prompt("enter 1st number"));
+            var num2 = Number(prompt("enter 2nd number"));
+            var operator = prompt("enter mode of calculation");
 
+            if (operator == "Add") {
+                var total = num1 + num2;
+                document.write(total);
+            }
+             else if (operator == "Subtract") {
+                var total = num1 - num2;
+                document.write(total);
+            } 
+            else if (operator == "Multiply") {
+                var total = num1 * num2;
+                document.write(total);
+            }
+            else {
+                var total = num1 / num2;
+                document.write(total);
+            }
         }
         calculate();
     </script>
 </body>
+
 </html>

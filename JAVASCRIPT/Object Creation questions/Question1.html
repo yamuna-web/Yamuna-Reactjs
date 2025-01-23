@@ -1,25 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Create an object to manage student enrollment.
-    </title>
+    <title>Document</title>
 </head>
+
 <body>
-    <!-- studentID
-name
-age
-gender
-coursesEnrolled
-enrollmentDate
-Methods:
-addStudent() - Adds a new student.
-removeStudent() - Removes a student.
-updateCourses() - Updates the courses a student is enrolled in.
- -->
-<script>
-    
+    <script>
+        //         Description: Create an object to manage student enrollment.
+        // Properties:
+        // studentID
+        // name
+        // age
+        // gender
+        // coursesEnrolled
+        // enrollmentDate
+        // Methods:
+        // addStudent() - Adds a new student.
+        // removeStudent() - Removes a student.
+        // updateCourses() - Updates the courses a student is enrolled in.
+
+        var student = {
+            studentID: 123,
+            name: "Bahavya",
+            age: 21,
+            gender: "female",
+            coursesEnrolled: ['Math', 'Science', 'History'],
+            enrollmentDate: '2025-01-22',
+            // place: "",  
+
+            addStudent: function () {
+                this.place = "Andhra";
+            },
+
+            removeStudent: function () {
+                delete this.studentID;
+            },
+
+            updateStudent: function () {
+                this.name = "Theju";
+            }
+        };
+
+        student.addStudent();
+        student.updateStudent();
+        student.removeStudent();
+
+        console.log(student);
+
+        //         /3. Recipe Book
+        // Description: Build an object to store and manage recipes.
+        // Properties:
+        // recipeName
+        // ingredients
+        // instructions
+        // prepTime
+        // servings
+        // difficultyLevel
+        // Methods:
+        // addRecipe() - Adds a new recipe.
+        // removeRecipe() - Removes a recipe.
+        // searchRecipe() - Finds recipes by ingredients.
+        var revcipy = {
+            recipeName: "magi",
+            ingredients: ["tomoto,onilon,oli"],
+            instructions: ["boil above items,cook"],
+            prepTime: "2mit",
+            servings: 5,
+            addRecipe: function () {
+                this.newResipy = "biriyani"
+            },
+            removeRecipe: function () {
+                delete this.servings
+            },
+            searchRecipe: function () { }
+        }
+        revcipy.addRecipe()
+        revcipy.removeRecipe()
+        revcipy.searchRecipe()
+        for (var a in revcipy) {
+            console.log(a)
+        }
 </script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

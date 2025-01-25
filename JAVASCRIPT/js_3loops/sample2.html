@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Prompt user to enter a number (1-7)
+        var i = prompt("Enter a number (1-7) for the day of the week:");
+
+        // Convert the input to a number
+        i = parseInt(i);
+
+        // Use a switch statement to display the corresponding day
+        switch (i) {
+            case 1:
+                document.write("Today is Sunday");
+                break;
+            case 2:
+                document.write("Today is Monday");
+                break;
+            case 3:
+                document.write("Today is Tuesday");
+                break;
+            case 4:
+                document.write("Today is Wednesday");
+                break;
+            case 5:
+                document.write("Today is Thursday");
+                break;
+            case 6:
+                document.write("Today is Friday");
+                break;
+            case 7:
+                document.write("Today is Saturday");
+                break;
+            default:
+                document.write("Invalid input. Please enter a number between 1 and 7.");
+        }
+    </script>
+</body>
+</html>

@@ -83,7 +83,7 @@
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
         </div>
         <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email">Email Address </label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
@@ -92,7 +92,7 @@
         </div>
         <div class="form-group">
             <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password"
+            <input type="password" id="confirmpassword" name="confirm-password" placeholder="Confirm your password"
                 required>
         </div>
         <button type="button" class="submit-btn" onclick="registeruser()">Register</button>
@@ -107,15 +107,68 @@
             <th>Confirm Password</th>
         </tr>
     </thead>
-    <tbody></tbody>
+    <tbody>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tbody>
 </table>
 <script>
-  var  allusers=[
+ var allusers = [];
 
-    ]
-    function displayUsers(){
-        
+function registeruser() {
+    // Get values from input fields
+    var fullName = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var confirmpassword = document.getElementById("confirmpassword").value;
+
+    // Validate that passwords match
+    if (password !== confirmpassword) {
+        alert("Passwords do not match!");
+        return;
     }
+
+    // Create user object
+    var user = {
+        fullName: fullName,
+        email: email,
+        password: password,  // Hide password for security
+        confirmpassword: confirmpassword
+        
+        // Hide confirm password
+    };
+
+    // Add user to array
+    allusers.push(user);
+
+    // Clear input fields
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("confirmpassword").value = "";
+
+    // Update table with new data
+    displayUsersInTable();
+}
+
+function displayUsersInTable() {
+    // Clear the table before updating
+    document.querySelector("tbody").innerHTML = "";
+
+    // Loop through all users and add them to the table
+    allusers.forEach(function (user) {
+        var myTr = document.createElement("tr");
+        for (var a in user) {
+            var myTd = document.createElement("td");
+            myTd.innerHTML = user[a];
+            myTr.appendChild(myTd);
+        }
+        document.querySelector("tbody").appendChild(myTr);
+    });
+}
+
 </script>
 </body>
 </html>

@@ -1,14 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-Commerce Signup</title>
-  <!-- <link rel="stylesheet" href="styles.css"> -->
-</head>
 <body>
   <div class="container">
+    <link rel="stylesheet" href="../create practice folder/styles.css">
     <!-- Form Column -->
     <div class="column">
       <h1>Create E-Commerce Account</h1>
@@ -31,6 +23,7 @@
         <button type="submit">Sign Up</button>
       </form>
     </div>
+    
     <!-- Table Column -->
     <div class="column">
       <h1>User Accounts</h1>
@@ -42,27 +35,62 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>John Doe</td>
-            <td>Buyer</td>
-            <td>
-              <button class="edit-btn">Edit</button>
-              <button class="delete-btn">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Jane Smith</td>
-            <td>Seller</td>
-            <td>
-              <button class="edit-btn">Edit</button>
-              <button class="delete-btn">Delete</button>
-            </td>
-          </tr>
+        <tbody id="userTableBody">
+          <!-- JavaScript will insert rows here -->
         </tbody>
       </table>
     </div>
   </div>
-  
+
+  <script>
+    // var UserAccounts = [
+    //   { name: "chenchaiah", AccountType: "Buyer" },
+    //   { name: "savithri", AccountType: "Seller" }
+    // ];
+
+    function displayUsers() {
+      var tableBody = document.getElementById("userTableBody");
+      tableBody.innerHTML = ""; // Clear previous data before inserting
+
+      UserAccounts.forEach(function (user, index) {
+        var myTr = document.createElement("tr");
+
+        // Add Name Column
+        var nameTd = document.createElement("td");
+        nameTd.innerText = user.name;
+        myTr.appendChild(nameTd);
+
+        // Add Account Type Column
+        var typeTd = document.createElement("td");
+        typeTd.innerText = user.AccountType;
+        myTr.appendChild(typeTd);
+
+        // Add Action Buttons
+        var actionTd = document.createElement("td");
+        var editButton = document.createElement("button");
+        editButton.innerText = "Edit";
+        editButton.className = "edit-btn";
+        editButton.onclick = function () {
+          
+        };
+
+        var deleteButton = document.createElement("button");
+        deleteButton.innerText = "Delete";
+        deleteButton.className = "delete-btn";
+        deleteButton.onclick = function () {
+          UserAccounts.splice(index, 1);
+          displayUsers(); // Refresh the table after deleting
+        };
+
+        actionTd.appendChild(editButton);
+        actionTd.appendChild(deleteButton);
+        myTr.appendChild(actionTd);
+
+        // Append row to table body
+        tableBody.appendChild(myTr);
+      });
+    }
+
+    displayUsers();
+  </script>
 </body>
-</html>

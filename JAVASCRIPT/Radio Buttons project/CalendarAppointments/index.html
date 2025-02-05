@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,18 +68,23 @@
             font-weight: bold;
         }
 
-        input, select, textarea, button {
+        input,
+        select,
+        textarea,
+        button {
             padding: 8px;
             font-size: 16px;
         }
 
-        .radio-group, .checkbox-group {
+        .radio-group,
+        .checkbox-group {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        .radio-group input, .checkbox-group input {
+        .radio-group input,
+        .checkbox-group input {
             margin-right: 5px;
         }
 
@@ -106,7 +112,8 @@
             margin-top: 10px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
@@ -147,12 +154,15 @@
             .content {
                 flex-direction: column;
             }
-            .form-container, .appointment-container {
+
+            .form-container,
+            .appointment-container {
                 flex: 100%;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -195,23 +205,24 @@
 
                     <label>Participants:</label>
                     <div class="checkbox-group">
-                        <input type="checkbox" id="alice" value="Alice">
+                        <input type="checkbox" id="alice" name="participants" value="Alice">
                         <label for="alice">Alice</label>
 
-                        <input type="checkbox" id="bob" value="Bob">
+                        <input type="checkbox" id="bob" value="Bob" name="participants">
                         <label for="bob">Bob</label>
 
-                        <input type="checkbox" id="charlie" value="Charlie">
+                        <input type="checkbox" id="charlie" value="Charlie" name="participants">
                         <label for="charlie">Charlie</label>
 
-                        <input type="checkbox" id="david" value="David">
+                        <input type="checkbox" id="david" value="David" name="participants">
                         <label for="david">David</label>
 
-                        <input type="checkbox" id="emma" value="Emma">
+                        <input type="checkbox" id="emma" value="Emma" name="participants">
                         <label for="emma">Emma</label>
                     </div>
 
-                    <button type="submit">Add Appointment</button>
+                    <button type="button" onclick="registeruser()" id="crtbtn">Join Now</button>
+                    <button type="button" onclick="update()" id="updbtn" style="display:none">Update</button>
                 </form>
             </div>
 
@@ -225,13 +236,16 @@
                             <th>Date</th>
                             <th>Time</th>
                             <th>Location</th>
-                            <th>Category</th>
+                            <th>description</th>
+                            <th>Event Category</th>
                             <th>Participants</th>
-                            <th>Actions</th>
+                            <th>Delete</th>
+                            <th>Edit</th>
+
                         </tr>
                     </thead>
                     <tbody id="appointment-list">
-                        <tr>
+                        <!-- <tr>
                             <td>Team Meeting</td>
                             <td>2024-02-20</td>
                             <td>10:00 AM</td>
@@ -266,13 +280,175 @@
                                 <button class="edit">Edit</button>
                                 <button class="delete">Delete</button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
         </div>
 
     </div>
+    <script>
+        var allUsers = []
+
+        function registeruser() {
+
+            var eventName = document.getElementById("eventName").value
+            var date = document.getElementById("date").value
+            var time = document.getElementById("time").value
+            var location = document.getElementById("location").value
+            var description = document.getElementById("description").value
+
+            var user = {
+                eventName,
+                date,
+                time,
+                location,
+                description,
+                category: [],
+                participants: []
+
+            }
+            //radiobuttons
+            var radio = document.getElementsByName("category")
+
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+                    user.category.push(radio[i].value)
+                }
+                radio[i].checked = false;
+            }
+            //checkboxes
+            var checkbox = document.getElementsByName("participants")
+            for (i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked == true) {
+                    user.participants.push(checkbox[i].value)
+                }
+                checkbox[i].checked = false
+            }
+
+            allUsers.push(user)
+            displayUsers()
+            document.getElementById("eventName").value = ""
+            document.getElementById("date").value = ""
+            document.getElementById("time").value = ""
+            document.getElementById("location").value = ""
+            document.getElementById("description").value = ""
+
+        }
+
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = ""
+            allUsers.forEach(function (user, index) {
+                var tr = document.createElement("tr");
+                for (a in user) {
+                    var td = document.createElement("td");
+                    td.innerHTML = user[a]
+                    tr.appendChild(td)
+                }
+
+                deltd = document.createElement("td")
+                delbtn = document.createElement("button")
+                delbtn.innerHTML = "delete"
+                delbtn.setAttribute("class", "delete-btn")
+                delbtn.setAttribute("onclick", "del(" + index + ")")
+                deltd.appendChild(delbtn)
+                tr.appendChild(deltd)
+
+                var edttd = document.createElement("td")
+                var edtbtn = document.createElement("button")
+                edtbtn.innerHTML = "Edit"
+                edtbtn.setAttribute("class", "edit-btn")
+                edtbtn.setAttribute("onclick", "edit(" + index + ")")
+                edttd.appendChild(edtbtn);
+                tr.appendChild(edttd);
+                document.querySelector("tbody").appendChild(tr)
+            })
+
+
+
+        }
+
+
+        function del(i) {
+            allUsers.splice(i, 1);
+            displayUsers();
+        }
+        var indx;
+        function edit(i) {
+            indx = i;
+            document.getElementById("eventName").value = allUsers[i].eventName
+            document.getElementById("date").value = allUsers[i].date
+            document.getElementById("time").value = allUsers[i].time
+            document.getElementById("location").value = allUsers[i].location
+            document.getElementById("description").value = allUsers[i].description
+
+            //radiobutton selection
+            var radio = document.getElementsByName("category")
+
+            for (j = 0; j < radio.length; j++) {
+
+                radio[j].checked = allUsers[i].category.includes(radio[j].value);
+            }
+                       
+            //checkbox selection
+            var checkbox = document.getElementsByName("participants")
+            for (var k = 0; k < checkbox.length; k++) {
+                checkbox[k].checked = allUsers[i].participants.includes(checkbox[k].value);
+            }
+
+            document.getElementById("crtbtn").style.display = "none"
+            document.getElementById("updbtn").style.display = "block"
+
+        }
+        function update() {
+            var eventName = document.getElementById("eventName").value
+            var date = document.getElementById("date").value
+            var time = document.getElementById("time").value
+            var location = document.getElementById("location").value
+            var description = document.getElementById("description").value
+
+            var radio = document.getElementsByName("category")
+
+           
+            var user = {
+                eventName,
+                date,
+                time,
+                location,
+                description,
+                category: [],
+                participants: []
+
+            }
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+                    user.category.push(radio[i].value)
+                }
+                radio[i].checked = false
+            }
+            //checkboxes
+            var checkbox = document.getElementsByName("participants")
+            for (i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked == true) {
+                    user.participants.push(checkbox[i].value)
+                }
+                checkbox[i].checked = false
+            }
+            allUsers[indx] = user
+
+            displayUsers();
+            document.getElementById("eventName").value = ""
+            document.getElementById("date").value = ""
+            document.getElementById("time").value = ""
+            document.getElementById("location").value = ""
+            document.getElementById("description").value = ""
+
+
+            document.getElementById("updbtn").style.display = "none"
+            document.getElementById("crtbtn").style.display = "block"
+        }
+    </script>
 
 </body>
+
 </html>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gym Membership Registration</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <!-- Form Column -->
@@ -19,21 +21,27 @@
         <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
         <label>Gender</label>
-        <div>
+        <select id="gender">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+
+        <!-- <div>
           <label><input type="radio" name="gender" value="male" required> Male</label><br>
           <label><input type="radio" name="gender" value="female" required> Female</label>
-        </div>
+        </div> -->
 
-        <label for="membership">Membership Type</label>
-        <select id="membership" name="membership" required>
+        <label>Membership Type</label>
+        <select id="membership" required>
           <option value="monthly">Monthly</option>
           <option value="quarterly">Quarterly</option>
           <option value="yearly">Yearly</option>
         </select>
 
-        <!-- <button type="submit">Join Now</button> -->
-        <button type="button" onclick="registerUser()" id="registerBtn">join now</button>
-        <button type="button" onclick="updateUser()" id="updateBtn">Update</button>
+        <!-- <button type="button" onclick="registerUser()">Join Now</button> -->
+        <button type="button" id="updateBtn" style="display: none;" onclick="updateUser()">Update</button>
+        <button type="button" id="registerBtn" style="display: block;" onclick="registerUser()">Join Now</button>
+
       </form>
     </div>
 
@@ -45,13 +53,18 @@
           <tr>
             <th>Name</th>
             <th>Email</th>
-            <th>Action</th>
+            <th>gender</th>
+            <th>membership</th>
+            <th>edit</th>
+            <th>delete</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- <tr>
             <td>John Doe</td>
             <td>john@example.com</td>
+            <td>Female</td>
+            <td>8</td>
             <td>
               <button class="edit-btn">Edit</button>
               <button class="delete-btn">Delete</button>
@@ -60,11 +73,16 @@
           <tr>
             <td>Jane Smith</td>
             <td>jane@example.com</td>
+            <td>Female</td>
+            <td>8</td>
             <td>
-              <button class="edit-btn">Edit</button>
-              <button class="delete-btn">Delete</button>
+              <button class="edit-btn" >Edit</button>
+              <button class="delete-btn" >Delete</button>
+               <button type="button" id="updateBtn" style="display: none;" onclick="updateUser()">Update</button>
+              <button type="button" id="registerBtn" style="display: block;" onclick="registerUser()">Join Now</button> 
+
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>
@@ -72,38 +90,53 @@
   <script>
     var allUsers = [
       // {
-      //   fullName: "Ram ",
-      //   email: "ram@gmail.com"
+      //   fullName: "bhavyasree",
+      //   email: "bhavyasree@gmail.com",
+      //   gender: "female",
+      //   membership: "monthly"
       // },
       // {
-      //   fullName: "kiran ",
-      //   email: "kiran@gmail.com"
+      //   fullName: "pawankalyan",
+      //   email: "pawan@gmail.com",
+      //   gender: "male",
+      //   membership: "monthly"
       // },
       // {
-      //   fullName: "Kumar ",
-      //   email: "kumar@gmail.com"
+      //   fullName: "ram ",
+      //   email: "ram@gmail.com",
+      //   gender: "male",
+      //   membership: "monthly"
       // }
     ]
     function registerUser() {
-      var fullName = document.getElementById("fullName").value;
+      var fullName = document.getElementById("name").value;
       var email = document.getElementById("email").value;
+      var gender = document.getElementById("gender").value;
+      var membership = document.getElementById("membership").value;
+
       // If Key & Values are same in An Object , We can mention Single Word Only 
       var user = {
         fullName,
-        email
+        email,
+        gender,
+        membership
       }
       allUsers.push(user)
 
-      document.getElementById("fullName").value = "";
-      document.getElementById("email").value = ""
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("gender").value = "";
+      document.getElementById("membership").value = "";
       displayUsersInTable()
+      console.log(allUsers)
     }
+
 
     function displayUsersInTable() {
       document.querySelector("tbody").innerHTML = "";
       allUsers.forEach(function (user, index) {
         var myTr = document.createElement("tr");
-        for (a in user) {
+        for (var a in user) {
           var myTd = document.createElement("td")
           myTd.innerHTML = user[a]
           myTr.appendChild(myTd)
@@ -140,30 +173,42 @@
     var gIndex;
     function editUser(i) {
       gIndex = i;
-      document.getElementById("fullName").value = allUsers[i].fullName;
-      document.getElementById("email").value = allUsers[i].email
+      document.getElementById("name").value = allUsers[i].fullName;
+      document.getElementById("email").value = allUsers[i].email;
+      document.getElementById("gender").value = allUsers[i].gender;
+      document.getElementById("membership").value = allUsers[i].membership;
 
       document.getElementById("updateBtn").style.display = "block"
       document.getElementById("registerBtn").style.display = "none"
+      console.log("update is calling")
     }
 
 
     function updateUser() {
-      var fullName = document.getElementById("fullName").value;
+      var fullName = document.getElementById("name").value;
       var email = document.getElementById("email").value;
+      var gender = document.getElementById("gender").value;
+      var membership = document.getElementById("membership").value;
       var user = {
         fullName,
-        email
+        email,
+        gender,
+        membership
       }
-         
+
       allUsers[gIndex] = user;
       displayUsersInTable();
-       document.getElementById("fullName").value = "";
-      document.getElementById("email").value = ""
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("gender").value = "";
+      document.getElementById("membership").value = "";
 
-       document.getElementById("updateBtn").style.display = "none"
+      document.getElementById("updateBtn").style.display = "none"
       document.getElementById("registerBtn").style.display = "block"
+
+
     }
-    </script>
+  </script>
 </body>
+
 </html>

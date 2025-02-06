@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Social Media Signup</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="form-container">
     <h1>Social Media Signup</h1>
@@ -22,60 +24,61 @@
       <button type="button" onclick="registeruser()">Sign Up</button>
       <table border="1">
         <thead>
-            <tr>
-                <th>UserName</th>
-                <th>Email</th>
-                <th>password</th>
-                
-              
-            </tr>
+          <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>password</th>
+
+
+          </tr>
         </thead>
         <tbody></tbody>
-    </table>
+      </table>
       <script>
-         var allUsers = [
-         
-         ]
- 
-         function displayUsers() {
-             document.querySelector("tbody").innerHTML = ""
-             allUsers.forEach(function (user){
-                 var myTr = document.createElement("tr");
-                 for(a in user){
-                     var myTd = document.createElement("td");
-                     myTd.innerHTML = user[a]
-                     myTr.appendChild(myTd)
-                 }
-                 document.querySelector("tbody").appendChild(myTr)
-             })
-             document.getElementById("username").value=""
-             document.getElementById("email").value=""
-             document.getElementById("password").value=""
-             
-             
-         }
- 
-         function registeruser() {
- 
-             var name = document.getElementById("username").value
-             var email = document.getElementById("email").value
-             var password = document.getElementById("password").value
-            
-             
- 
-             var user = {
-                 userName: name,
-                 mail: email,
-                 password: password,
-                 
-              
-             }
- 
-             allUsers.push(user)
-             displayUsers()
-         }
+        var allUsers = [
+
+        ]
+
+        function displayUsers() {
+          document.querySelector("tbody").innerHTML = ""
+          allUsers.forEach(function (user) {
+            var myTr = document.createElement("tr");
+            for (a in user) {
+              var myTd = document.createElement("td");
+              myTd.innerHTML = user[a]
+              myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr)
+          })
+          document.getElementById("username").value = ""
+          document.getElementById("email").value = ""
+          document.getElementById("password").value = ""
+
+
+        }
+
+        function registeruser() {
+
+          var name = document.getElementById("username").value
+          var email = document.getElementById("email").value
+          var password = document.getElementById("password").value
+
+
+
+          var user = {
+            userName: name,
+            mail: email,
+            password: password,
+
+
+          }
+
+          allUsers.push(user)
+          displayUsers()
+        }
       </script>
     </form>
   </div>
 </body>
+
 </html>

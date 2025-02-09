@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: rgb(245, 24, 24);
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Message Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="sender">Sender:</label>
+                <input type="text" id="sender" placeholder="Enter sender name" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="receiver">Receiver:</label>
+                <input type="text" id="receiver" placeholder="Enter receiver name" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Type your message..." required onkeyup="validateForm()"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="timestamp">Timestamp:</label>
+                <input type="datetime-local" id="timestamp"  placeholder="Type your message..." required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status"  placeholder="Type your message..." required onkeyup="validateForm()">
+                    <option value="Sent">Sent</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Read">Read</option>
+                </select>
+            </div>
+            <button type="button">Submit</button>
+        </form>
+    </div>
+<script>
+    function validateForm() {
+        var Message ={
+            sender:document.getElementById("sender").value,
+            receiver:document.getElementById("receiver").value,
+            message:document.getElementById("message").value,
+            timestamp:document.getElementById("timestamp").value,
+            status:document.getElementById("status").value,
+            
+        }
+
+        console.log(Message)
+
+        var isInvalid = false;
+        for(a in Message){
+            if(Message[a] == ""){
+                isInvalid = true;
+            }
+        }
+
+        if(isInvalid === true){
+            document.querySelector("button").setAttribute("disabled",true)
+        }else{
+            document.querySelector("button").removeAttribute("disabled",true)
+        }
+    }
+</script>
+</body>
+</html>

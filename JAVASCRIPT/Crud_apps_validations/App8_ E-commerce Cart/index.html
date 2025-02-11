@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { display: flex; gap: 10px; flex-wrap: wrap; }
+        input, select, button { padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #007bff; color: white; cursor: pointer; }
+        button:disabled {
+            background-color: rgb(245, 24, 24);
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Product Form</h2>
+    <form>
+        <input type="text" placeholder="Product Name" required onkeyup="validateForm()">
+        <input type="number" placeholder="Quantity" required onkeyup="validateForm()">
+        <input type="number" placeholder="Price ($)" required onkeyup="validateForm()">
+        <input type="number" placeholder="Discount (%)">
+        <select required onkeyup="validateForm()">
+            <option value="">Category</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Groceries</option>
+        </select>
+        <input type="number" placeholder="Total Price" readonly onkeyup="validateForm()">
+        <button type="button">Submit</button>
+    </form>
+<script>
+function validateForm(){
+        var Product ={
+            name:document.getElementById("name").value,
+            damage:document.getElementById("damage").value,
+            cooldown:document.getElementById("cooldown").value,
+
+        }
+        console.log(Product)
+        var isInvalid=false;
+        for(a in Product){
+            if(Product[a] == ""){
+                isInvalid = true;
+            }
+        }
+        if(isInvalid === true){
+            document.querySelector("button").setAttribute("disabled",true)
+
+        }else{
+            document.querySelector("button").removeAttribute("disabled",true)
+        }
+    }
+</script>
+</body>
+</html>

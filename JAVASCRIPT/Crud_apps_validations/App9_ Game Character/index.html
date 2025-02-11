@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ability Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: rgb(245, 24, 24);
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Ability Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Ability Name:</label>
+                <input type="text" id="name" placeholder="Enter ability name" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="damage">Damage:</label>
+                <input type="number" id="damage" placeholder="Enter damage amount" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="cooldown">Cooldown (seconds):</label>
+                <input type="number" id="cooldown" placeholder="Enter cooldown time" required onkeyup="validateForm()">
+            </div>
+            <button type="button">Submit Ability</button>
+        </form>
+    </div>
+<script>
+function validateForm(){
+        var Ability ={
+            name:document.getElementById("name").value,
+            damage:document.getElementById("damage").value,
+            cooldown:document.getElementById("cooldown").value,
+
+        }
+        console.log(Ability)
+        var isInvalid=false;
+        for(a in Ability){
+            if(Ability[a] == ""){
+                isInvalid = true;
+            }
+        }
+        if(isInvalid === true){
+            document.querySelector("button").setAttribute("disabled",true)
+
+        }else{
+            document.querySelector("button").removeAttribute("disabled",true)
+        }
+    }
+</script>
+</body>
+</html>

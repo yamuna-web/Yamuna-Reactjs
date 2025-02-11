@@ -60,7 +60,7 @@
     <form>
         <!-- Recipe Name -->
         <label for="name">Recipe Name:</label>
-        <input type="text" id="name" name="name" required onkeyup="validateForm()">
+        <input type="text" id="name" name="name" required onchange="validateForm()">
 
         <!-- Ingredients (Array) -->
         <label for="ingredients">Ingredients (comma-separated):</label>
@@ -72,7 +72,7 @@
 
         <!-- Preparation Time -->
         <label for="prepTime">Preparation Time (minutes):</label>
-        <input type="number" id="prepTime" name="prepTime" min="1" required onkeyup="validateForm()">
+        <input type="number" id="prepTime" name="prepTime" min="1" required onchange="validateForm()">
 
         <!-- Servings -->
         <label for="servings">Servings:</label>
@@ -80,7 +80,7 @@
 
         <!-- Category -->
         <label for="category">Category:</label>
-        <select id="category" name="category" required onkeyup="validateForm()">
+        <select id="category" name="category" required onchange="validateForm()">
             <option value="">Select Category</option>
             <option value="breakfast">Breakfast</option>
             <option value="lunch">Lunch</option>
@@ -90,7 +90,7 @@
         </select>
 
         <!-- Submit Button -->
-        <button type="submit">Submit Recipe</button>
+        <button type="button" disabled>Submit Recipe</button>
     </form>
     <script>
         function validateForm() {

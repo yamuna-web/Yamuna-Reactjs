@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: rgb(245, 24, 24);
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Event Registration</h2>
+        <form>
+            <div class="form-group">
+                <label for="eventId">Event ID:</label>
+                <input type="text" id="eventId" placeholder="Enter event ID" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" placeholder="Enter event name" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="Enter location" required onkeyup="validateForm()">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="Enter event description" rows="3" required onkeyup="validateForm()"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="participants">Participants:</label>
+                <input type="number" id="participants" placeholder="Enter number of participants" required onkeyup="validateForm()">
+            </div>
+            <button type="button">Submit Event</button>
+        </form>
+    </div>
+<script>
+    function validateForm(){
+        var Event ={
+            eventId:document.getElementById("eventId").value,
+            eventName:document.getElementById("eventName").value,
+            date:document.getElementById("date").value,
+            time:document.getElementById("time").value,
+            location:document.getElementById("location").value,
+            description:document.getElementById("description").value,
+            participants:document.getElementById("participants").value,
+
+        }
+        console.log(Event)
+        var isInvalid=false;
+        for(a in Event){
+            if(Event[a] == ""){
+                isInvalid = true;
+            }
+        }
+        if(isInvalid === true){
+            document.querySelector("button").setAttribute("disabled",true)
+
+        }else{
+            document.querySelector("button").removeAttribute("disabled",true)
+        }
+    }
+</script>
+</body>
+</html>

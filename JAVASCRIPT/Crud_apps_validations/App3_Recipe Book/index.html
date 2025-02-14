@@ -1,124 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Submission Form</title>
+    <title>Recipe Book</title>
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            max-width: 450px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            background: #ffffff;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 95%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
             text-align: center;
             color: #333;
         }
+
+        .content {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            flex: 30%;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .recipe-container {
+            flex: 70%;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         label {
             font-weight: bold;
-            display: block;
-            margin: 10px 0 5px;
         }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        textarea {
-            resize: vertical;
-        }
+
+        input,
+        select,
+        textarea,
         button {
-            background-color: #39d619;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
+            padding: 8px;
             font-size: 16px;
         }
-        button:disabled {
-            background-color:gray;
-            color: #666;
-            cursor: not-allowed;
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            margin-right: 5px;
+        }
+
+        button {
+            background: #ff5722;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #e64a19;
+        }
+
+        .recipe-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        td button {
+            padding: 5px 10px;
+            margin: 2px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        td .view {
+            background: #28a745;
+            color: white;
+        }
+
+        td .delete {
+            background: #dc3545;
+            color: white;
+        }
+
+        td .view:hover {
+            background: #218838;
+        }
+
+        td .delete:hover {
+            background: #c82333;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .form-container,
+            .recipe-container {
+                flex: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <h2>Recipe Submission Form</h2>
+    <div class="container">
+        <h1>Recipe Book</h1>
 
-    <form>
-        <!-- Recipe Name -->
-        <label for="name">Recipe Name:</label>
-        <input type="text" id="name" name="name" required onchange="validateForm()">
+        <div class="content">
+            <!-- Left Column: Recipe Entry Form (30%) -->
+            <div class="form-container">
+                <h2>Add Recipe</h2>
+                <form id="recipe-form">
+                    <label for="name">Recipe Name:</label>
+                    <input type="text" id="name" required>
 
-        <!-- Ingredients (Array) -->
-        <label for="ingredients">Ingredients (comma-separated):</label>
-        <input type="text" id="ingredients" name="ingredients" placeholder="e.g., Sugar, Flour, Eggs" required onkeyup="validateForm()">
+                    <label>Ingredients:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="flour" value="Flour" name="ing">
+                        <label for="flour">Flour</label>
 
-        <!-- Instructions -->
-        <label for="instructions">Instructions:</label>
-        <textarea id="instructions" name="instructions" rows="4" required onkeyup="validateForm()"></textarea>
+                        <input type="checkbox" id="sugar" value="Sugar" name="ing">
+                        <label for="sugar">Sugar</label>
 
-        <!-- Preparation Time -->
-        <label for="prepTime">Preparation Time (minutes):</label>
-        <input type="number" id="prepTime" name="prepTime" min="1" required onchange="validateForm()">
+                        <input type="checkbox" id="eggs" value="Eggs" name="ing">
+                        <label for="eggs">Eggs</label>
 
-        <!-- Servings -->
-        <label for="servings">Servings:</label>
-        <input type="number" id="servings" name="servings" min="1" required onkeyup="validateForm()">
+                        <input type="checkbox" id="milk" value="Milk" name="ing">
+                        <label for="milk">Milk</label>
 
-        <!-- Category -->
-        <label for="category">Category:</label>
-        <select id="category" name="category" required onchange="validateForm()">
-            <option value="">Select Category</option>
-            <option value="breakfast">Breakfast</option>
-            <option value="lunch">Lunch</option>
-            <option value="dinner">Dinner</option>
-            <option value="dessert">Dessert</option>
-            <option value="snack">Snack</option>
-        </select>
+                        <input type="checkbox" id="butter" value="Butter" name="ing">
+                        <label for="butter">Butter</label>
+                    </div>
 
-        <!-- Submit Button -->
-        <button type="button" disabled>Submit Recipe</button>
-    </form>
+                    <label for="instructions">Instructions:</label>
+                    <textarea id="instructions" rows="4" required></textarea>
+
+                    <label for="prepTime">Preparation Time (mins):</label>
+                    <input type="number" id="prepTime" required>
+
+                    <label for="servings">Servings:</label>
+                    <input type="number" id="servings" required>
+
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Dessert">Dessert</option>
+                    </select>
+
+                    <label for="cuisine">Cuisine Type:</label>
+                    <select id="cuisine">
+                        <option value="Italian">Italian</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Mexican">Mexican</option>
+                    </select>
+
+                    <button type="button" onclick="registeruser()" id="crtbtn">Join Now</button>
+                    <button type="button" onclick="update()" id="updbtn" style="display:none">Update</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Recipe List (70%) -->
+            <div class="recipe-container">
+                <h2>Recipes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Recipe Name</th>
+                            <th>Ingredients</th>
+                            <th>Instructions</th>
+                            <th>Prep Time</th>
+                            <th>Servings</th>
+                            <th>category</th>
+                            <th>Cuisine Type:</th>
+                            <th>Delete</th>
+                            <th>Edit</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="recipe-list">
+                        <!-- <tr>
+                            <td>Pancakes</td>
+                            <td>Breakfast</td>
+                            <td>American</td>
+                            <td>20</td>
+                            <td>4</td>
+                            <td>
+                                <button class="view">View</button>
+                                <button class="delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pasta Alfredo</td>
+                            <td>Dinner</td>
+                            <td>Italian</td>
+                            <td>30</td>
+                            <td>2</td>
+                            <td>
+                                <button class="view">View</button>
+                                <button class="delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chicken Curry</td>
+                            <td>Lunch</td>
+                            <td>Indian</td>
+                            <td>40</td>
+                            <td>3</td>
+                            <td>
+                                <button class="view">View</button>
+                                <button class="delete">Delete</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
     <script>
-        function validateForm() {
-            var Recipe ={
-                name:document.getElementById("name").value,
-                ingredients:document.getElementById("ingredients").value,
-                instructions:document.getElementById("instructions").value,
-                prepTime:document.getElementById("prepTime").value,
-                servings:document.getElementById("servings").value,
-                category:document.getElementById("category").value,
-                
+        var allUsers = []
+        function registeruser() {
+            var name = document.getElementById("name").value
+            var instructions = document.getElementById("instructions").value
+            var prepTime = document.getElementById("prepTime").value
+            var servings = document.getElementById("servings").value
+            var category = document.getElementById("category").value
+            var cuisine = document.getElementById("cuisine").value
+
+            var user = {
+                name,
+                ing: [],
+                instructions,
+                prepTime,
+                servings,
+                category,
+                cuisine
             }
-
-            console.log(Recipe)
-
-            var isInvalid = false;
-            for(a in Recipe){
-                if(Recipe[a] == ""){
-                    isInvalid = true;
+            var checkbox = document.getElementsByName("ing")
+            // console.log(checkbox);
+            for (i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked == true) {
+                    user.ing.push(checkbox[i].value)
                 }
+                checkbox[i].checked = false
+            }
+            allUsers.push(user)
+            document.getElementById("name").value = ""
+            document.getElementById("instructions").value = ""
+            document.getElementById("prepTime").value = ""
+            document.getElementById("servings").value = ""
+            document.getElementById("category").value = ""
+            document.getElementById("cuisine").value = ""
+            displayUsers()
+        }
+
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = ""
+            allUsers.forEach(function (user, index) {
+                var tr = document.createElement("tr");
+                for (a in user) {
+                    var td = document.createElement("td");
+                    td.innerHTML = user[a]
+                    tr.appendChild(td)
+                }
+
+                deltd = document.createElement("td")
+                delbtn = document.createElement("button")
+                delbtn.innerHTML = "delete"
+                delbtn.setAttribute("class", "delete")
+                delbtn.setAttribute("onclick", "del(" + index + ")")
+                deltd.appendChild(delbtn)
+                tr.appendChild(deltd)
+
+                var edttd = document.createElement("td")
+                var edtbtn = document.createElement("button")
+                edtbtn.innerHTML = "Edit"
+                edtbtn.setAttribute("class", "edit-btn")
+                edtbtn.setAttribute("onclick", "edit(" + index + ")")
+                edttd.appendChild(edtbtn);
+                tr.appendChild(edttd);
+                document.querySelector("tbody").appendChild(tr)
+            })
+        }
+        displayUsers()
+
+        function del(i) {
+            allUsers.splice(i, 1);
+            displayUsers();
+        }
+        var indx;
+        function edit(i) {
+            indx = i;
+            document.getElementById("name").value = allUsers[i].name
+            document.getElementById("instructions").value = allUsers[i].instructions
+            document.getElementById("prepTime").value = allUsers[i].prepTime
+            document.getElementById("servings").value = allUsers[i].servings
+            document.getElementById("category").value = allUsers[i].category
+            document.getElementById("cuisine").value = allUsers[i].cuisine
+
+            //checkbox selection
+            var checkbox = document.getElementsByName("ing")
+            for (var k = 0; k < checkbox.length; k++) {
+                checkbox[k].checked = allUsers[i].ing.includes(checkbox[k].value);
             }
 
-            if(isInvalid === true){
-                document.querySelector("button").setAttribute("disabled",true)
-            }else{
-                document.querySelector("button").removeAttribute("disabled",true)
+            document.getElementById("crtbtn").style.display = "none"
+            document.getElementById("updbtn").style.display = "block"
+
+        }
+        function update() {
+            var name = document.getElementById("name").value
+            var instructions = document.getElementById("instructions").value
+            var prepTime = document.getElementById("prepTime").value
+            var servings = document.getElementById("servings").value
+            var category = document.getElementById("category").value
+            var cuisine = document.getElementById("cuisine").value
+
+            var user = {
+                name,
+                ing: [],
+                instructions,
+                prepTime,
+                servings,
+                category,
+                cuisine
             }
+            var checkbox = document.getElementsByName("ing")
+            // console.log(checkbox);
+            for (i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked == true) {
+                    user.ing.push(checkbox[i].value)
+                }
+                checkbox[i].checked = false
+            }
+            allUsers[indx] = user
+
+            displayUsers();
+            document.getElementById("name").value = ""
+            document.getElementById("instructions").value = ""
+            document.getElementById("prepTime").value = ""
+            document.getElementById("servings").value = ""
+            document.getElementById("category").value = ""
+            document.getElementById("cuisine").value = ""
+
+
+            document.getElementById("updbtn").style.display = "none"
+            document.getElementById("crtbtn").style.display = "block"
         }
     </script>
 </body>
+
 </html>

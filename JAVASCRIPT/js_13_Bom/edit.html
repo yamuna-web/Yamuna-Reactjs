@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Common styles for body and containers */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 80%;
+    width: 100%;
+  }
+  
+  /* Styles for form and table columns */
+  .column {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Styles for the form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+  }
+  
+  .edit-btn {
+    background-color: #28a745;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+  }
+  
+  .edit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+
+  #updateBtn{
+    display: none;
+  }
+  .newContainer{
+    width: 60%;
+  }
+  
+    </style>
+</head>
+<body>
+    <div class="newContainer">
+        <!-- Form Column -->
+        <div class="newColumn">
+          <h1>Event Registration</h1>
+          <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="fullName" name="name" placeholder="Enter your full name" required>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+            <button type="button" onclick="updateUser()" id="newupdateBtn">Update</button>
+          </form>
+        </div>
+    
+      </div>
+    <script>
+      var urlAddress = location.href ;
+      var userIndex = urlAddress.substr(urlAddress.indexOf("?")+1)
+      var allUsers = JSON.parse(localStorage.getItem("allUsers"))
+      var userToEdit = allUsers[userIndex];
+
+      document.getElementById("fullName").value = userToEdit.fullName
+      document.getElementById("email").value = userToEdit.email
+      console.log(userToEdit)
+    
+
+      function updateUser(){
+        var fullName = document.getElementById("fullName").value;
+        var email = document.getElementById("email").value;
+
+        userToEdit.fullName = fullName;
+        userToEdit.email = email;
+
+        allUsers[userIndex] = userToEdit;
+        localStorage.setItem("allUsers", JSON.stringify(allUsers))
+        window.location.href = "sample2.html"
+      }
+    </script>
+</body>
+</html>

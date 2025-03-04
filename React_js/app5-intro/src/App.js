@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { Daddy } from './Daddy';
+
+
 
 function App() {
   return (
     <div className="App">
-      <h1>yamuna</h1>
-      <p>react  js introduction</p>
+      
+  
+    <Daddy/>
     </div>
+  
   );
 }
 

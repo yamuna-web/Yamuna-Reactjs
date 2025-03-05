@@ -1,0 +1,9 @@
+li{
+    list-style: none;
+}
+ul{
+    background: pink;
+    width: 300px;
+    margin: 5px;
+    float: left;
+}

@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Daddy } from './Daddy';
+import { Parent } from './Parent';
 
 
 
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       
   
-    <Daddy/>
+    {/* <Daddy/> */}
+    <Parent/>
     </div>
   
   );

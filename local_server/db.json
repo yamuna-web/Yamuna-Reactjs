@@ -1,16 +1,212 @@
 {
-  "users": [
+  "users": [],
+  "Ecart": [
     {
-      "id": "0348",
-      "fname": "ne",
-      "lname": "gvh",
-      "email": "gundlaguttayamuna61@gmail.com"
+      "id": "1",
+      "name": "yamuna",
+      "price": "20",
+      "quantity": "30%",
+      "totalprice": "340"
     },
     {
-      "id": "337e",
-      "fname": "savithri",
-      "lname": "chench",
-      "email": "yemmu123@gmail.com"
+      "id": "2",
+      "name": "neeraja",
+      "price": "39",
+      "quantity": "30%",
+      "totalprice": "450"
+    }
+  ],
+  "socialmedia": [
+    {
+      "id": "P001",
+      "content": "This is a wonderful day! Feeling great and ready to tackle new challenges.",
+      "likes": 120,
+      "comments": [
+        {
+          "user": "JaneDoe",
+          "comment": "That's awesome! Keep up the positive vibes!"
+        },
+        {
+          "user": "JohnSmith",
+          "comment": "I agree! Today is going to be amazing."
+        }
+      ],
+      "author": "AliceJohnson"
+    },
+    {
+      "id": "P002",
+      "content": "Had an amazing workout session at the gym today. Can't wait for the next one!",
+      "likes": 85,
+      "comments": [
+        {
+          "user": "MarkLee",
+          "comment": "You're crushing it! Keep going!"
+        },
+        {
+          "user": "EmilyBrown",
+          "comment": "I need to get back into the gym too. Inspired!"
+        }
+      ],
+      "author": "BobMartin"
+    },
+    {
+      "id": "P003",
+      "content": "Just finished reading a great book on personal development. Highly recommend it!",
+      "likes": 45,
+      "comments": [
+        {
+          "user": "SarahGreen",
+          "comment": "What book was it? I need something new to read."
+        },
+        {
+          "user": "TomDavis",
+          "comment": "Personal development books are the best!"
+        }
+      ],
+      "author": "ChrisWalker"
+    },
+    {
+      "id": "P004",
+      "content": "Starting a new project at work today. Excited to see where this takes me!",
+      "likes": 70,
+      "comments": [
+        {
+          "user": "JessicaTaylor",
+          "comment": "Good luck! Hope it goes well."
+        },
+        {
+          "user": "PaulEvans",
+          "comment": "You got this! Looking forward to hearing more about it."
+        }
+      ],
+      "author": "DanaLee"
+    }
+  ],
+  "system": [
+    {
+      "id": 1,
+      "title": "Task One",
+      "description": "Details about task one.",
+      "status": "Pending",
+      "createdAt": "2025-03-01T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Task Two",
+      "description": "Details about task two.",
+      "status": "In-Progress",
+      "createdAt": "2025-03-05T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Task Three",
+      "description": "Details about task three.",
+      "status": "Completed",
+      "createdAt": "2025-03-10T10:15:00Z"
+    },
+    {
+      "id": 4,
+      "title": "Task Four",
+      "description": "Details about task four.",
+      "status": "Pending",
+      "createdAt": "2025-03-12T11:45:00Z"
+    }
+  ],
+  "Appquiz": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "options": [
+        "Berlin",
+        "Madrid",
+        "Paris",
+        "Rome"
+      ],
+      "correctAnswer": "Paris",
+      "score": 5
+    },
+    {
+      "id": 2,
+      "question": "Which planet is known as the Red Planet?",
+      "options": [
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Venus"
+      ],
+      "correctAnswer": "Mars",
+      "score": 5
+    },
+    {
+      "id": 3,
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "options": [
+        "Shakespeare",
+        "Dickens",
+        "Austen",
+        "Hemingway"
+      ],
+      "correctAnswer": "Shakespeare",
+      "score": 10
+    },
+    {
+      "id": 4,
+      "question": "What is the largest ocean on Earth?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "correctAnswer": "Pacific Ocean",
+      "score": 8
+    }
+  ],
+  "Management":[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "role": "Admin",
+      "preferences": {
+        "theme": "dark",
+        "language": "English",
+        "notifications": true
+      }
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "role": "Subscriber",
+      "preferences": {
+        "theme": "light",
+        "language": "Spanish",
+        "notifications": false
+      }
+    },
+    {
+      "id": 3,
+      "name": "Charlie Brown",
+      "email": "charlie.brown@example.com",
+      "role": "Subscriber",
+      "preferences": {
+        "theme": "dark",
+        "language": "French",
+        "notifications": true
+      }
+    },
+    {
+      "id": 4,
+      "name": "David Lee",
+      "email": "david.lee@example.com",
+      "role": "Admin",
+      "preferences": {
+        "theme": "light",
+        "language": "German",
+        "notifications": false
+      }
     }
   ]
+  
 }

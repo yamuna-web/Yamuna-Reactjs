@@ -1,26 +1,26 @@
 import { Component } from "react";
 import axios from "axios"
 
-export default class UserProfile extends Component {
+export default class ExpenseTracker extends Component {
     constructor() {
         super()
         this.state = {
             person: {
                 id: "",
-                name: "",
-                email: "",
-                role: "",
-                preferences: ""
+                amount: "",
+                category: "",
+                description: "",
+                date: ""
             },
-            Management: [],
+            Etracker: [],
             editindex: null,
         }
     }
 
 
-    getManagementFromServer = () => {
-        axios.get("http://localhost:3000/Management").then((response) => {
-            this.setState({ Management: response.data })
+    getEtrackerFromServer = () => {
+        axios.get("http://localhost:3000/Etracker").then((response) => {
+            this.setState({ Etracker: response.data })
         })
 
     }
@@ -31,15 +31,15 @@ export default class UserProfile extends Component {
         this.setState({ person: newusr })
     }
     adduser = () => {
-        axios.post("http://localhost:3000/Management", this.state.person).then(() => {
-            this.getManagementFromServer()
+        axios.post("http://localhost:3000/Etracker", this.state.person).then(() => {
+            this.getEtrackerFromServer()
             this.clearForm()
         })
     }
 
     deletetuser = (val) => {
-        axios.delete("http://localhost:3000/Management/" + val.id).then(() => {
-            this.getManagementFromServer()
+        axios.delete("http://localhost:3000/Etracker/" + val.id).then(() => {
+            this.getEtrackerFromServer()
         })
 
     }
@@ -47,9 +47,9 @@ export default class UserProfile extends Component {
         this.setState({ person: val, editindex: i });
     }
     updateUser = () => {
-        axios.put("http://localhost:3000/Management/" + this.state.Management[this.state.editindex].id, this.state.person)
+        axios.put("http://localhost:3000/Etracker/" + this.state.Etracker[this.state.editindex].id, this.state.person)
             .then(() => {
-                this.getManagementFromServer();
+                this.getEtrackerFromServer();
                 this.setState({ editindex: null });
                 this.clearForm();
             })
@@ -58,10 +58,10 @@ clearForm = () => {
     this.setState({
         person: {
             id: "",
-            name: "",
-            email: "",
-            role: "",
-            preferences: ""
+            amount: "",
+            category: "",
+            description: "",
+            date: ""
         },
     })}
 render() {
@@ -73,28 +73,28 @@ render() {
                 value={this.state.person.id}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">name:</label>
+            <label htmlFor="">amount:</label>
             <input type="text"
-                name="name"
-                value={this.state.person.name}
+                name="amount"
+                value={this.state.person.amount}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">email:</label>
+            <label htmlFor="">category:</label>
             <input type="text"
-                name="email"
-                value={this.state.person.email}
+                name="category"
+                value={this.state.person.category}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">role</label>
+            <label htmlFor="">description</label>
             <input type="text"
-                name="role"
-                value={this.state.person.role}
+                name="description"
+                value={this.state.person.description}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">preferences:</label>
+            <label htmlFor="">date:</label>
             <input type="text"
-                name="preferences"
-                value={this.state.person.preferences}
+                name="date"
+                value={this.state.person.date}
                 onChange={this.handlechange} />
 
             <br />
@@ -105,23 +105,23 @@ render() {
         <table border={1}>
             <thead>
                 <tr>
-                    <th>User ID</th>
-                    <th>User Name</th>
-                    <th>User Email</th>
-                    <th>Admin</th>
-                    <th>User Preferences</th>
+                    <th>Expense ID</th>
+                    <th>Expense Amount</th>
+                    <th>Expense Type</th>
+                    <th>Details of Expense</th>
+                    <th>Expense Date</th>
                     <th>edit</th>
                     <th>delete</th>
                 </tr>
             </thead>
             <tbody>
-                {this.state.Management.map((val, i) => {
+                {this.state.Etracker.map((val, i) => {
                     return (<tr key={val.id}>
                         <td>{val.id}</td>
-                        <td>{val.name}</td>
-                        <td>{val.email}</td>
-                        <td>{val.role}</td>
-                        <td>{val.preferences}</td>
+                        <td>{val.amount}</td>
+                        <td>{val.category}</td>
+                        <td>{val.description}</td>
+                        <td>{val.date}</td>
                         <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
                         <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
                     </tr>)
@@ -132,6 +132,6 @@ render() {
     </div>
 }
 componentDidMount() {
-    this.getManagementFromServer();
+    this.getEtrackerFromServer();
 }
 }

@@ -97,7 +97,7 @@ export default class SocilaMedia extends Component{
                 (<button type="button" onClick={this.updateUser}> update user</button>)}
             </form>
             <hr />
-            <table border={2}>
+            <table border={1}>
               <thead>
                 <tr>
                     <th>Unique Post ID</th>
@@ -112,7 +112,7 @@ export default class SocilaMedia extends Component{
               </thead>
               <tbody>
               {this.state.socialmedia.map((val, i) => {
-                    return (<tr key={i}>
+                    return (<tr key={val.id}>
                         <td>{val.id}</td>
                         <td>{val.content}</td>
                         <td>{val.likes}</td>

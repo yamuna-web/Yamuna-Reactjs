@@ -1,26 +1,26 @@
 import { Component } from "react";
 import axios from "axios"
 
-export default class UserProfile extends Component {
+export default class InventaryManagement extends Component {
     constructor() {
         super()
         this.state = {
             person: {
                 id: "",
                 name: "",
-                email: "",
-                role: "",
-                preferences: ""
+                quantity: "",
+                price: "",
+                category: ""
             },
-            Management: [],
+            Inventaryststem: [],
             editindex: null,
         }
     }
 
 
-    getManagementFromServer = () => {
-        axios.get("http://localhost:3000/Management").then((response) => {
-            this.setState({ Management: response.data })
+    getInventaryststemFromServer = () => {
+        axios.get("http://localhost:3000/Inventaryststem").then((response) => {
+            this.setState({ Inventaryststem: response.data })
         })
 
     }
@@ -31,15 +31,15 @@ export default class UserProfile extends Component {
         this.setState({ person: newusr })
     }
     adduser = () => {
-        axios.post("http://localhost:3000/Management", this.state.person).then(() => {
-            this.getManagementFromServer()
+        axios.post("http://localhost:3000/Inventaryststem", this.state.person).then(() => {
+            this.getInventaryststemFromServer()
             this.clearForm()
         })
     }
 
     deletetuser = (val) => {
-        axios.delete("http://localhost:3000/Management/" + val.id).then(() => {
-            this.getManagementFromServer()
+        axios.delete("http://localhost:3000/Inventaryststem/" + val.id).then(() => {
+            this.getInventaryststemFromServer()
         })
 
     }
@@ -47,9 +47,9 @@ export default class UserProfile extends Component {
         this.setState({ person: val, editindex: i });
     }
     updateUser = () => {
-        axios.put("http://localhost:3000/Management/" + this.state.Management[this.state.editindex].id, this.state.person)
+        axios.put("http://localhost:3000/Inventaryststem/" + this.state.Inventaryststem[this.state.editindex].id, this.state.person)
             .then(() => {
-                this.getManagementFromServer();
+                this.getInventaryststemFromServer();
                 this.setState({ editindex: null });
                 this.clearForm();
             })
@@ -59,9 +59,9 @@ clearForm = () => {
         person: {
             id: "",
             name: "",
-            email: "",
-            role: "",
-            preferences: ""
+            quantity: "",
+            price: "",
+            category: ""
         },
     })}
 render() {
@@ -79,22 +79,22 @@ render() {
                 value={this.state.person.name}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">email:</label>
+            <label htmlFor="">quantity:</label>
             <input type="text"
-                name="email"
-                value={this.state.person.email}
+                name="quantity"
+                value={this.state.person.quantity}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">role</label>
+            <label htmlFor="">price</label>
             <input type="text"
-                name="role"
-                value={this.state.person.role}
+                name="price"
+                value={this.state.person.price}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">preferences:</label>
+            <label htmlFor="">category:</label>
             <input type="text"
-                name="preferences"
-                value={this.state.person.preferences}
+                name="category"
+                value={this.state.person.category}
                 onChange={this.handlechange} />
 
             <br />
@@ -105,23 +105,23 @@ render() {
         <table border={1}>
             <thead>
                 <tr>
-                    <th>User ID</th>
-                    <th>User Name</th>
-                    <th>User Email</th>
-                    <th>Admin</th>
-                    <th>User Preferences</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Stock Quantity</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
                     <th>edit</th>
                     <th>delete</th>
                 </tr>
             </thead>
             <tbody>
-                {this.state.Management.map((val, i) => {
+                {this.state.Inventaryststem.map((val, i) => {
                     return (<tr key={val.id}>
                         <td>{val.id}</td>
                         <td>{val.name}</td>
-                        <td>{val.email}</td>
-                        <td>{val.role}</td>
-                        <td>{val.preferences}</td>
+                        <td>{val.quantity}</td>
+                        <td>{val.price}</td>
+                        <td>{val.category}</td>
                         <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
                         <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
                     </tr>)
@@ -132,6 +132,6 @@ render() {
     </div>
 }
 componentDidMount() {
-    this.getManagementFromServer();
+    this.getInventaryststemFromServer();
 }
 }

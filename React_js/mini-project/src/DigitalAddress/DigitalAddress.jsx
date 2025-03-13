@@ -1,7 +1,7 @@
 import { Component } from "react";
 import axios from "axios"
 
-export default class UserProfile extends Component {
+export default class DigitalAdress extends Component {
     constructor() {
         super()
         this.state = {
@@ -9,18 +9,18 @@ export default class UserProfile extends Component {
                 id: "",
                 name: "",
                 email: "",
-                role: "",
-                preferences: ""
+                phone: "",
+                address: ""
             },
-            Management: [],
+            AdressBook: [],
             editindex: null,
         }
     }
 
 
-    getManagementFromServer = () => {
-        axios.get("http://localhost:3000/Management").then((response) => {
-            this.setState({ Management: response.data })
+    getAdressBookFromServer = () => {
+        axios.get("http://localhost:3000/AdressBook").then((response) => {
+            this.setState({ AdressBook: response.data })
         })
 
     }
@@ -31,15 +31,15 @@ export default class UserProfile extends Component {
         this.setState({ person: newusr })
     }
     adduser = () => {
-        axios.post("http://localhost:3000/Management", this.state.person).then(() => {
-            this.getManagementFromServer()
+        axios.post("http://localhost:3000/AdressBook", this.state.person).then(() => {
+            this.getAdressBookFromServer()
             this.clearForm()
         })
     }
 
     deletetuser = (val) => {
-        axios.delete("http://localhost:3000/Management/" + val.id).then(() => {
-            this.getManagementFromServer()
+        axios.delete("http://localhost:3000/AdressBook/" + val.id).then(() => {
+            this.getAdressBookFromServer()
         })
 
     }
@@ -47,9 +47,9 @@ export default class UserProfile extends Component {
         this.setState({ person: val, editindex: i });
     }
     updateUser = () => {
-        axios.put("http://localhost:3000/Management/" + this.state.Management[this.state.editindex].id, this.state.person)
+        axios.put("http://localhost:3000/AdressBook/" + this.state.AdressBook[this.state.editindex].id, this.state.person)
             .then(() => {
-                this.getManagementFromServer();
+                this.getAdressBookFromServer();
                 this.setState({ editindex: null });
                 this.clearForm();
             })
@@ -60,8 +60,8 @@ clearForm = () => {
             id: "",
             name: "",
             email: "",
-            role: "",
-            preferences: ""
+            phone: "",
+            address: ""
         },
     })}
 render() {
@@ -85,16 +85,16 @@ render() {
                 value={this.state.person.email}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">role</label>
+            <label htmlFor="">phone</label>
             <input type="text"
-                name="role"
-                value={this.state.person.role}
+                name="phone"
+                value={this.state.person.phone}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">preferences:</label>
+            <label htmlFor="">address:</label>
             <input type="text"
-                name="preferences"
-                value={this.state.person.preferences}
+                name="address"
+                value={this.state.person.address}
                 onChange={this.handlechange} />
 
             <br />
@@ -105,23 +105,23 @@ render() {
         <table border={1}>
             <thead>
                 <tr>
-                    <th>User ID</th>
-                    <th>User Name</th>
-                    <th>User Email</th>
-                    <th>Admin</th>
-                    <th>User Preferences</th>
+                    <th>Contact ID</th>
+                    <th>Contact Name</th>
+                    <th>Email Address</th>
+                    <th>Phone Number</th>
+                    <th>Physical Address</th>
                     <th>edit</th>
                     <th>delete</th>
                 </tr>
             </thead>
             <tbody>
-                {this.state.Management.map((val, i) => {
+                {this.state.AdressBook.map((val, i) => {
                     return (<tr key={val.id}>
                         <td>{val.id}</td>
                         <td>{val.name}</td>
                         <td>{val.email}</td>
-                        <td>{val.role}</td>
-                        <td>{val.preferences}</td>
+                        <td>{val.phone}</td>
+                        <td>{val.address}</td>
                         <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
                         <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
                     </tr>)
@@ -132,6 +132,6 @@ render() {
     </div>
 }
 componentDidMount() {
-    this.getManagementFromServer();
+    this.getAdressBookFromServer();
 }
 }

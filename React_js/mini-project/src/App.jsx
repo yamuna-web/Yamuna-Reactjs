@@ -7,6 +7,12 @@ import SocilaMedia from './Social Media_Post Editor/SocialMedia'
 import TaskManagement from './Task Management/TaskManagement'
 import OnlineQuiz from './OnlineQuiz/OnlineQuiz'
 import UsersProfile from './UserProfile/UserProfile'
+import Managementsystem from './Managementsystem/Managementsystem.jsx'
+import DigitalAdress from './DigitalAddress/DigitalAddress.jsx'
+import MovieTicket from './MovieTicket/MovieTicket'
+import InventaryManagement from './InventaryManagement/InventaryManagement.jsx'
+import ExpenseTracker from './ExpenseTracker/ExpenseTracker.jsx'
+import UserProfile from './UserProfile/UserProfile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,10 +20,15 @@ function App() {
   return (
     <>
      {/* <Managementtickets/> */}
-     {/* <SocilaMedia/> */}
+     <SocilaMedia/>    
      {/* <TaskManagement/> */}
-     {/* <OnlineQuiz/> */}
-     <UsersProfile/>
+     {/* <OnlineQuiz/>  */}
+     {/* <UserProfile/>  */}
+     {/* <Managementsystem/> */}
+     {/* <DigitalAdress/> */}
+     {/* <MovieTicket/> */}
+     {/* <InventaryManagement/> */}
+     {/* <ExpenseTracker/> */}
     </>
   )
 }

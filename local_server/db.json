@@ -21,95 +21,52 @@
       "id": "P001",
       "content": "This is a wonderful day! Feeling great and ready to tackle new challenges.",
       "likes": 120,
-      "comments": [
-        {
-          "user": "JaneDoe",
-          "comment": "That's awesome! Keep up the positive vibes!"
-        },
-        {
-          "user": "JohnSmith",
-          "comment": "I agree! Today is going to be amazing."
-        }
-      ],
+      "comments": "hi",
       "author": "AliceJohnson"
     },
     {
       "id": "P002",
       "content": "Had an amazing workout session at the gym today. Can't wait for the next one!",
       "likes": 85,
-      "comments": [
-        {
-          "user": "MarkLee",
-          "comment": "You're crushing it! Keep going!"
-        },
-        {
-          "user": "EmilyBrown",
-          "comment": "I need to get back into the gym too. Inspired!"
-        }
-      ],
+      "comments": "hi",
       "author": "BobMartin"
     },
     {
       "id": "P003",
       "content": "Just finished reading a great book on personal development. Highly recommend it!",
       "likes": 45,
-      "comments": [
-        {
-          "user": "SarahGreen",
-          "comment": "What book was it? I need something new to read."
-        },
-        {
-          "user": "TomDavis",
-          "comment": "Personal development books are the best!"
-        }
-      ],
+      "comments": "hi",
       "author": "ChrisWalker"
     },
     {
       "id": "P004",
       "content": "Starting a new project at work today. Excited to see where this takes me!",
       "likes": 70,
-      "comments": [
-        {
-          "user": "JessicaTaylor",
-          "comment": "Good luck! Hope it goes well."
-        },
-        {
-          "user": "PaulEvans",
-          "comment": "You got this! Looking forward to hearing more about it."
-        }
-      ],
+      "comments": "hi",
       "author": "DanaLee"
     }
   ],
   "system": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Task One",
       "description": "Details about task one.",
       "status": "Pending",
       "createdAt": "2025-03-01T08:00:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Task Two",
       "description": "Details about task two.",
       "status": "In-Progress",
       "createdAt": "2025-03-05T09:30:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Task Three",
       "description": "Details about task three.",
       "status": "Completed",
       "createdAt": "2025-03-10T10:15:00Z"
-    },
-    {
-      "id": 4,
-      "title": "Task Four",
-      "description": "Details about task four.",
-      "status": "Pending",
-      "createdAt": "2025-03-12T11:45:00Z"
     }
   ],
   "Appquiz": [
@@ -123,7 +80,7 @@
         "Rome"
       ],
       "correctAnswer": "Paris",
-      "score": 5
+      "score": 10
     },
     {
       "id": 2,
@@ -135,22 +92,10 @@
         "Venus"
       ],
       "correctAnswer": "Mars",
-      "score": 5
+      "score": 8
     },
     {
       "id": 3,
-      "question": "Who wrote 'Romeo and Juliet'?",
-      "options": [
-        "Shakespeare",
-        "Dickens",
-        "Austen",
-        "Hemingway"
-      ],
-      "correctAnswer": "Shakespeare",
-      "score": 10
-    },
-    {
-      "id": 4,
       "question": "What is the largest ocean on Earth?",
       "options": [
         "Atlantic Ocean",
@@ -159,12 +104,44 @@
         "Pacific Ocean"
       ],
       "correctAnswer": "Pacific Ocean",
-      "score": 8
+      "score": 9
+    },
+    {
+      "id": 4,
+      "question": "Who wrote 'To Kill a Mockingbird'?",
+      "options": [
+        "Harper Lee",
+        "J.K. Rowling",
+        "George Orwell",
+        "F. Scott Fitzgerald"
+      ],
+      "correctAnswer": "Harper Lee",
+      "score": 7
+    },
+    {
+      "id": 5,
+      "question": "Which element has the chemical symbol 'O'?",
+      "options": [
+        "Oxygen",
+        "Gold",
+        "Osmium",
+        "Ozone"
+      ],
+      "correctAnswer": "Oxygen",
+      "score": 5
+    },
+    {
+      "id": "1",
+      "question": "xdcfvgbhjn",
+      "options": "ghbjnmk,",
+      "correctAnswer": "fvgbhnjmkl",
+      "score": "",
+      "totalprice": "drftghjnkm"
     }
   ],
-  "Management":[
+  "Management": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Alice Johnson",
       "email": "alice.johnson@example.com",
       "role": "Admin",
@@ -175,7 +152,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Bob Smith",
       "email": "bob.smith@example.com",
       "role": "Subscriber",
@@ -186,7 +163,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Charlie Brown",
       "email": "charlie.brown@example.com",
       "role": "Subscriber",
@@ -197,7 +174,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "David Lee",
       "email": "david.lee@example.com",
       "role": "Admin",
@@ -206,7 +183,149 @@
         "language": "German",
         "notifications": false
       }
+    },
+    {
+      "id": "vgbhnjk",
+      "name": "rftgyhj",
+      "email": "yamuna61@gmail.com",
+      "role": "edrfthj",
+      "preferences": "fghjk"
+    }
+  ],
+  "Librarysystem": [
+    {
+      "id": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "isAvailable": true,
+      "borrower": null
+    },
+    {
+      "id": "4",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "isAvailable": false,
+      "borrower": "10266"
+    },
+    {
+      "id": "vgbhnjk",
+      "title": "xdcfvbhjnkm",
+      "author": "fvgbhjnmk",
+      "isAvailable": "fgvbhjnkm",
+      "borrower": "tyjkmlghhj"
+    }
+  ],
+  "AdressBook": [
+    {
+      "id": "1",
+      "name": "John D",
+      "email": "john.doe@example.com",
+      "phone": "+1234567890",
+      "address": "123 Elm Street, Springfield, IL"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "+0987654321",
+      "address": "456 Oak Avenue, Lincoln, NE"
+    },
+    {
+      "id": "3",
+      "name": "Mark Johnson",
+      "email": "mark.johnson@example.com",
+      "phone": "+1122334455",
+      "address": "789 Pine Road, Madison, WI"
+    },
+    {
+      "id": "1",
+      "name": "gundlaguttayamuna",
+      "email": "gundlaguttayamuna61@gmail.com",
+      "phone": "9876543456",
+      "address": "jffghjkkn"
+    }
+  ],
+  "Inventaryststem": [
+    {
+      "id": "2",
+      "name": "Smartphone",
+      "quantity": 120,
+      "price": 699.99,
+      "category": "Electronics"
+    },
+    {
+      "id": "3",
+      "name": "Desk Chair",
+      "quantity": "7577777",
+      "price": 129.99,
+      "category": "Furniture"
+    }
+  ],
+  "Bookingsystem": [
+    {
+      "seatNumber": "A1",
+      "isBooked": true,
+      "category": "VIP",
+      "userID": "101333",
+      "id": "a767"
+    },
+    {
+      "seatNumber": "B5",
+      "isBooked": false,
+      "category": "Regular",
+      "userID": null,
+      "id": "047c"
+    },
+    {
+      "seatNumber": "C3",
+      "isBooked": true,
+      "category": "Economy",
+      "userID": 102,
+      "id": "4067"
+    },
+    {
+      "id": "8a66",
+      "seatNumber": "A1hbjn",
+      "isBooked": "true",
+      "category": "Travel",
+      "userID": "101"
+    }
+  ],
+  "Etracker": [
+    {
+      "id": "1",
+      "amount": "120.57",
+      "category": "Travel",
+      "description": "Taxi fare to client meeting",
+      "date": "2025-03-10"
+    },
+    {
+      "id": "2",
+      "amount": 250,
+      "category": "Accommodation",
+      "description": "Hotel stay for business trip",
+      "date": "2025-03-11"
+    },
+    {
+      "id": "3",
+      "amount": 35.75,
+      "category": "Food",
+      "description": "Dinner with team",
+      "date": "2025-03-12"
+    },
+    {
+      "id": "4",
+      "amount": 500,
+      "category": "Office Supplies",
+      "description": "New computer equipment",
+      "date": "2025-03-13"
+    },
+    {
+      "id": "3",
+      "amount": "120.57",
+      "category": "Travel",
+      "description": "Taxi fare to client meeting",
+      "date": "2025-03-10"
     }
   ]
-  
 }

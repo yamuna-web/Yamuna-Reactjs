@@ -1,26 +1,26 @@
 import { Component } from "react";
 import axios from "axios"
 
-export default class UserProfile extends Component {
+export default class Managementsystem extends Component {
     constructor() {
         super()
         this.state = {
             person: {
                 id: "",
-                name: "",
-                email: "",
-                role: "",
-                preferences: ""
+                title: "",
+                author: "",
+                isAvailable: "",
+                borrower: ""
             },
-            Management: [],
+            Librarysystem: [],
             editindex: null,
         }
     }
 
 
-    getManagementFromServer = () => {
-        axios.get("http://localhost:3000/Management").then((response) => {
-            this.setState({ Management: response.data })
+    getLibrarysystemFromServer = () => {
+        axios.get("http://localhost:3000/Librarysystem").then((response) => {
+            this.setState({ Librarysystem: response.data })
         })
 
     }
@@ -31,15 +31,15 @@ export default class UserProfile extends Component {
         this.setState({ person: newusr })
     }
     adduser = () => {
-        axios.post("http://localhost:3000/Management", this.state.person).then(() => {
-            this.getManagementFromServer()
+        axios.post("http://localhost:3000/Librarysystem", this.state.person).then(() => {
+            this.getLibrarysystemFromServer()
             this.clearForm()
         })
     }
 
     deletetuser = (val) => {
-        axios.delete("http://localhost:3000/Management/" + val.id).then(() => {
-            this.getManagementFromServer()
+        axios.delete("http://localhost:3000/Librarysystem/" + val.id).then(() => {
+            this.getLibrarysystemFromServer()
         })
 
     }
@@ -47,9 +47,9 @@ export default class UserProfile extends Component {
         this.setState({ person: val, editindex: i });
     }
     updateUser = () => {
-        axios.put("http://localhost:3000/Management/" + this.state.Management[this.state.editindex].id, this.state.person)
+        axios.put("http://localhost:3000/Librarysystem/" + this.state.Librarysystem[this.state.editindex].id, this.state.person)
             .then(() => {
-                this.getManagementFromServer();
+                this.getLibrarysystemFromServer();
                 this.setState({ editindex: null });
                 this.clearForm();
             })
@@ -58,10 +58,10 @@ clearForm = () => {
     this.setState({
         person: {
             id: "",
-            name: "",
-            email: "",
-            role: "",
-            preferences: ""
+            title: "",
+            author: "",
+            isAvailable: "",
+            borrower: ""
         },
     })}
 render() {
@@ -73,28 +73,28 @@ render() {
                 value={this.state.person.id}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">name:</label>
+            <label htmlFor="">title:</label>
             <input type="text"
-                name="name"
-                value={this.state.person.name}
+                name="title"
+                value={this.state.person.title}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">email:</label>
+            <label htmlFor="">author:</label>
             <input type="text"
-                name="email"
-                value={this.state.person.email}
+                name="author"
+                value={this.state.person.author}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">role</label>
+            <label htmlFor="">isAvailable</label>
             <input type="text"
-                name="role"
-                value={this.state.person.role}
+                name="isAvailable"
+                value={this.state.person.isAvailable}
                 onChange={this.handlechange} />{""}
             <br />
-            <label htmlFor="">preferences:</label>
+            <label htmlFor="">borrower:</label>
             <input type="text"
-                name="preferences"
-                value={this.state.person.preferences}
+                name="borrower"
+                value={this.state.person.borrower}
                 onChange={this.handlechange} />
 
             <br />
@@ -105,23 +105,23 @@ render() {
         <table border={1}>
             <thead>
                 <tr>
-                    <th>User ID</th>
-                    <th>User Name</th>
-                    <th>User Email</th>
-                    <th>Admin</th>
-                    <th>User Preferences</th>
+                    <th>Book ID</th>
+                    <th>Book Title</th>
+                    <th>Book Author</th>
+                    <th>Boolean - Book Status</th>
+                    <th>User ID - If Borrowed</th>
                     <th>edit</th>
                     <th>delete</th>
                 </tr>
             </thead>
             <tbody>
-                {this.state.Management.map((val, i) => {
+                {this.state.Librarysystem.map((val, i) => {
                     return (<tr key={val.id}>
                         <td>{val.id}</td>
-                        <td>{val.name}</td>
-                        <td>{val.email}</td>
-                        <td>{val.role}</td>
-                        <td>{val.preferences}</td>
+                        <td>{val.title}</td>
+                        <td>{val.author}</td>
+                        <td>{val.isAvailable}</td>
+                        <td>{val.borrower}</td>
                         <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
                         <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
                     </tr>)
@@ -132,6 +132,6 @@ render() {
     </div>
 }
 componentDidMount() {
-    this.getManagementFromServer();
+    this.getLibrarysystemFromServer();
 }
 }

@@ -20,8 +20,8 @@ function App() {
   return (
     <>
      {/* <Managementtickets/> */}
-     <SocilaMedia/>    
-     {/* <TaskManagement/> */}
+     {/* <SocilaMedia/>     */}
+     <TaskManagement/>
      {/* <OnlineQuiz/>  */}
      {/* <UserProfile/>  */}
      {/* <Managementsystem/> */}

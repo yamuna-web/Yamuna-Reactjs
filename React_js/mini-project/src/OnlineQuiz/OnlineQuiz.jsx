@@ -1,7 +1,9 @@
 import { Component } from "react";
 import axios from "axios"
-import Child1 from "./child1";
-import Child2 from "./Child2";
+import Child1 from "./OnlineTable";
+import Child2 from "./OnlineForm";
+import OnlineForm from "./OnlineForm";
+import OnlineTable from "./OnlineTable";
 
 export default class OnlineQuiz extends Component {
     constructor() {
@@ -68,11 +70,16 @@ clearForm = () => {
     })}
 render() {
     return <div>
-        
+        <OnlineForm person={this.state.person}
+       adduser={this.adduser}
+       handlechange={this.handlechange}
+      updateUser={this.updateUser}
+      editindex={this.state.editindex}/>
         
         <hr />
-        <Child2/>
-        <Child1 Appquiz={this.state.Appquiz}/>
+        
+        <OnlineTable Appquiz={this.state.Appquiz} edituser={this.edituser} deletetuser={this.deletetuser}
+        />
     </div>
 }
 componentDidMount() {

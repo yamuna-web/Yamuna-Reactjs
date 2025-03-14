@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export default class Child1 extends Component{
+export default class OnlineTable extends Component{
     constructor(){
         super()
     };
@@ -26,8 +26,8 @@ render(){
                         <td>{val.options}</td>
                         <td>{val.correctAnswer}</td>
                         <td>{val.score}</td>
-                        <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
-                        <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
+                        <td><button type="button" onClick={() => this.props.edituser(val, i)}>edit</button></td>
+                        <td><button type="button" onClick={() => this.props.deletetuser(val)}>delete</button></td>
                     </tr>)
                 })}
 

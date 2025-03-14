@@ -85,18 +85,6 @@
   ],
   "Appquiz": [
     {
-      "id": "1",
-      "question": "What is the capital of France?",
-      "options": [
-        "Berlin",
-        "Madrid",
-        "Paris",
-        "Rome"
-      ],
-      "correctAnswer": "Paris",
-      "score": 10
-    },
-    {
       "id": "2",
       "question": "Which planet is known as the Red Planet?",
       "options": [
@@ -145,12 +133,12 @@
       "score": 5
     },
     {
-      "id": "1",
-      "question": "xdcfvgbhjn",
-      "options": "ghbjnmk,",
-      "correctAnswer": "fvgbhnjmkl",
+      "id": "",
+      "question": "",
+      "options": "",
+      "correctAnswer": "",
       "score": "",
-      "totalprice": "drftghjnkm"
+      "createdAt": "8"
     }
   ],
   "Management": [

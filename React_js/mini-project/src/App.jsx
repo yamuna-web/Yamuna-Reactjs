@@ -21,8 +21,8 @@ function App() {
     <>
      {/* <Managementtickets/> */}
      {/* <SocilaMedia/>     */}
-     <TaskManagement/>
-     {/* <OnlineQuiz/>  */}
+     {/* <TaskManagement/> */}
+     <OnlineQuiz/> 
      {/* <UserProfile/>  */}
      {/* <Managementsystem/> */}
      {/* <DigitalAdress/> */}

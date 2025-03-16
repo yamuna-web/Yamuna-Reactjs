@@ -10,13 +10,13 @@
     },
     {
       "id": "2",
-      "name": "neeraja",
+      "name": "neru",
       "price": "39",
       "quantity": "30%",
       "totalprice": "450"
     }
   ],
-  "socialmedia": [
+  "Social": [
     {
       "id": "P001",
       "content": "This is a wonderful day! Feeling great and ready to tackle new challenges.",
@@ -37,13 +37,6 @@
       "likes": 45,
       "comments": "hi",
       "author": "ChrisWalker"
-    },
-    {
-      "id": "P004",
-      "content": "Starting a new project at work today. Excited to see where this takes me!",
-      "likes": 70,
-      "comments": "hi",
-      "author": "DanaLee"
     }
   ],
   "system": [
@@ -79,13 +72,13 @@
       "id": "5",
       "title": "Task five",
       "description": "Details about task five.",
-      "status": "Completed",
+      "status": "C",
       "createdAt": "2025-03-13T12:45:00Z"
     }
   ],
   "Appquiz": [
     {
-      "id": "2",
+      "id": "1",
       "question": "Which planet is known as the Red Planet?",
       "options": [
         "Earth",
@@ -97,48 +90,40 @@
       "score": 8
     },
     {
+      "id": "2",
+      "question": "What is the largest mammal in the world?",
+      "options": [
+        "Elephant",
+        "Blue Whale",
+        "Shark",
+        "Giraffe"
+      ],
+      "correctAnswer": "Blue Whale",
+      "score": 10
+    },
+    {
       "id": "3",
-      "question": "What is the largest ocean on Earth?",
+      "question": "Which is the smallest country in the world?",
       "options": [
-        "Atlantic Ocean",
-        "Indian Ocean",
-        "Arctic Ocean",
-        "Pacific Ocean"
+        "Monaco",
+        "Vatican City",
+        "San Marino",
+        "Liechtenstein"
       ],
-      "correctAnswer": "Pacific Ocean",
-      "score": 9
-    },
-    {
-      "id": "4",
-      "question": "Who wrote 'To Kill a Mockingbird'?",
-      "options": [
-        "Harper Lee",
-        "J.K. Rowling",
-        "George Orwell",
-        "F. Scott Fitzgerald"
-      ],
-      "correctAnswer": "Harper Lee",
-      "score": 7
-    },
-    {
-      "id": "5",
-      "question": "Which element has the chemical symbol 'O'?",
-      "options": [
-        "Oxygen",
-        "Gold",
-        "Osmium",
-        "Ozone"
-      ],
-      "correctAnswer": "Oxygen",
+      "correctAnswer": "Vatican City",
       "score": 5
     },
     {
-      "id": "",
-      "question": "",
-      "options": "",
-      "correctAnswer": "",
-      "score": "",
-      "createdAt": "8"
+      "id": "4",
+      "question": "What is the capital of Japan?",
+      "options": [
+        "Beijing",
+        "Seoul",
+        "Tokyo",
+        "Bangkok"
+      ],
+      "correctAnswer": "Tokyo",
+      "score": "9"
     }
   ],
   "Management": [
@@ -147,51 +132,28 @@
       "name": "Alice Johnson",
       "email": "alice.johnson@example.com",
       "role": "Admin",
-      "preferences": {
-        "theme": "dark",
-        "language": "English",
-        "notifications": true
-      }
+      "preferences": "theme dark"
     },
     {
       "id": "2",
       "name": "Bob Smith",
       "email": "bob.smith@example.com",
       "role": "Subscriber",
-      "preferences": {
-        "theme": "light",
-        "language": "Spanish",
-        "notifications": false
-      }
+      "preferences": "theme dark"
     },
     {
       "id": "3",
       "name": "Charlie Brown",
       "email": "charlie.brown@example.com",
       "role": "Subscriber",
-      "preferences": {
-        "theme": "dark",
-        "language": "French",
-        "notifications": true
-      }
+      "preferences": "theme dark"
     },
     {
       "id": "4",
       "name": "David Lee",
       "email": "david.lee@example.com",
       "role": "Admin",
-      "preferences": {
-        "theme": "light",
-        "language": "German",
-        "notifications": false
-      }
-    },
-    {
-      "id": "vgbhnjk",
-      "name": "rftgyhj",
-      "email": "yamuna61@gmail.com",
-      "role": "edrfthj",
-      "preferences": "fghjk"
+      "preferences": "thie white"
     }
   ],
   "Librarysystem": [
@@ -208,23 +170,9 @@
       "author": "Herman Melville",
       "isAvailable": false,
       "borrower": "10266"
-    },
-    {
-      "id": "vgbhnjk",
-      "title": "xdcfvbhjnkm",
-      "author": "fvgbhjnmk",
-      "isAvailable": "fgvbhjnkm",
-      "borrower": "tyjkmlghhj"
     }
   ],
   "AdressBook": [
-    {
-      "id": "1",
-      "name": "John D",
-      "email": "john.doe@example.com",
-      "phone": "+1234567890",
-      "address": "123 Elm Street, Springfield, IL"
-    },
     {
       "id": "2",
       "name": "Jane Smith",
@@ -236,15 +184,8 @@
       "id": "3",
       "name": "Mark Johnson",
       "email": "mark.johnson@example.com",
-      "phone": "+1122334455",
+      "phone": "+112",
       "address": "789 Pine Road, Madison, WI"
-    },
-    {
-      "id": "1",
-      "name": "gundlaguttayamuna",
-      "email": "gundlaguttayamuna61@gmail.com",
-      "phone": "9876543456",
-      "address": "jffghjkkn"
     }
   ],
   "Inventaryststem": [
@@ -257,10 +198,10 @@
     },
     {
       "id": "3",
-      "name": "Desk Chair",
+      "name": "dosa",
       "quantity": "7577777",
-      "price": 129.99,
-      "category": "Furniture"
+      "price": "129.99",
+      "category": "Travel"
     }
   ],
   "Bookingsystem": [
@@ -268,7 +209,7 @@
       "seatNumber": "A1",
       "isBooked": true,
       "category": "VIP",
-      "userID": "101333",
+      "userID": "1098",
       "id": "a767"
     },
     {
@@ -309,25 +250,11 @@
       "date": "2025-03-11"
     },
     {
-      "id": "3",
-      "amount": 35.75,
-      "category": "Food",
-      "description": "Dinner with team",
-      "date": "2025-03-12"
-    },
-    {
       "id": "4",
       "amount": 500,
       "category": "Office Supplies",
-      "description": "New computer equipment",
+      "description": "New computer ",
       "date": "2025-03-13"
-    },
-    {
-      "id": "3",
-      "amount": "120.57",
-      "category": "Travel",
-      "description": "Taxi fare to client meeting",
-      "date": "2025-03-10"
     }
   ]
 }

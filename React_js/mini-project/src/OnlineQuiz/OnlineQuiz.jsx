@@ -78,8 +78,8 @@ render() {
         
         <hr />
         
-        <OnlineTable Appquiz={this.state.Appquiz} edituser={this.edituser} deletetuser={this.deletetuser}
-        />
+        <OnlineTable Appquiz={this.state.Appquiz} edituser={this.edituser} deletetuser={this.deletetuser}/>
+        
     </div>
 }
 componentDidMount() {

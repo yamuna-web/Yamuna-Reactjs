@@ -1,5 +1,7 @@
 import { Component } from "react";
 import axios from "axios"
+import ExpenseForm from "./ExpenseForm";
+import ExpenseTable from "./ExpenseTable";
 
 export default class ExpenseTracker extends Component {
     constructor() {
@@ -66,69 +68,14 @@ clearForm = () => {
     })}
 render() {
     return <div>
-        <form >
-            <label htmlFor="">id</label>
-            <input type="text"
-                name="id"
-                value={this.state.person.id}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">amount:</label>
-            <input type="text"
-                name="amount"
-                value={this.state.person.amount}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">category:</label>
-            <input type="text"
-                name="category"
-                value={this.state.person.category}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">description</label>
-            <input type="text"
-                name="description"
-                value={this.state.person.description}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">date:</label>
-            <input type="text"
-                name="date"
-                value={this.state.person.date}
-                onChange={this.handlechange} />
-
-            <br />
-            {this.state.editindex === null ? <button type="button" onClick={this.adduser}>add user</button> :
-                (<button type="button" onClick={this.updateUser}> update user</button>)}
-        </form>
+        <ExpenseForm person={this.state.person}
+                               adduser={this.adduser}
+                               handlechange={this.handlechange}
+                              updateUser={this.updateUser}
+                              editindex={this.state.editindex}/>
         <hr />
-        <table border={1}>
-            <thead>
-                <tr>
-                    <th>Expense ID</th>
-                    <th>Expense Amount</th>
-                    <th>Expense Type</th>
-                    <th>Details of Expense</th>
-                    <th>Expense Date</th>
-                    <th>edit</th>
-                    <th>delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                {this.state.Etracker.map((val, i) => {
-                    return (<tr key={val.id}>
-                        <td>{val.id}</td>
-                        <td>{val.amount}</td>
-                        <td>{val.category}</td>
-                        <td>{val.description}</td>
-                        <td>{val.date}</td>
-                        <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
-                        <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
-                    </tr>)
-                })}
-
-            </tbody>
-        </table>
+                <ExpenseTable Etracker={this.state.Etracker} edituser={this.edituser} deletetuser={this.deletetuser}/>
+        
     </div>
 }
 componentDidMount() {

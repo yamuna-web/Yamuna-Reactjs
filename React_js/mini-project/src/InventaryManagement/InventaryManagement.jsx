@@ -1,5 +1,7 @@
 import { Component } from "react";
 import axios from "axios"
+import InventaryForm from "./InventaryForm";
+import InventaryTable from "./InventaryTable";
 
 export default class InventaryManagement extends Component {
     constructor() {
@@ -66,69 +68,14 @@ clearForm = () => {
     })}
 render() {
     return <div>
-        <form >
-            <label htmlFor="">id</label>
-            <input type="text"
-                name="id"
-                value={this.state.person.id}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">name:</label>
-            <input type="text"
-                name="name"
-                value={this.state.person.name}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">quantity:</label>
-            <input type="text"
-                name="quantity"
-                value={this.state.person.quantity}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">price</label>
-            <input type="text"
-                name="price"
-                value={this.state.person.price}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">category:</label>
-            <input type="text"
-                name="category"
-                value={this.state.person.category}
-                onChange={this.handlechange} />
-
-            <br />
-            {this.state.editindex === null ? <button type="button" onClick={this.adduser}>add user</button> :
-                (<button type="button" onClick={this.updateUser}> update user</button>)}
-        </form>
+        <InventaryForm person={this.state.person}
+                               adduser={this.adduser}
+                               handlechange={this.handlechange}
+                              updateUser={this.updateUser}
+                              editindex={this.state.editindex}/>
         <hr />
-        <table border={1}>
-            <thead>
-                <tr>
-                    <th>Product ID</th>
-                    <th>Product Name</th>
-                    <th>Stock Quantity</th>
-                    <th>Product Price</th>
-                    <th>Product Category</th>
-                    <th>edit</th>
-                    <th>delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                {this.state.Inventaryststem.map((val, i) => {
-                    return (<tr key={val.id}>
-                        <td>{val.id}</td>
-                        <td>{val.name}</td>
-                        <td>{val.quantity}</td>
-                        <td>{val.price}</td>
-                        <td>{val.category}</td>
-                        <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
-                        <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
-                    </tr>)
-                })}
-
-            </tbody>
-        </table>
+               <InventaryTable Inventaryststem={this.state.Inventaryststem} edituser={this.edituser} deletetuser={this.deletetuser}/>
+       
     </div>
 }
 componentDidMount() {

@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export default class OnlineForm extends Component{
+export default class SocialForm extends Component{
 constructor(){
     super()
 };
@@ -14,27 +14,27 @@ render(){
                 onChange={this.props.handlechange}/>
 </div>
 <div className="mb-3">
-  <label htmlFor="formGroupExampleInput" className="form-label">question</label>
-  <input type="text" className="form-control" name="question"
-                value={this.props.person.question}
+  <label htmlFor="formGroupExampleInput" className="form-label">content</label>
+  <input type="text" className="form-control" name="content"
+                value={this.props.person.content}
                 onChange={this.props.handlechange}/>
 </div>
 <div className="mb-3">
-  <label htmlFor="formGroupExampleInput" className="form-label">options</label>
-  <input type="text" className="form-control" name="options"
-                value={this.props.person.options}
+  <label htmlFor="formGroupExampleInput" className="form-label">likes</label>
+  <input type="text" className="form-control" name="likes"
+                value={this.props.person.likes}
                 onChange={this.props.handlechange}/>
 </div>
 <div className="mb-3">
-  <label htmlFor="formGroupExampleInput" className="form-label">correctAnswer</label>
-  <input type="text" className="form-control" name="correctAnswer"
-                value={this.props.person.correctAnswer}
+  <label htmlFor="formGroupExampleInput" className="form-label">comments</label>
+  <input type="text" className="form-control" name="comments"
+                value={this.props.person.comments}
                 onChange={this.props.handlechange}/>
 </div>
 <div className="mb-3">
-  <label htmlFor="formGroupExampleInput" className="form-label">score</label>
-  <input type="text" className="form-control" name="score"
-                value={this.props.person.score}
+  <label htmlFor="formGroupExampleInput" className="form-label">author</label>
+  <input type="text" className="form-control" name="author"
+                value={this.props.person.author}
                 onChange={this.props.handlechange}/>
 </div>
             <br />

@@ -1,5 +1,7 @@
 import { Component } from "react";
 import axios from "axios"
+import MovieForm from "./MovieForm";
+import MovieTable from "./MovieTable";
 
 export default class MovieTicket extends Component {
     constructor() {
@@ -66,60 +68,14 @@ clearForm = () => {
     })}
 render() {
     return <div>
-        <form >
-            <label htmlFor="">seatNumber</label>
-            <input type="text"
-                name="seatNumber"
-                value={this.state.person.seatNumber}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">isBooked:</label>
-            <input type="text"
-                name="isBooked"
-                value={this.state.person.isBooked}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">category:</label>
-            <input type="text"
-                name="category"
-                value={this.state.person.category}
-                onChange={this.handlechange} />{""}
-            <br />
-            <label htmlFor="">userID</label>
-            <input type="text"
-                name="userID"
-                value={this.state.person.userID}
-                onChange={this.handlechange} />{""}
-            <br />
-            {this.state.editindex === null ? <button type="button" onClick={this.adduser}>add user</button> :
-                (<button type="button" onClick={this.updateUser}> update user</button>)}
-        </form>
+        <MovieForm person={this.state.person}
+               adduser={this.adduser}
+               handlechange={this.handlechange}
+              updateUser={this.updateUser}
+              editindex={this.state.editindex}/>
         <hr />
-        <table border={1}>
-            <thead>
-                <tr>
-                    <th>Seat Identifier</th>
-                    <th>Seat Status</th>
-                    <th>VIP, Regular, Economy</th>
-                    <th>Booked By User ID</th>
-                    <th>edit</th>
-                    <th>delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                {this.state.Bookingsystem.map((val, i) => {
-                    return (<tr key={val.id}>
-                        <td>{val.seatNumber}</td>
-                        <td>{val.isBooked}</td>
-                        <td>{val.category}</td>
-                        <td>{val.userID}</td>
-                        <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
-                        <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
-                    </tr>)
-                })}
-
-            </tbody>
-        </table>
+        <MovieTable Bookingsystem={this.state.Bookingsystem} edituser={this.edituser} deletetuser={this.deletetuser}/>
+                
     </div>
 }
 componentDidMount() {

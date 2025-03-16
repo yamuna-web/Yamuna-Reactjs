@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export default class OnlineForm extends Component{
+export default class InventaryForm extends Component{
 constructor(){
     super()
 };
@@ -14,27 +14,27 @@ render(){
                 onChange={this.props.handlechange}/>
 </div>
 <div className="mb-3">
-  <label htmlFor="formGroupExampleInput" className="form-label">question</label>
-  <input type="text" className="form-control" name="question"
-                value={this.props.person.question}
+  <label htmlFor="formGroupExampleInput" className="form-label">name</label>
+  <input type="text" className="form-control" name="name"
+                value={this.props.person.name}
                 onChange={this.props.handlechange}/>
 </div>
 <div className="mb-3">
-  <label htmlFor="formGroupExampleInput" className="form-label">options</label>
-  <input type="text" className="form-control" name="options"
-                value={this.props.person.options}
+  <label htmlFor="formGroupExampleInput" className="form-label">quantity</label>
+  <input type="text" className="form-control" name="quantity"
+                value={this.props.person.quantity}
                 onChange={this.props.handlechange}/>
 </div>
 <div className="mb-3">
-  <label htmlFor="formGroupExampleInput" className="form-label">correctAnswer</label>
-  <input type="text" className="form-control" name="correctAnswer"
-                value={this.props.person.correctAnswer}
+  <label htmlFor="formGroupExampleInput" className="form-label">price</label>
+  <input type="text" className="form-control" name="price"
+                value={this.props.person.price}
                 onChange={this.props.handlechange}/>
 </div>
 <div className="mb-3">
-  <label htmlFor="formGroupExampleInput" className="form-label">score</label>
-  <input type="text" className="form-control" name="score"
-                value={this.props.person.score}
+  <label htmlFor="formGroupExampleInput" className="form-label">category</label>
+  <input type="text" className="form-control" name="category"
+                value={this.props.person.category}
                 onChange={this.props.handlechange}/>
 </div>
             <br />

@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Managementtickets from './E_commerce_Chart/managementtickets'
-import SocilaMedia from './Social Media_Post Editor/SocialMedia'
+
 import TaskManagement from './Task Management/TaskManagement'
 import OnlineQuiz from './OnlineQuiz/OnlineQuiz'
 import UsersProfile from './UserProfile/UserProfile'
@@ -13,6 +13,8 @@ import MovieTicket from './MovieTicket/MovieTicket'
 import InventaryManagement from './InventaryManagement/InventaryManagement.jsx'
 import ExpenseTracker from './ExpenseTracker/ExpenseTracker.jsx'
 import UserProfile from './UserProfile/UserProfile'
+import Social from './Social Media_Post Editor/Social.jsx'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,13 +22,13 @@ function App() {
   return (
     <>
      {/* <Managementtickets/> */}
-     {/* <SocilaMedia/>     */}
+    <Social/>
      {/* <TaskManagement/> */}
-     <OnlineQuiz/> 
+     {/* <OnlineQuiz/>  */}
      {/* <UserProfile/>  */}
      {/* <Managementsystem/> */}
      {/* <DigitalAdress/> */}
-     {/* <MovieTicket/> */}
+     {/* <MovieTicket/>  */}
      {/* <InventaryManagement/> */}
      {/* <ExpenseTracker/> */}
     </>

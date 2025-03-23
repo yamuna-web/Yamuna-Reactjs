@@ -13,6 +13,7 @@ import InventaryManagement from './InventaryManagement/InventaryManagement.jsx'
 import ExpenseTracker from './ExpenseTracker/ExpenseTracker.jsx'
 import UserProfile from './UserProfile/UserProfile'
 import Social from './Social Media_Post Editor/Social.jsx'
+import Demo from './Practice/Demo.jsx'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   return (
     <>
      {/* <Managementtickets/> */}
-    <Social/>
+    {/* <Social/> */}
      {/* <TaskManagement/> */}
      {/* <OnlineQuiz/>  */}
      {/* <UserProfile/>  */}
@@ -30,6 +31,7 @@ function App() {
      {/* <MovieTicket/>  */}
      {/* <InventaryManagement/> */}
      {/* <ExpenseTracker/> */}
+     <Demo/>
     </>
   )
 }

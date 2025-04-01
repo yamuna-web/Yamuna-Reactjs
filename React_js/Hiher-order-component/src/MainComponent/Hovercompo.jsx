@@ -2,6 +2,7 @@ import { Component } from "react";
 import Main from "./Main";
 
 class Hovercompo extends Component{
+    
     render(){
         return (<>
               <h2>{this.props.count}</h2>

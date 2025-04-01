@@ -11,4 +11,5 @@ class Hovercompo extends Component{
             </>)
     }
 }
+
 export default Main(Hovercompo)

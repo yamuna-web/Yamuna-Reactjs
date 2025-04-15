@@ -1,0 +1,7 @@
+nav{
+  justify-content: space-evenly;
+  display: flex;
+}
+div#root {
+  text-align: center;
+}

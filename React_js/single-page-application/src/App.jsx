@@ -13,13 +13,13 @@ function App() {
 
   return (
     <>
-   <h2>Hello I am from Header</h2>
+      <h2>Hello I am from Header</h2>
       <Router>
         <nav>
-        <Link to={''}>Home</Link>
-        <Link to={'about'}>About</Link>
-        <Link to={'contact'}>Contact</Link>
-        <Link to={'projects'}>Projects</Link>
+          <Link to={''}>Home</Link>
+          <Link to={'about'}>About</Link>
+          <Link to={'contact'}>Contact</Link>
+          <Link to={'projects'}>Projects</Link>
         </nav>
         <Routes>
           <Route path="" element={<Home />} />

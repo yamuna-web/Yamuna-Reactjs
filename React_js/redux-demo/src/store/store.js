@@ -7,9 +7,6 @@ const rootReducer = combineReducers({
   students: null,
   users: usersReducer,
 });
-
-
-
 const store = createStore(rootReducer);
 
 export default store;

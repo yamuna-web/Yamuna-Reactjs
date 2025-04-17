@@ -1,4 +1,4 @@
-const defaultUsers = ["Ram", "Ravi", "Sam", "Kumar"];
+const defaultUsers = ["yamuna", "neeraja", "", "chenchaiah"];
 export const usersReducer = (state = defaultUsers, action) => {
   switch (action.type) {
     case "CREATE_USER":

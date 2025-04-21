@@ -50,7 +50,7 @@ const Users=()=>{
       <label htmlFor="">lasttname</label>
       <input type="text" name="lname" id="" value={studentdetails.lname}  onChange={handleevent}/>{""} 
     {editindex===null?<button type="button" onClick={addstudent}>add student</button>:
-    <button type="button" onClick={updatestudent}>update student</button>}
+    <button type="button" onClick={updatestudent} style={{ background: "blue", color: "white" }}>update student</button>}
 
     </form>
     <table border={1}>
@@ -65,8 +65,8 @@ const Users=()=>{
             return <tr key={i}>
               <td>{std.fname}</td>
               <td>{std.lname}</td>
-              <td><button type="button" onClick={()=>{handleEdit(std,i)}}>Edit</button></td>
-              <td><button type="button" onClick={()=>{handledelete(i)}}>Delete</button></td>
+              <td><button type="button" onClick={()=>{handleEdit(std,i)}} style={{ background: "green", color: "white" }}>Edit</button></td>
+              <td><button type="button" onClick={()=>{handledelete(i)}} style={{ background: "red", color: "white" }}>Delete</button></td>
             </tr>
           })}
           

@@ -13,8 +13,6 @@ function App() {
 
   return (
     <>
-
-
       <FuncRenderPropsDemo
         render={(count, handleIncrement, handleDecrement, handleReset) => (
           <FuncHoverCouter

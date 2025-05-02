@@ -210,6 +210,5 @@ const StudentDetails = () => {
       </table>
     </div>
   );
-};
-
+}
 export default StudentDetails;

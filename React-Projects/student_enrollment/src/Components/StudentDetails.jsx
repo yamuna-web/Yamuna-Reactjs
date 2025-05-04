@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUserAction, deleteUserAction, updateUserAction } from "../Store/StudentsSlice";
 
-// ✅ Generate a unique student ID
+
 const generateStudentId = (students) => {
   const newId = students.length + 1;
   return newId;
@@ -27,7 +27,7 @@ const StudentDetails = () => {
   const [maxLimit] = useState(10);
   const [filteredStudents, setFilteredStudents] = useState(students);
 
-  // ✅ Sync filtered students with Redux store
+ 
   useEffect(() => {
     setFilteredStudents(students);
   }, [students]);

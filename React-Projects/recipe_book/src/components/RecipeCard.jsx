@@ -24,6 +24,7 @@ const RecipeCard = ({ recipe, isFavorite, onEdit, onDelete, onToggleFavorite }) 
         </button>
       </div>
     </div>
+    
   );
 };
 

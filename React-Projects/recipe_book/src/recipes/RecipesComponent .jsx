@@ -9,7 +9,6 @@ import {
   filterByCategory
 } from './recipesSlice';
 import RecipeCard from '../../components/RecipeCard';
-
 const RecipesComponent = () => {
   const dispatch = useDispatch();
   const recipes = useSelector(state => state.recipes.recipes || []);

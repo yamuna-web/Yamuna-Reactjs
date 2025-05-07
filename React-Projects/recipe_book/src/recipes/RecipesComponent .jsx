@@ -7,7 +7,8 @@ import {
   editRecipe,
   searchRecipes,
   filterByCategory
-} from './recipesSlice';
+} 
+from './recipesSlice';
 import RecipeCard from '../../components/RecipeCard';
 const RecipesComponent = () => {
   const dispatch = useDispatch();

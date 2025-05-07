@@ -12,6 +12,7 @@ const initialState = {
       category: "Dinner",
       cuisine: "Italian"
     },
+    
     {
       name: "Pancakes",
       ingredients: ["Flour", "Eggs", "Milk", "Sugar"],

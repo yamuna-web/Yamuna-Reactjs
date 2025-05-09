@@ -7,7 +7,6 @@ const ProductSearch = ({ setFilteredProducts }) => {
   const [categoryFilter, setCategoryFilter] = useState('');
 
   const dispatch = useDispatch();
-
   const handleSearch = () => {
     // You can filter by category or name here
     if (categoryFilter) {

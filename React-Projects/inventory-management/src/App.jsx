@@ -13,7 +13,6 @@ const App = () => {
   const handleEditProduct = (product) => {
     setSelectedProduct(product);
   };
-
   const clearSelectedProduct = () => {
     setSelectedProduct(null);
   };

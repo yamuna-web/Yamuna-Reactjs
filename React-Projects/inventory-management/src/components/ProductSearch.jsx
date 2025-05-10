@@ -5,6 +5,7 @@ import { selectProductsByCategory } from '../inventory/inventorySlice';
 const ProductSearch = ({ setFilteredProducts }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('');
+  
 
   const dispatch = useDispatch();
   const handleSearch = () => {

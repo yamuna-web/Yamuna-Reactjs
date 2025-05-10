@@ -16,7 +16,6 @@ const App = () => {
   const clearSelectedProduct = () => {
     setSelectedProduct(null);
   };
-
   return (
     <div className="app">
       <h1>Inventory Management</h1>

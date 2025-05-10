@@ -176,7 +176,6 @@
   .search-bar button:hover {
     background-color: #005fa3;
   }
-  
   will-change: filter;
   transition: filter 300ms;
 }

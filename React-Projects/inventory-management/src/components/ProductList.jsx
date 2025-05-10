@@ -10,6 +10,7 @@ const ProductList = ({ onEdit }) => {
   // Function to calculate total price for each product
   const calculateTotalPrice = (product) => {
     return product.quantity * product.price;
+    
   };
 
   return (

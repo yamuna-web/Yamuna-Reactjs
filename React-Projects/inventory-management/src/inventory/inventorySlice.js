@@ -52,7 +52,6 @@ const inventorySlice = createSlice({
             reorderLevel,
           },
         };
-        
       },
     },
     updateQuantity(state, action) {

@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
+import { addLocation } from "../redux/weatherSlice";
+import { addLocation } from "../redux/weatherSlice"; 
+
 
 const initialState = {
   locations: [],

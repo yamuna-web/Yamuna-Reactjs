@@ -1,42 +1,125 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Global reset */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Form container */
+form {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background-color: #fff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Form inputs */
+form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Form button */
+form button {
+  background-color: #3b82f6; /* Tailwind's blue-500 */
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #2563eb; /* Tailwind's blue-600 */
 }
 
-.card {
-  padding: 2em;
+/* Product card */
+.product-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background-color: #fff;
 }
 
-.read-the-docs {
-  color: #888;
+/* Product card buttons */
+.product-card .actions button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.product-card .edit-btn {
+  background-color: #facc15; /* Tailwind's yellow-400 */
+}
+.product-card .edit-btn:hover {
+  background-color: #eab308;
+}
+
+.product-card .delete-btn {
+  background-color: #ef4444; /* red-500 */
+  color: #fff;
+}
+.product-card .delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.product-card .cart-btn {
+  background-color: #22c55e; /* green-500 */
+  color: #fff;
+}
+.product-card .cart-btn:hover {
+  background-color: #16a34a;
+}
+
+/* Cart section */
+.cart {
+  margin-top: 24px;
+}
+
+.cart h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.cart-item {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item button {
+  background-color: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.cart-item button:hover {
+  background-color: #dc2626;
+}
+
+.cart-total {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 12px;
 }

@@ -1,42 +1,87 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Chat Container */
+.chat-container {
+  width: 400px;
+  max-width: 100%;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Message List */
+.message-list {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Individual Message */
+.message-list div {
+  background-color: #e1f5fe;
+  padding: 10px 14px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 80%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.message-list p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
+/* Delete Button */
+.message-list button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: transparent;
+  border: none;
   color: #888;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.message-list button:hover {
+  color: red;
+}
+
+/* Input Area */
+.message-input {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.message-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.message-input button {
+  margin-left: 10px;
+  padding: 10px 16px;
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.message-input button:hover {
+  background-color: #0277bd;
 }

@@ -58,11 +58,7 @@ const Yamuna = () => {
 
         <label>Last Name: </label>
         <input
-          type="text"
-          name="lname"
-          value={studentdetails.lname}
-          onChange={handleChange}
-        />
+          type="text"name="lname"value={studentdetails.lname}onChange={handleChange}/>
         <br />
 
         <label>Email: </label>

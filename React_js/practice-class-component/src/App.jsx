@@ -23,8 +23,8 @@ function App() {
    <>
   {/* <Yamuna/> */}
 {/* <Counter/> */}
-{/* <Parent/> */}
-<Greeting/>
+<Parent/>
+{/* <Greeting/> */}
 {/* <UserCard/> */}
 {/* <Timer/> */}
 {/* <Loginstatus/> */}

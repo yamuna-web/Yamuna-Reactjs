@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Childbutton from "./ChildButton";
+import Childbutton from "./Childbutton";
 
 class Parent extends Component {
     constructor() {

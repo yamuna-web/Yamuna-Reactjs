@@ -1,7 +1,8 @@
 import { Component } from "react";
 import Greetprops from "./Greetprops";
 
-export default class Greeting extends Component{
+
+ class Greeting extends Component{
     constructor(){
         super()
         this.state={
@@ -19,3 +20,4 @@ export default class Greeting extends Component{
         </>)
     }
 }
+export default Greeting

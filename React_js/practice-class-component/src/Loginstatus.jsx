@@ -8,7 +8,6 @@ export default class Loginstatus extends Component {
       isLoggedIn: false
     };
   }
-
   toggleLogin = () => {
     this.setState({
       isLoggedIn: !this.state.isLoggedIn

@@ -7,7 +7,6 @@ export default class Inputfield extends Component {
       inputValue: ''
     };
   }
-
   handleChange = (e) => {
     this.setState({ inputValue: e.target.value });
   };

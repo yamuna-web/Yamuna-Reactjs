@@ -9,7 +9,6 @@ const Maxdistance = () => {
 
 setResult(distance);
   };
-
   return (
     <div>
       <h2>person distance</h2>

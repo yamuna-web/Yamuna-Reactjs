@@ -8,7 +8,6 @@ class Parent extends Component {
             message: "Welcome to Parent Component !!"
         }
     }
-
     changeMessage = () => {
         this.setState({ message: "Welcome to Child component " })
 

@@ -2,15 +2,14 @@ import { Component } from "react";
 import Childbutton from "./Childbutton";
 
 class Parent extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             message: "Welcome to Parent Component !!"
         }
     }
     changeMessage = () => {
         this.setState({ message: "Welcome to Child component " })
-
     }
     render() {
         return <div>

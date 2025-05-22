@@ -6,7 +6,7 @@ import Greetprops from "./Greetprops";
     constructor(){
         super()
         this.state={
-            name:"yamuna",
+            count:1
         }
     }
     increment=()=>{

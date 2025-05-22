@@ -1,9 +1,6 @@
 import { Component } from "react";
 
 class Childbutton extends Component {
-    constructor() {
-        super()
-    }
     render() {
         return <div>
             <button onClick={this.props.changeMessage}>message</button>

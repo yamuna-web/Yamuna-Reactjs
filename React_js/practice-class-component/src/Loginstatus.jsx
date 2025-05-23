@@ -19,9 +19,7 @@ export default class Loginstatus extends Component {
     return (
       <div>
         <h2>{isLoggedIn ? 'Welcome back!' : 'Please log in'}</h2>
-        <button onClick={this.toggleLogin}>
-          {isLoggedIn ? 'Log out' : 'Log in'}
-        </button>
+        <button onClick={this.toggleLogin}>{isLoggedIn ? 'Log out' : 'Log in'}</button>
       </div>
     );
   }

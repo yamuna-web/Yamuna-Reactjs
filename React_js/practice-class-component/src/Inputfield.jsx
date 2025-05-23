@@ -15,11 +15,7 @@ export default class Inputfield extends Component {
     return (
       <div>
         <input
-          type="text"
-          value={this.state.inputValue}
-          onChange={this.handleChange}
-          placeholder=""
-        />
+          type="text"value={this.state.inputValue}onChange={this.handleChange}placeholder="" />
         <p>inputvalue: {this.state.inputValue}</p>
       </div>
     );

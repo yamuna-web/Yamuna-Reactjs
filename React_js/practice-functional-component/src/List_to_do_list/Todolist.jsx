@@ -7,3 +7,4 @@ function Todolist({ todos = [] }) {
     </ul>
   );
 }
+export default Todolist

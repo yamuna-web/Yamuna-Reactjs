@@ -1,8 +1,8 @@
 import { Component } from "react";
 
 export default class Practice1 extends Component{
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
         this.state={
             count:0
         }

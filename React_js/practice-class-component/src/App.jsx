@@ -54,11 +54,11 @@ function App() {
 {/* <Question5/> */}
 {/* <Question6/> */}
 {/* <Question7/> */}
-{/* <Practice1/> */}
+<Practice1/>
 {/* <Practice2/> */}
 {/* <Practice3/> */}
 {/* <Practice4/> */}
-<Practice5/>
+{/* <Practice5/> */}
    </>
   )
 }

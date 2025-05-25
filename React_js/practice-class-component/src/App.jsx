@@ -26,6 +26,13 @@ import Practice2 from './Practice2'
 import Practice3 from './Practice3'
 import Practice4 from './Practice4'
 import Practice5 from './Practice5'
+import Programe1 from './Programe1'
+import Count from './Count2'
+import Count2 from './Count2'
+import Greeting2par from './Greeting2par'
+import Timer3 from './Timer3'
+import Usercard3 from './Usercard3'
+import Toggle3 from './Toggle3'
 
 
 
@@ -54,11 +61,17 @@ function App() {
 {/* <Question5/> */}
 {/* <Question6/> */}
 {/* <Question7/> */}
-<Practice1/>
+{/* <Practice1/> */}
 {/* <Practice2/> */}
 {/* <Practice3/> */}
 {/* <Practice4/> */}
 {/* <Practice5/> */}
+{/* <Programe1/> */}
+{/* <Count2/> */}
+{/* <Greeting2par/> */}
+{/* <Timer3/> */}
+{/* <Usercard3/> */}
+<Toggle3/>
    </>
   )
 }

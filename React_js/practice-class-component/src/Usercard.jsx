@@ -12,6 +12,7 @@ export default class UserCard extends Component {
         </>)
     }
 }
+
 UserCard.defaultProps = {
     role: 'Guest'
 };

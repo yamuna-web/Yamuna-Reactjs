@@ -7,8 +7,6 @@ export default class Usercard3 extends Component{
     render(){
       return  <p>role:{this.props.role}</p>
     }
-
-    
 }
 Usercard3.defaultProps={
 role:"yamuna"

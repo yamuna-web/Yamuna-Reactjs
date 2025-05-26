@@ -14,7 +14,6 @@ export default class Toggle extends Component {
             isOn: !this.state.isOn
         });
     }
-
     render() {
         return (
             <div>

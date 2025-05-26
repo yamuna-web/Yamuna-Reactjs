@@ -12,6 +12,7 @@ export default class Toggle3 extends Component{
             ison:!this.state.ison
         })
     }
+    
     render(){
         return <div>
            <h1>{this.state.ison?"on":"off"}</h1>

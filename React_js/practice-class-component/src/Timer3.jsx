@@ -10,6 +10,7 @@ export default class Timer3 extends Component {
 componentDidMount=()=>{
     this.state.intervel
 }
+
     render() {
        return <p>{this.state.seconds}</p>
     }

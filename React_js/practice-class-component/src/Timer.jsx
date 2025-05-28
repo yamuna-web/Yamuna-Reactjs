@@ -24,7 +24,6 @@ export default class Timer extends Component {
 
     clearInterval(this.state.intervalId);
   }
-
   render() {
     return (
       <div>

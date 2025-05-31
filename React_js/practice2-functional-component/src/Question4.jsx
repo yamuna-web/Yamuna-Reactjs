@@ -8,6 +8,7 @@ console.log(email)
     const handleNamechange = (e) => setName(e.target.value)
     const handleEmailchange = (e) => setEmail(e.target.value)
     return (
+        
         <div>
             <h2>user form</h2>
             <label htmlFor="">Name</label>

@@ -12,6 +12,7 @@ const Question5 = () => {
             clearInterval(timer)
         }
     }, [])
+    
 
     return <div>
         <h1>current time</h1>

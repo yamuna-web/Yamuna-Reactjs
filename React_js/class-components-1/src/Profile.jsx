@@ -10,3 +10,4 @@ import Profile from "./Profile";
   }
 }
 <Profile name="John" age={25} />
+

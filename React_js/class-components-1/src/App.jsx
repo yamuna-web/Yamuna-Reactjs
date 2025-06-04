@@ -5,10 +5,11 @@ import './App.css'
 import Parent from './Parent'
 import Title from './Title'
 import Container from './Container'
-import TodoApp from './TodoApp'
+import TodoApp from "./TodoApp"
 import Calculator from './Calculator'
 import Grandparent from './Grandparent'
 import ButtonPanel from './Buttonpanel'
+import Timer from './Timer'
 
 
 
@@ -22,11 +23,11 @@ function App() {
 {/* <Parent/> */}
 {/* <Title/> */}
 {/* <Container/> */}
-{/* <TodoApp/> */}
+<TodoApp/>
 {/* <Calculator/> */}
-<Grandparent/>
+{/* <Grandparent/> */}
 {/* <ButtonPanel/> */}
-
+{/* <Timer/> */}
     </>
   )
 }

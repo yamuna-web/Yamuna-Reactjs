@@ -8,7 +8,7 @@ class ButtonPanel extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Notify Dashboard</button>
+        <button onClick={this.handleClick}> Dashboard</button>
       </div>
     );
   }

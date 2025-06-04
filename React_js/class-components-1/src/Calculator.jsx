@@ -20,7 +20,7 @@ class Calculator extends Component {
         <h2>Square Calculator</h2>
         <Result number={this.state.number} />
         <InputNumber value={this.state.number} onNumberChange={this.handleNumberChange} />
-        {/* <Result number={this.state.number} /> */}
+        <Result number={this.state.number} />
       </div>
     );
   }

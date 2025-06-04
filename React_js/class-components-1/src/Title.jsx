@@ -8,7 +8,7 @@ export default class Title extends Component{
        
     }
     render(){
-        const title="bhavya"
+        const title="pspk"
         return<div>
 <TitleDisplay ti={title}/>
         </div>

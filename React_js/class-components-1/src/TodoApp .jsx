@@ -16,6 +16,5 @@ const TodoApp = () => {
       <TodoList todos={todos} />
     </div>
   );
-};
-
+}
 export default TodoApp;

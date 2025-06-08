@@ -5,7 +5,6 @@ class ComponentDidUpdate extends Component {
     super();
     this.state = { count: 0 };
   }
-
   componentDidUpdate(prevProps, prevState) {
     if (prevState.count !== this.state.count) {
       console.log('Component updated!');

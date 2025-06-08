@@ -9,5 +9,4 @@ class ComponentDidMount extends Component {
     return <p>Check console after component mounts.</p>;
   }
 }
-
 export default ComponentDidMount;

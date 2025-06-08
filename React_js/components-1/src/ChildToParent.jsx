@@ -6,7 +6,6 @@ const ChildToParent = () => {
   const handleData = (childData) => {
     setMessage(childData);
   };
-
   return (
     <div>
       <Child sendData={handleData} />

@@ -13,3 +13,4 @@ const DataFetcher = ({ render }) => {
 };
 
 export default DataFetcher;
+

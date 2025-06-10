@@ -11,6 +11,7 @@ const PollingAPI = () => {
         .then(data => setTime(data.datetime));
     }, 5000);
 
+    
     return () => clearInterval(interval);
   }, []);
 

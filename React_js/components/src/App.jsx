@@ -23,11 +23,11 @@ function App() {
   {/* <UseRefFocus/> */}
   {/* <UseRefValue/> */}
   {/* <UseReducerExample/> */}
-  {/* <UseMemoExample/> */}
+  <UseMemoExample/>
   {/* <UseCallbackExample/> */}
   {/* <MemoComponent/> */}
   {/* <LazyLoadComponent/> */}
-  <DebounceInput/>
+  {/* <DebounceInput/> */}
  
   
  

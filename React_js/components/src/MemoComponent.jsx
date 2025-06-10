@@ -10,6 +10,7 @@ const MemoComponent = () => {
   const [value, setValue] = React.useState('React');
 
   return (
+    
     <div>
       <Child value={value} />
       <button onClick={() => setCount(count + 1)}>Re-render</button>

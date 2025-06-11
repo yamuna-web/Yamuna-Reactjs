@@ -11,6 +11,9 @@ import UseCallbackExample from './UseCallbackExample'
 import MemoComponent from './MemoComponent'
 import LazyLoadComponent from './LazyLoadComponent'
 import DebounceInput from './DebounceInput'
+import Usememo from './Usememo'
+import MemoizedChild from './MemoizedChild'
+import ThrottledScroll from './ThrottledScroll'
 
 
 
@@ -23,11 +26,14 @@ function App() {
   {/* <UseRefFocus/> */}
   {/* <UseRefValue/> */}
   {/* <UseReducerExample/> */}
-  <UseMemoExample/>
+  {/* <UseMemoExample/> */}
   {/* <UseCallbackExample/> */}
   {/* <MemoComponent/> */}
   {/* <LazyLoadComponent/> */}
   {/* <DebounceInput/> */}
+  {/* <Usememo/> */}
+  {/* <MemoizedChild/> */}
+  <ThrottledScroll/>
  
   
  

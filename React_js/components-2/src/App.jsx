@@ -13,11 +13,11 @@ function App() {
 
   return (
     <>
-      {/* <FetchOnMount/> */}
+      <FetchOnMount/>
       {/* <LoadingErrorHandling/> */}
       {/* <PollingAPI/> */}
       {/* <CancelableFetch/> */}
-      <AxiosInterceptors/>
+      {/* <AxiosInterceptors/> */}
     
      
     </>

@@ -16,5 +16,4 @@ const DebounceInput = () => {
     </div>
   );
 };
-
 export default DebounceInput;

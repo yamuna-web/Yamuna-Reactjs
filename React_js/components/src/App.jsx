@@ -13,7 +13,8 @@ import LazyLoadComponent from './LazyLoadComponent'
 import DebounceInput from './DebounceInput'
 import Usememo from './Usememo'
 import MemoizedChild from './MemoizedChild'
-import ThrottledScroll from './ThrottledScroll'
+import Class1 from './Class1'
+
 
 
 
@@ -33,7 +34,8 @@ function App() {
   {/* <DebounceInput/> */}
   {/* <Usememo/> */}
   {/* <MemoizedChild/> */}
-  <ThrottledScroll/>
+  <Class1/>
+ 
  
   
  

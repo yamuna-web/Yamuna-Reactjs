@@ -19,5 +19,4 @@ const FormInput = () => {
     </form>
   );
 };
-
 export default FormInput;

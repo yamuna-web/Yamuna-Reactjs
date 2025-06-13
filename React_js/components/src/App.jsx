@@ -35,6 +35,7 @@ function App() {
   {/* <Usememo/> */}
   {/* <MemoizedChild/> */}
   <Class1/>
+  
  
  
   

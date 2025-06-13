@@ -17,6 +17,7 @@ export default class Class1 extends Component {
     reset = () => {
         this.setState({ count: 0 })
     }
+    
     render() {
         return <div>
             <p>{this.state.count}</p>

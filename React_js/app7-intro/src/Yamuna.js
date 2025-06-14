@@ -18,4 +18,5 @@ class Yamuna extends Component{
             </div>
     }
 }
+
 export default Yamuna

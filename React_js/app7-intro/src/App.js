@@ -8,7 +8,5 @@ function App() {
     <Neeraja/>
     <Yamuna/>     
     </div>
-   
-    
   } 
 export default App;

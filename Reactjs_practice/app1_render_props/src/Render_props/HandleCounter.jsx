@@ -18,7 +18,6 @@ export default class HandleCounter extends Component {
   handleReset = () => {
     this.setState({ count: 0 });
   };
-
   render() {
     console.log(this.props);
     return (

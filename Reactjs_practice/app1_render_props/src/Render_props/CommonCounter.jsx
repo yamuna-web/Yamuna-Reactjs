@@ -19,6 +19,7 @@ export default class CommonCounter extends Component {
             />
           )}
         />
+        
         <HandleCounter
           render={(count, handleIncrement, handleDecrement, handleReset) => (
             <HoverCounter

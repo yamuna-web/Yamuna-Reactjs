@@ -13,3 +13,4 @@ export default class HoverCounter extends Component {
     );
   }
 }
+

@@ -14,3 +14,4 @@ export default class ClickCounter extends Component {
     );
   }
 }
+

@@ -3,7 +3,6 @@ import React, { Component } from "react";
 export default class ClickCounter extends Component {
 
   render() {
-    console.log(this.props)
     return (
       <div>
         <h2>{this.props.count}</h2>

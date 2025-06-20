@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 export default class HandleCounter extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       count: 0,
@@ -19,7 +19,7 @@ export default class HandleCounter extends Component {
     this.setState({ count: 0 });
   };
   render() {
-    console.log(this.props);
+
     return (
       <div>
         {this.props.render(

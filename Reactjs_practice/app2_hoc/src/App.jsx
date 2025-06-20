@@ -6,6 +6,10 @@ import ClickCounter from './Component/ClickCounter'
 import HoverCounter from './Component/HoverCounter'
 import Neeraja from './counter/Neeraja'
 import Yamuna from './counter/Yamuna'
+import Click from './Hoc/Click'
+import Hover from './Hoc/Hover'
+import Clickbhavi from './Bhavya/Clickbhavi'
+import Hoverbhavi from './Bhavya/Hoverbhavi'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,9 +19,15 @@ function App() {
   {/* <ClickCounter/> */}
   {/* <br /> */}
   {/* <HoverCounter/> */}
-  <Neeraja/>
+  {/* <Neeraja/>
   <br />
-  <Yamuna/>
+  <Yamuna/> */}
+  {/* <Click/>
+  <br />
+  <Hover/> */}
+  <Clickbhavi/>
+  <br />
+  <Hoverbhavi/>
     </>
     
   )

@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-     {/* <Managementtickets/> */}
+     <Managementtickets/>
     {/* <Social/> */}
      {/* <TaskManagement/> */}
      {/* <OnlineQuiz/>  */}
@@ -31,7 +31,7 @@ function App() {
      {/* <MovieTicket/>  */}
      {/* <InventaryManagement/> */}
      {/* <ExpenseTracker/> */}
-     <Demo/>
+     {/* <Demo/> */}
     </>
   )
 }

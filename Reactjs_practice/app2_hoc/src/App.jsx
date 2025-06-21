@@ -10,6 +10,7 @@ import Click from './Hoc/Click'
 import Hover from './Hoc/Hover'
 import Clickbhavi from './Bhavya/Clickbhavi'
 import Hoverbhavi from './Bhavya/Hoverbhavi'
+import Component1 from './Yamuna/Component1'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,9 +26,10 @@ function App() {
   {/* <Click/>
   <br />
   <Hover/> */}
-  <Clickbhavi/>
+  {/* <Clickbhavi/>
   <br />
-  <Hoverbhavi/>
+  <Hoverbhavi/> */}
+  <Component1/>
     </>
     
   )

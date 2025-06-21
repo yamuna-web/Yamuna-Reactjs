@@ -6,7 +6,10 @@ export default class About extends Component{
     }
     render(){
         return <>
-           <h1>this is from About</h1>
+           <h2>this is from About</h2>
+           <p>
+            
+           </p>
         </>
     }
 }

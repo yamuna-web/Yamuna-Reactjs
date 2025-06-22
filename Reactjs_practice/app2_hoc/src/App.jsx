@@ -23,13 +23,13 @@ function App() {
   {/* <Neeraja/>
   <br />
   <Yamuna/> */}
-  {/* <Click/>
+  <Click/>
   <br />
-  <Hover/> */}
+  <Hover/>
   {/* <Clickbhavi/>
   <br />
   <Hoverbhavi/> */}
-  <Component1/>
+  {/* <Component1/> */}
     </>
     
   )

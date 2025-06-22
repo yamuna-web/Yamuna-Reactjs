@@ -6,6 +6,10 @@ import Click from './Click'
 import Hover from './Hover'
 import Clickcounter from './Components/Clickcounter'
 import Hovercounter from './Components/Hovercounter'
+import { Clickdemo } from './Clickdemo'
+import { Hoverdemo } from './Hoverdemo'
+import Clickcompo from './Hocdemo/Clickcompo'
+import Hovercompo from './Hocdemo/Hovercompo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,9 +19,15 @@ function App() {
    {/* <Click/>
    <br />
    <Hover/> */}
-   <Clickcounter/>
+   {/* <Clickcounter/>
    <br />
-   <Hovercounter/>
+   <Hovercounter/> */}
+   {/* <Clickdemo/>
+   <br />
+   <Hoverdemo/> */}
+   <Clickcompo/>
+   <br />
+   <Hovercompo/>
     </>
   )
 }

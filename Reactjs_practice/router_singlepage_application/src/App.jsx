@@ -11,7 +11,6 @@ const Dashboard = lazy(() => import("./Components/Dashboard"));
 
 function App() {
   const [count, setCount] = useState(0);
-
   return (
     <>
       <BrowserRouter>

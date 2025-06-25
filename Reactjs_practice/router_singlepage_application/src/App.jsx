@@ -7,8 +7,6 @@ import { Suspense } from "react";
 const Register = lazy(() => import("./Components/Register"));
 const Login = lazy(() => import("./Components/Login"));
 const Dashboard = lazy(() => import("./Components/Dashboard"));
-
-
 function App() {
   const [count, setCount] = useState(0);
   return (

@@ -11,7 +11,6 @@ const Register = () => {
     password: "",
     confirmPassword: "",
   });
-  
   const [users, setUsers] = useState([]);
   const handleChange = (e) => {
     const newUser = { ...user };

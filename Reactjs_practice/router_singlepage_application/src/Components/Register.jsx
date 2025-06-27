@@ -17,6 +17,7 @@ const Register = () => {
     newUser[e.target.name] = e.target.value;
     setUser(newUser);
   };
+  
   const handleSubmit = () => {
     const newUsers = JSON.parse(localStorage.getItem("users"));
     if (newUsers !== null) {

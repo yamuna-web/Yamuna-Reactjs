@@ -17,6 +17,7 @@ export default class CommonCounter extends Component {
               handleDecrement={handleDecrement}
               handleReset={handleReset}
             />
+            
           )}
         />
         

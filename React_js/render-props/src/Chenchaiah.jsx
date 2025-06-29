@@ -15,6 +15,7 @@ export default class Chenchaiah extends Component{
                reset={reset}
                />
             )}/>
+            
             <Savithri render={(count,increment,decrement,reset)=>(
                 <Neeru
                 count={count}

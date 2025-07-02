@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-     <Managementtickets/>
+     {/* <Managementtickets/> */}
     {/* <Social/> */}
      {/* <TaskManagement/> */}
      {/* <OnlineQuiz/>  */}

@@ -12,4 +12,5 @@ render(){
     </div>
 }
 }
+
 export default Hoc(Hovercounter)

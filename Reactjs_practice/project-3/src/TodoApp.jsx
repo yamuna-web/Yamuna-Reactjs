@@ -20,6 +20,7 @@ const TodoApp = () => {
         todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
+    
   };
 
   const deleteTodo = (id) => {

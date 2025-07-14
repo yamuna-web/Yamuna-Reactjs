@@ -15,5 +15,4 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
     </li>
   );
 };
-
 export default TodoItem;

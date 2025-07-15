@@ -16,3 +16,4 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
   );
 };
 export default TodoItem;
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Example</title>
+</head>
+<body>
+  <h2>JavaScript Demo</h2>
+  <p id="message">Click the button to see something happen!</p>
+  <button onclick="showMessage()">Click Me</button>
+
+  <script>
+    // Function to display a message
+    function showMessage() {
+      // Variables
+      let name = "Pavan";
+      let age = 21;
+
+      // Conditional
+      let status = age >= 18 ? "an Adult" : "a Minor";
+
+      // Loop
+      let numbers = "";
+      for (let i = 1; i <= 5; i++) {
+        numbers += i + " ";
+      }
+
+      // Change the HTML content
+      document.getElementById("message").innerText =
+        "Hello " + name + "! You are " + status + ".\n" +
+        "Here are numbers: " + numbers;
+    }
+  </script>
+</body>
+</html>

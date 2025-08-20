@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .quiz-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    h2 {
+      margin-bottom: 15px;
+    }
+    .options button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #3498db;
+      color: white;
+      font-size: 16px;
+    }
+    .options button:hover {
+      background: #2980b9;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h2 id="question">Loading question...</h2>
+    <div class="options" id="options"></div>
+    <p id="result"></p>
+    <button onclick="nextQuestion()">Next Question</button>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        question: "What is the capital of India?",
+        options: ["Mumbai", "New Delhi", "Chennai", "Kolkata"],
+        answer: "New Delhi"
+      },
+      {
+        question: "Which language is used for web apps?",
+        options: ["Python", "JavaScript", "C++", "Java"],
+        answer: "JavaScript"
+      },
+      {
+        question: "Who developed Java?",
+        options: ["Microsoft", "Sun Microsystems", "Google", "IBM"],
+        answer: "Sun Microsystems"
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function loadQuestion() {
+      document.getElementById("result").innerText = "";
+      let questionData = quizData[currentQuestion];
+      document.getElementById("question").innerText = questionData.question;
+
+      let optionsContainer = document.getElementById("options");
+      optionsContainer.innerHTML = "";
+      questionData.options.forEach(option => {
+        let btn = document.createElement("button");
+        btn.innerText = option;
+        btn.onclick = () => checkAnswer(option);
+        optionsContainer.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected) {
+      let correct = quizData[currentQuestion].answer;
+      if (selected === correct) {
+        document.getElementById("result").innerText = "✅ Correct!";
+        score++;
+      } else {
+        document.getElementById("result").innerText = "❌ Wrong! Correct answer: " + correct;
+      }
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        document.getElementById("question").innerText = "Quiz Over 🎉";
+        document.getElementById("options").innerHTML = "";
+        document.getElementById("result").innerText = "Your Score: " + score + "/" + quizData.length;
+      }
+    }
+
+    // Load first question
+    loadQuestion();
+  </script>
+</body>
+</html>

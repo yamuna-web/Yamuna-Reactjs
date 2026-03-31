@@ -25,9 +25,6 @@ export class Yemmu extends Component {
                 catchPhrase: "Multi-layered client-server neural-net",
                 bs: "harness real-time e-markets"
             }
-
-
-
         }
     }
     render() {

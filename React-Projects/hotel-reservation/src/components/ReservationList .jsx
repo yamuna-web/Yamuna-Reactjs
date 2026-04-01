@@ -13,6 +13,7 @@ const ReservationList = ({ setEditData }) => {
     res.roomType.toLowerCase().includes(search.toLowerCase())
   );
 
+  
   return (
     <div>
       <div className="flex mb-4 gap-2">

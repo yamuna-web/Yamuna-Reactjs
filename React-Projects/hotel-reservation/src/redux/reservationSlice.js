@@ -16,6 +16,7 @@ const reservationSlice = createSlice({
     cancelReservation: (state, action) => {
       state.reservations = state.reservations.filter((res) => res.id !== action.payload);
     },
+    
     updateReservation: (state, action) => {
       const { id, updates } = action.payload;
       const index = state.reservations.findIndex((res) => res.id === id);

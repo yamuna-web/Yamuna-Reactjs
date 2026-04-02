@@ -10,6 +10,7 @@ const initialState = {
   learningHistory: [],
 };
 
+
 const languageSlice = createSlice({
   name: 'languageLearning',
   initialState,

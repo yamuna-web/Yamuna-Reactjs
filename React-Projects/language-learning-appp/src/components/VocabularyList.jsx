@@ -8,6 +8,7 @@ const VocabularyList = () => {
 
   return (
     <div>
+      
       {vocabulary.map((word) => (
         <div key={word.id} className="border p-3 rounded mb-2">
           <h3 className="font-bold">{word.word}</h3>

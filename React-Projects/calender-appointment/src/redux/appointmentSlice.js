@@ -7,6 +7,7 @@ const initialState = {
   holidays: ['2025-12-25', '2025-01-01'],
 };
 
+
 const appointmentSlice = createSlice({
   name: 'appointment',
   initialState,

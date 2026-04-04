@@ -19,6 +19,7 @@ const AppointmentList = ({ setEditData }) => {
   });
   return (
     
+    
     <div>
       <div className="flex mb-4 gap-2">
         <input placeholder="Search by event or location" value={search} onChange={(e) => setSearch(e.target.value)} className="border p-2 flex-1" />

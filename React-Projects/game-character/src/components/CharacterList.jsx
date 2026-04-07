@@ -28,4 +28,5 @@ const CharacterList = ({ setEditData }) => {
   );
 };
 
+
 export default CharacterList;

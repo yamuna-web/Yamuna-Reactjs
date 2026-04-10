@@ -2,6 +2,7 @@ import React from "react";
 
 const Products = ({ data }) => {
   return (
+    
     <div className="container">
       <div className="row">
         {data && data.length > 0 ? (

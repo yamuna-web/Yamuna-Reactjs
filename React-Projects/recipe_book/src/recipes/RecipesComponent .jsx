@@ -8,6 +8,7 @@ import {
   searchRecipes,
   filterByCategory
 } 
+
 from './recipesSlice';
 import RecipeCard from '../../components/RecipeCard';
 const RecipesComponent = () => {

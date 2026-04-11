@@ -9,6 +9,7 @@ const RecipeCard = ({ recipe, isFavorite, onEdit, onDelete, onToggleFavorite }) 
       marginBottom: '10px',
       backgroundColor: '#f9f9f9'
     }}>
+      
       <h3>{recipe.name}</h3>
       <p><strong>Category:</strong> {recipe.category}</p>
       <p><strong>Cuisine:</strong> {recipe.cuisine}</p>

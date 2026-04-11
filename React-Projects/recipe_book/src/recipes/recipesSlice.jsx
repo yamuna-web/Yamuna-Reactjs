@@ -13,6 +13,7 @@ const initialState = {
       cuisine: "Italian"
     },
     
+    
     {
       name: "Pancakes",
       ingredients: ["Flour", "Eggs", "Milk", "Sugar"],

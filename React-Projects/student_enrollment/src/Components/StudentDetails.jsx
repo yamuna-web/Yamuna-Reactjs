@@ -12,6 +12,7 @@ const StudentDetails = () => {
   const { students } = useSelector((state) => state.students);
   const dispatch = useDispatch();
 
+  
   const [student, setStudent] = useState({
     id: "",
     name: "",

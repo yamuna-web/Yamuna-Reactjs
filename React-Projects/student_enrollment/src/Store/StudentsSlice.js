@@ -5,7 +5,6 @@ const initialState = {
     
   ]
 };
-
 const StudentsSlice = createSlice({
   name: "students",
   initialState,

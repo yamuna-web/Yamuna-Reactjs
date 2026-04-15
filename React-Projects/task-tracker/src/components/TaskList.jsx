@@ -15,6 +15,7 @@ const TaskList = () => {
     dispatch(filterTasks({ priority: e.target.value }));
   };
 
+  
   const getFilteredTasks = () => {
     if (filter === 'high') return highPriorityTasks;
     if (filter === 'completed') return completedTasks;

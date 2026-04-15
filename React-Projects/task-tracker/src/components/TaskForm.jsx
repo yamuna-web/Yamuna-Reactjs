@@ -13,6 +13,7 @@ const TaskForm = () => {
     category: 'Work',
   });
 
+  
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };

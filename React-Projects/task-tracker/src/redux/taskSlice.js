@@ -9,6 +9,7 @@ const initialState = {
   categories: ['Work', 'Personal', 'Urgent', 'Other'],
 };
 
+
 const taskSlice = createSlice({
   name: 'taskTracker',
   initialState,

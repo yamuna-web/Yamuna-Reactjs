@@ -9,7 +9,6 @@ const WeatherList = () => {
   const handleWeatherUpdate = (id, weatherInfo) => {
     dispatch(updateWeatherData({ id, weatherInfo }));
   };
-
   return (
     <div>
       <h2 className="text-xl font-bold mb-2">Weather Locations</h2>

@@ -15,7 +15,6 @@ const WeatherForm = () => {
     dispatch(addLocation({ name: location }));
     setLocation('');
   };
-
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
       <input

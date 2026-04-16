@@ -8,7 +8,6 @@ const initialState = {
   locations: [],
   weatherData: [],
 };
-
 const weatherSlice = createSlice({
   name: 'weather',
   initialState,

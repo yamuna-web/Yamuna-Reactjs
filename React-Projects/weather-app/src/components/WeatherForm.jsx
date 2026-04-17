@@ -9,7 +9,6 @@ const WeatherForm = () => {
   const handleChange = (e) => {
     setLocation(e.target.value);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addLocation({ name: location }));

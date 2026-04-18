@@ -14,7 +14,6 @@ const TemperatureConverter = () => {
       setFahrenheit('');
     }
   };
-  
   const handleFahrenheitChange = (e) => {
     const value = e.target.value;
     setFahrenheit(value);

@@ -13,7 +13,6 @@ const App = () => {
         <WeatherList />
       </div>
     </Provider>
-    
   );
 };
 
